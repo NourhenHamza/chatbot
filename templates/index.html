@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataMind</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 DataMind</h1>
+            <p>Posez vos questions sur la base de données</p>
+        </div>
+        
+        <div class="chat-container">
+            <div id="status" class="status">
+                ✅ Connecté au serveur Flask
+            </div>
+            
+            <div id="messages" class="messages">
+                <div class="message bot-message">
+                    👋 Bonjour ! Je suis votre assistant de base de données. Posez-moi des questions sur vos données !
+                </div>
+            </div>
+            
+            <div class="loading" id="loading">
+                🔄 Traitement de votre question...
+            </div>
+            
+            <div class="input-container">
+                <input 
+                    type="text" 
+                    id="questionInput" 
+                    class="question-input" 
+                    placeholder="Tapez votre question ici..."
+                    onkeypress="handleKeyPress(event)"
+                >
+                <button onclick="sendQuestion()" id="sendButton" class="send-button">
+                    Envoyer
+                </button>
+            </div>
+            
+            <div class="examples">
+                <strong>Exemples de questions :</strong><br>
+                <span class="example-question" onclick="setQuestion('Quel est le nombre de vêtements ?')">
+                    Quel est le nombre de vêtements ?
+                </span>
+                <span class="example-question" onclick="setQuestion('Liste tous les produits')">
+                    Liste tous les produits
+                </span>
+                <span class="example-question" onclick="setQuestion('Combien d\'utilisateurs avons-nous ?')">
+                    Combien d'utilisateurs avons-nous ?
+                </span>
+                <span class="example-question" onclick="setQuestion('Quelles sont les collections disponibles ?')">
+                    Quelles sont les collections disponibles ?
+                </span>
+            </div>
+            
+            <div class="chat-actions">
+                <button onclick="clearChat()" class="clear-button">
+                    🗑️ Effacer le chat
+                </button>
+                <button onclick="showCollections()" class="collections-button">
+                    📚 Voir les collections
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
