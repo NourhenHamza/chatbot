@@ -26,8 +26,7 @@ DataMind est un chatbot intelligent permettant d'interroger des bases MongoDB en
 
 - Python 3.8+
 - MongoDB 4.4+
-- Compte Groq (optionnel pour LLM cloud)
-- Clé API OpenAI (optionnelle)
+- Compte Groq 
 
 ### Installation
 
@@ -36,9 +35,6 @@ DataMind est un chatbot intelligent permettant d'interroger des bases MongoDB en
 git clone https://github.com/votre-repo/datamind-chatbot.git
 cd datamind-chatbot
 
-# Configurez l'environnement
-cp .env.example .env
-# Editez le fichier .env avec vos paramètres
 
 # Installez les dépendances
 pip install -r requirements.txt
