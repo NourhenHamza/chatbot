@@ -12,6 +12,7 @@
 
 DataMind est un chatbot intelligent permettant d'interroger des bases MongoDB en langage naturel, avec intégration d'LLM pour les requêtes complexes.
   <img src="/Téléchargements/datamind.png" alt="DataMind" width="200"/>
+  
 ### ✨ Fonctionnalités clés
 
 - 💬 Interface conversationnelle intuitive
