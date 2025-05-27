@@ -1,7 +1,7 @@
 # DataMind ChatBot 🤖
 
 <div align="center">
-  <img src="static/images/logo.png" alt="DataMind Logo" width="200"/>
+ 
   
   [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
   [![MongoDB Version](https://img.shields.io/badge/MongoDB-4.4%2B-green)](https://www.mongodb.com/)
