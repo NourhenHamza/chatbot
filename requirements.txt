@@ -1,6 +1,12 @@
-flask==2.3.3
-flask-cors==4.0.0
-pymongo==4.5.0
-python-dotenv==1.0.0
-requests==2.31.0
-langchain==0.0.305
+flask
+requests
+sqlalchemy
+pymysql
+psycopg2
+# cx_oracle
+pymongo
+python-dotenv
+groq
+langchain
+tiktoken
+flask-cors

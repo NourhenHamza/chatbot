@@ -1,41 +1,56 @@
-# DataMind ChatBot 🤖
+# Dynamic Chatbot with Database Integration
 
-<div align="center">
-  <img src="static/images/logo.png" alt="DataMind Logo" width="200"/>
-  
-  [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
-  [![MongoDB Version](https://img.shields.io/badge/MongoDB-4.4%2B-green)](https://www.mongodb.com/)
-  [![License](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
-</div>
+This chatbot is designed to provide dynamic responses based on the data stored in various types of databases such as
+MySQL, PostgreSQL, Oracle, SQLite, and MongoDB. By leveraging the capabilities of natural language processing (NLP) and
+integrating with the databases, the chatbot can fetch real-time data and answer user queries accordingly.
 
-## 📌 Aperçu du Projet
+## Features
 
-DataMind est un chatbot intelligent permettant d'interroger des bases MongoDB en langage naturel, avec intégration d'LLM pour les requêtes complexes.
-  <img src="/C:/Users/User-PC/Desktop/datamind.png" alt="DataMind" width="200"/>
+- **Dynamic Database Connection:** Connects to various SQL and NoSQL databases based on configuration.
+- **Natural Language Processing:** Understands user queries and fetches the relevant data from the database.
+- **Mock Data Integration:** Can operate with mock data for testing and demonstration purposes.
+- **Scalability:** Designed with best practices to ensure scalability and maintainability.
 
-### ✨ Fonctionnalités clés
+## Prerequisites
 
-- 💬 Interface conversationnelle intuitive
-- 🛠️ Support des opérations CRUD via NLP
-- 🔍 Analyse de données avec Groq/Ollama
-- 📊 Exploration visuelle des schémas
-- ⚡ Réponses rapides avec cache intelligent
+- Python 3.x
+- Required Python libraries listed in `requirements.txt`.
 
-## 🚀 Démarrage Rapide
+## Installation
 
-### Prérequis
+1. Clone the repository:
 
-- Python 3.8+
-- MongoDB 4.4+
-- Compte Groq 
+```
+git clone https://github.com/NourhenHamza/chatbot
+```
 
-### Installation
+2. Navigate to the project directory:
 
-```bash
-# Clonez le dépôt
-git clone https://github.com/votre-repo/datamind-chatbot.git
-cd datamind-chatbot
+```
+cd chatbot
 
+```
 
-# Installez les dépendances
+3. Install the required Python libraries:
+
+```
 pip install -r requirements.txt
+```
+
+4. Set up your `.env` file with the appropriate database configurations. An example `.env` file (`example.env`) is
+   provided for reference.
+
+5. Run the application:
+
+```
+python main.py
+```
+
+## Usage
+
+1. Start the chatbot.
+2. Ask queries related to the data present in your database.
+3. Receive dynamic responses based on real-time database data.
+
+ 
+

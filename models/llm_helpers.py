@@ -1,7 +1,14 @@
 import os
-import requests
-import json
-from typing import List, Dict, Any
+from langchain.retrievers.document_compressors import LLMChainExtractor
+from langchain.llms import LlamaCpp
+from langchain.chat_models import ChatGroq
+
+from langchain.prompts.chat import (
+    ChatPromptTemplate,
+    SystemMessagePromptTemplate,
+    HumanMessagePromptTemplate,
+)
+from langchain.chains import LLMChain
 from langchain.schema import BaseOutputParser
 from langchain.docstore.document import Document
 
@@ -17,254 +24,116 @@ class CommaSeparatedListOutputParser(BaseOutputParser):
 def convert_to_documents(data_list):
     data = []
     for data_dict in data_list:
-        if isinstance(data_dict, dict):
-            list_value = list(data_dict.keys())[0] if data_dict.keys() else "data"
-            metadata = data_dict
-            content = str(data_dict.get(list_value, data_dict))
-            data.append(Document(page_content=content, metadata=metadata))
-        else:
-            data.append(Document(page_content=str(data_dict), metadata={}))
+        list_value = list(data_dict.keys())[0]
+        # metadata = {"source": data_dict[list_value]}
+        metadata = data_dict
+        data.append(Document(page_content=data_dict[list_value], metadata=metadata))
     return data
 
 
-class LlamaLanguageModelRequest:
-    """
-    Classe pour utiliser Llama via Ollama (local) ou via API Groq (gratuit)
+class LanguageModelRequest:
+    """ 
+    A class to handle requests to a language model using Groq with Llama.
+    
+    This class provides methods to send questions to a language model and retrieve responses.
     """
 
     def __init__(self):
-        # Configuration pour Ollama local
-        self.ollama_url = os.getenv('OLLAMA_URL', 'http://localhost:11434')
-        self.ollama_model = os.getenv('OLLAMA_MODEL', 'llama2')
-        
-        # Configuration pour Groq (API gratuite)
-        self.groq_api_key = os.getenv('GROQ_API_KEY', '')
-        self.groq_model = os.getenv('GROQ_MODEL', 'llama2-70b-4096')
-        
-        # Prompts système
-        self.system_prompt = os.getenv('SYSTEM_PROMPT', "You are an AI assistant that provides information from given data. Be concise and helpful.")
-        self.system_prompt_query = os.getenv('SYSTEM_PROMPT_QUERY', 
-            "You are an AI that creates database queries based on user questions and database schema. "
-            "Only respond with the query, no extra text.")
-        
-        # Détecter quelle méthode utiliser
-        self.use_groq = bool(self.groq_api_key)
-        self.use_ollama = self._check_ollama_available()
-        
-        if not self.use_groq and not self.use_ollama:
-            print("⚠️  Ni Groq ni Ollama détecté. Utilisation du mode fallback.")
-        elif self.use_groq:
-            print("🚀 Utilisation de Groq API (gratuit)")
-        elif self.use_ollama:
-            print("🦙 Utilisation d'Ollama local")
+        # Using GROQ_API_KEY instead of OpenAI
+        groq_api_key = os.getenv('GROQ_API_KEY')
+        self.chat_model = ChatGroq(
+            model_name="llama-3.1-70b-versatile",  # Using Llama model
+            groq_api_key=groq_api_key,
+            temperature=0
+        )
+        self.system_prompt = os.getenv('SYSTEM_PROMPT', "You are an AI who give information from given data")
+        self.system_prompt_query = os.getenv('SYSTEM_PROMPT_QUERY', "You are an AI who create sql query based on the "
+                                                                    "user question and database tables and fields")
+        self.compressor = LLMChainExtractor.from_llm(llm=self.chat_model)
 
-    def _check_ollama_available(self) -> bool:
-        """Vérifier si Ollama est disponible localement"""
-        try:
-            response = requests.get(f"{self.ollama_url}/api/tags", timeout=5)
-            return response.status_code == 200
-        except:
-            return False
+    def ask_llm(self, question, data_list):
+        """ 
+        Send a question with data to llm and get the response.
 
-    def _call_ollama(self, prompt: str, system_prompt: str = "") -> str:
-        """Appeler Ollama localement"""
-        try:
-            payload = {
-                "model": self.ollama_model,
-                "prompt": prompt,
-                "system": system_prompt,
-                "stream": False
-            }
-            
-            response = requests.post(
-                f"{self.ollama_url}/api/generate",
-                json=payload,
-                timeout=30
-            )
-            
-            if response.status_code == 200:
-                return response.json().get('response', '')
-            else:
-                return f"Erreur Ollama: {response.status_code}"
-                
-        except Exception as e:
-            return f"Erreur de connexion Ollama: {str(e)}"
-
-    def _call_groq(self, prompt: str, system_prompt: str = "") -> str:
-        """Appeler l'API Groq (gratuite)"""
-        try:
-            headers = {
-                "Authorization": f"Bearer {self.groq_api_key}",
-                "Content-Type": "application/json"
-            }
-            
-            messages = []
-            if system_prompt:
-                messages.append({"role": "system", "content": system_prompt})
-            messages.append({"role": "user", "content": prompt})
-            
-            payload = {
-                "model": self.groq_model,
-                "messages": messages,
-                "temperature": 0.1,
-                "max_tokens": 1000
-            }
-            
-            response = requests.post(
-                "https://api.groq.com/openai/v1/chat/completions",
-                headers=headers,
-                json=payload,
-                timeout=30
-            )
-            
-            if response.status_code == 200:
-                return response.json()['choices'][0]['message']['content']
-            else:
-                return f"Erreur Groq: {response.status_code}"
-                
-        except Exception as e:
-            return f"Erreur de connexion Groq: {str(e)}"
-
-    def _fallback_response(self, question: str, data_list: List[Dict]) -> str:
-        """Réponse de secours si aucune API n'est disponible"""
-        question_lower = question.lower()
-        
-        if not data_list:
-            return "Aucune donnée trouvée pour répondre à votre question."
-        
-        # Réponses basiques selon le type de question
-        if any(word in question_lower for word in ["qui", "utilisateurs", "users", "personnes"]):
-            if isinstance(data_list, list) and len(data_list) > 0:
-                names = []
-                for user in data_list:
-                    if isinstance(user, dict):
-                        if 'name' in user:
-                            names.append(user['name'])
-                        elif 'nom' in user:
-                            names.append(user['nom'])
-                
-                if names:
-                    return f"Les utilisateurs sont : {', '.join(names)}"
-                else:
-                    return f"J'ai trouvé {len(data_list)} utilisateurs dans la base de données."
-        
-        elif any(word in question_lower for word in ["combien", "nombre", "count"]):
-            return f"Il y a {len(data_list)} éléments dans les données."
-        
-        elif any(word in question_lower for word in ["âge", "age"]):
-            ages = []
-            for user in data_list:
-                if isinstance(user, dict) and 'age' in user:
-                    ages.append(str(user['age']))
-            
-            if ages:
-                return f"Les âges sont : {', '.join(ages)} ans"
-        
-        # Réponse générique
-        return f"Voici les données trouvées : {str(data_list)[:200]}..."
-
-    def ask_llm(self, question: str, data_list: List[Dict]) -> str:
         """
-        Poser une question au LLM avec les données
-        """
-        if not data_list:
-            return "Aucune donnée disponible pour répondre à votre question."
-        
-        # Préparer le prompt
-        data_str = json.dumps(data_list, ensure_ascii=False, indent=2)[:1000]  # Limiter la taille
-        prompt = f"""Question: {question}
+        docs = convert_to_documents(data_list)
 
-Données disponibles:
-{data_str}
+        data = docs
+        template = self.system_prompt + "\ndata: {data} "
+        system_message_prompt = SystemMessagePromptTemplate.from_template(template)
+        human_template = "{questions}"
+        human_message_prompt = HumanMessagePromptTemplate.from_template(human_template)
 
-Réponds à la question en utilisant uniquement les données fournies. Sois concis et précis."""
+        chat_prompt = ChatPromptTemplate.from_messages([system_message_prompt, human_message_prompt])
 
-        # Essayer les différentes méthodes
-        if self.use_groq:
-            response = self._call_groq(prompt, self.system_prompt)
-            if not response.startswith("Erreur"):
-                return response
-        
-        if self.use_ollama:
-            response = self._call_ollama(prompt, self.system_prompt)
-            if not response.startswith("Erreur"):
-                return response
-        
-        # Fallback
-        return self._fallback_response(question, data_list)
+        chat_prompt.format_messages(data=data, questions=question)
 
-    def get_table_based_on_query(self, tables: List[str], query: str) -> List[str]:
-        """Déterminer quelles tables utiliser selon la requête"""
-        prompt = f"""Tables disponibles: {', '.join(tables)}
-Question: {query}
+        chain = LLMChain(
+            llm=self.chat_model,
+            prompt=chat_prompt,
+            output_parser=CommaSeparatedListOutputParser()
+        )
 
-Quelle(s) table(s) sont pertinente(s) pour cette question? Réponds uniquement avec le(s) nom(s) de table(s), séparés par des virgules."""
+        response = chain.run(data=data, questions=question)
+        return response
 
-        if self.use_groq:
-            response = self._call_groq(prompt)
-            if not response.startswith("Erreur"):
-                return [t.strip() for t in response.split(',')]
-        
-        if self.use_ollama:
-            response = self._call_ollama(prompt)
-            if not response.startswith("Erreur"):
-                return [t.strip() for t in response.split(',')]
-        
-        # Fallback simple
-        query_lower = query.lower()
-        relevant_tables = []
-        for table in tables:
-            if table.lower() in query_lower or any(word in query_lower for word in ["utilisateur", "user"] if "user" in table.lower()):
-                relevant_tables.append(table)
-        
-        return relevant_tables if relevant_tables else [tables[0]] if tables else []
+    def generate_query_by_llm(self, tables, columns, query):
+        template = self.system_prompt_query + (
+            "\ntables: {tables} column: {columns}\n\nonly write query no other extra text can check multiple "
+            "fields for conditions but use 'or' never use 'and' if not mandatory and don't forget to use SELECT *")
+        system_message_prompt = SystemMessagePromptTemplate.from_template(template)
+        human_template = "{questions}"
+        human_message_prompt = HumanMessagePromptTemplate.from_template(human_template)
 
-    def get_column_based_on_query(self, columns: List[str], query: str) -> str:
-        """Déterminer quelles colonnes utiliser selon la requête"""
-        prompt = f"""Colonnes disponibles: {', '.join(columns)}
-Question: {query}
+        chat_prompt = ChatPromptTemplate.from_messages([system_message_prompt, human_message_prompt])
 
-Quelle colonne est la plus pertinente pour cette question? Réponds uniquement avec le nom de la colonne."""
+        chat_prompt.format_messages(tables=tables, columns=columns, questions=query)
 
-        if self.use_groq:
-            response = self._call_groq(prompt)
-            if not response.startswith("Erreur"):
-                return response.strip()
-        
-        if self.use_ollama:
-            response = self._call_ollama(prompt)
-            if not response.startswith("Erreur"):
-                return response.strip()
-        
-        # Fallback simple
-        query_lower = query.lower()
-        for col in columns:
-            if col.lower() in query_lower:
-                return col
-        
-        return columns[0] if columns else ""
+        chain = LLMChain(
+            llm=self.chat_model,
+            prompt=chat_prompt,
+            output_parser=CommaSeparatedListOutputParser()
+        )
 
-    def generate_query_by_llm(self, tables: List[str], columns: List[List[str]], query: str) -> str:
-        """Générer une requête de base de données"""
-        prompt = f"""Tables: {tables}
-Colonnes: {columns}
-Question: {query}
+        response = chain.run(tables=tables, columns=columns, questions=query)
+        return response[0]
 
-Génère une requête MongoDB appropriée pour cette question. Réponds uniquement avec la requête, pas d'explication."""
+    def get_table_based_on_query(self, tables, query):
+        template = ("Get the table names for sql query based on given table and question only write table names so it "
+                    "can use for query database,\ntables: {tables}\n\nOnly response table name")
+        system_message_prompt = SystemMessagePromptTemplate.from_template(template)
+        human_template = "{questions}"
+        human_message_prompt = HumanMessagePromptTemplate.from_template(human_template)
 
-        if self.use_groq:
-            response = self._call_groq(prompt, self.system_prompt_query)
-            if not response.startswith("Erreur"):
-                return response.strip()
-        
-        if self.use_ollama:
-            response = self._call_ollama(prompt, self.system_prompt_query)
-            if not response.startswith("Erreur"):
-                return response.strip()
-        
-        # Fallback simple
-        return "{}"  # Requête MongoDB vide pour récupérer tout
+        chat_prompt = ChatPromptTemplate.from_messages([system_message_prompt, human_message_prompt])
 
+        chat_prompt.format_messages(tables=tables, questions=query)
 
-# Alias pour compatibilité
-LanguageModelRequest = LlamaLanguageModelRequest
+        chain = LLMChain(
+            llm=self.chat_model,
+            prompt=chat_prompt,
+            output_parser=CommaSeparatedListOutputParser()
+        )
+
+        response = chain.run(tables=tables, questions=query)
+        return response
+
+    def get_column_based_on_query(self, columns, query):
+        template = ("Get the column names for sql query based on given columns and question only write column names "
+                    "so it can use for query database\ncolumns: {columns}")
+        system_message_prompt = SystemMessagePromptTemplate.from_template(template)
+        human_template = "{questions}"
+        human_message_prompt = HumanMessagePromptTemplate.from_template(human_template)
+
+        chat_prompt = ChatPromptTemplate.from_messages([system_message_prompt, human_message_prompt])
+
+        chat_prompt.format_messages(columns=columns, questions=query)
+
+        chain = LLMChain(
+            llm=self.chat_model,
+            prompt=chat_prompt,
+            output_parser=CommaSeparatedListOutputParser()
+        )
+
+        response = chain.run(columns=columns, questions=query)
+        return response[0]
