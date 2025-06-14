@@ -27,7 +27,7 @@ def convert_to_documents(data_list):
         list_value = list(data_dict.keys())[0]
         # metadata = {"source": data_dict[list_value]}
         metadata = data_dict
-        data.append(Document(page_content=data_dict[list_value], metadata=metadata))
+        data.append(Document(page_content=str(data_dict[list_value]), metadata=metadata))
     return data
 
 
