@@ -35,7 +35,7 @@ class DynamicDatabase:
             raise ValueError(f"Unsupported database type: {self.db_type}")
 
         # Check if connection was successful
-        if not self.connection:
+        if self.connection is None:
             raise ValueError("Failed to establish database connection.")
 
     def _get_sql_connection_string(self):
@@ -59,7 +59,9 @@ class DynamicDatabase:
             return f"sqlite:///{dbname}"
 
     def _get_mongodb_connection(self):
-        """Establish a connection to MongoDB using environment variables."""
+        """Establish a connection to MongoDB using environment variables.
+        Supports both local MongoDB and MongoDB Atlas connections.
+        """
         self._import_pymongo()
         user = os.environ.get("MONGODB_USER")
         password = os.environ.get("MONGODB_PASSWORD")
@@ -67,9 +69,31 @@ class DynamicDatabase:
         port = os.environ.get("MONGODB_PORT")
         dbname = os.environ.get("MONGODB_DBNAME")
 
-        connection_string = f"mongodb+srv://{user}:{password}@{host}:{port}/{dbname}"
-        client = MongoClient(connection_string)
-        return client[dbname]
+        # Determine connection type based on host
+        if host and ('mongodb.net' in host or 'mongodb.com' in host or host.endswith('.mongodb.net')):
+            # MongoDB Atlas connection (mongodb+srv)
+            if user and password:
+                connection_string = f"mongodb+srv://{user}:{password}@{host}/{dbname}"
+            else:
+                connection_string = f"mongodb+srv://{host}/{dbname}"
+            print(f"Connecting to MongoDB Atlas: {connection_string.replace(password, '***') if password else connection_string}")
+        else:
+            # Local MongoDB connection (mongodb://)
+            if user and password:
+                connection_string = f"mongodb://{user}:{password}@{host}:{port}/{dbname}"
+            else:
+                connection_string = f"mongodb://{host}:{port}/{dbname}"
+            print(f"Connecting to local MongoDB: {connection_string.replace(password, '***') if password else connection_string}")
+        
+        try:
+            client = MongoClient(connection_string)
+            # Test the connection
+            client.admin.command('ping')
+            print("MongoDB connection successful!")
+            return client[dbname]
+        except Exception as e:
+            print(f"MongoDB connection failed: {str(e)}")
+            raise
 
     # Conditional imports for necessary libraries
     def _import_sqlalchemy(self):
@@ -106,7 +130,7 @@ class DynamicDatabase:
         }
 
     def get_tables(self):
-        if not self.connection:
+        if self.connection is None:
             self.connect()
 
         try:
@@ -128,7 +152,7 @@ class DynamicDatabase:
             raise ValueError(f"Error fetching table names: {str(e)}")
 
     def get_fields(self, table_name):
-        if not self.connection:
+        if self.connection is None:
             self.connect()
 
         try:
@@ -168,7 +192,7 @@ class DynamicDatabase:
         return []
 
     def _query_real_data(self, table_name, field=None, target_query=None):
-        if not self.connection:
+        if self.connection is None:
             self.connect()
         if self.db_type in ["mysql", "postgresql", "oracle", "sqlite"]:
             return self._query_sql_data(table_name, field, target_query)

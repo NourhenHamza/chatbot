@@ -21,7 +21,7 @@ class NLPQueryProcessor:
 
         # target_field = self.llm.get_column_based_on_query(fields, query)
         target_query = self.llm.generate_query_by_llm(tables, all_fields, query)
-        return target_table, target_field, target_query
+        return target_table[0], target_field, target_query
 
         ## OLD Way
         # for table in tables:

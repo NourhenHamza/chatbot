@@ -4,6 +4,8 @@ from models.database import DynamicDatabase
 from models.nlp_processor import NLPQueryProcessor
 from models.llm_helpers import LanguageModelRequest
 from dotenv import load_dotenv
+from flask import Flask, request, jsonify
+ 
 
 # Load environment variables from .env file
 load_dotenv()
@@ -36,6 +38,7 @@ def ask():
 
     # Otherwise, return a generic response
     return jsonify({"response": f"Processed question: {question}"})
+
 
 
 if __name__ == "__main__":
