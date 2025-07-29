@@ -4,7 +4,7 @@ from models.database import DynamicDatabase
 from models.nlp_processor import NLPQueryProcessor
 from models.llm_helpers import LanguageModelRequest
 from dotenv import load_dotenv
-from flask import Flask, request, jsonify
+import os 
  
 
 # Load environment variables from .env file
@@ -24,20 +24,24 @@ nlp_processor = NLPQueryProcessor(db, language_model_processor)
 def ask():
     question = request.json.get("question")
     use_mock_data = request.json.get("use_mock_data", False)
-
+    db_type = request.json.get("db_type", os.environ.get("DATABASE_TYPE"))
+    
+    # Set database type and mock data flag
+    db.db_type = db_type.lower()
     db.set_mock_data(use_mock_data)
 
-    # Process the question using NLPQueryProcessor to detect table and field
-    table_name, field, target_query = nlp_processor.understand_query(question)
-
-    # If a table is detected in the question
-    if table_name:
-        data = db.query(table_name, field, target_query)
-        response = language_model_processor.ask_llm(question, data)
-        return jsonify({"response": response})
-
-    # Otherwise, return a generic response
-    return jsonify({"response": f"Processed question: {question}"})
+    try:
+        # Process the question
+        table_name, field, target_query = nlp_processor.understand_query(question)
+        
+        if table_name:
+            data = db.query(table_name, field, target_query)
+            response = language_model_processor.ask_llm(question, data)
+            return jsonify({"response": response})
+            
+        return jsonify({"response": f"Processed question: {question}"})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 
