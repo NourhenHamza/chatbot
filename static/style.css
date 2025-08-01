@@ -537,11 +537,9 @@ body.theme-mysql .sidebar::before {
   font-family: "Inter", sans-serif;
 }
 
-body.theme-mysql .db-details {
-  background: linear-gradient(135deg, #eff6ff 0%, #fff7ed 50%, #eff6ff 100%);
+/* Common DB Details Style */
+.db-details {
   border: 2px solid #bfdbfe;
-  border-left: 6px solid #f97316;
-  color: #1e40af;
   padding: 1.5rem;
   border-radius: 16px;
   margin-bottom: 2rem;
@@ -554,8 +552,42 @@ body.theme-mysql .db-details {
 }
 
 .db-details strong {
-  color: #f97316;
   font-weight: 700;
+}
+
+/* MySQL DB Details */
+body.theme-mysql .db-details {
+  background: linear-gradient(135deg, #eff6ff 0%, #fff7ed 50%, #eff6ff 100%);
+  border-left: 6px solid #f97316;
+  color: #1e40af;
+}
+
+body.theme-mysql .db-details strong {
+  color: #f97316;
+}
+
+/* PostgreSQL DB Details */
+body.theme-postgresql .db-details {
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.6) 0%, rgba(51, 65, 85, 0.8) 100%);
+  border-left: 6px solid #94a3b8;
+  color: #e2e8f0;
+  border: 2px solid rgba(148, 163, 184, 0.3);
+}
+
+body.theme-postgresql .db-details strong {
+  color: #cbd5e1;
+}
+
+/* MongoDB DB Details */
+body.theme-mongodb .db-details {
+  background: linear-gradient(135deg, rgba(4, 120, 87, 0.6) 0%, rgba(6, 95, 70, 0.8) 100%);
+  border-left: 6px solid #34d399;
+  color: #ecfdf5;
+  border: 2px solid rgba(52, 211, 153, 0.4);
+}
+
+body.theme-mongodb .db-details strong {
+  color: #6ee7b7;
 }
 
 .tables-section h4 {
@@ -573,9 +605,9 @@ body.theme-mysql .db-details {
   overflow-y: auto;
   list-style: none;
   scrollbar-width: thin;
-  scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
 }
 
+/* Common Tables List Scrollbar */
 #tablesList::-webkit-scrollbar {
   width: 6px;
 }
@@ -584,15 +616,8 @@ body.theme-mysql .db-details {
   background: transparent;
 }
 
-#tablesList::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #3b82f6, #f97316);
-  border-radius: 3px;
-}
-
-body.theme-mysql #tablesList li {
-  background: linear-gradient(135deg, #f8fafc 0%, #fff7ed 50%, #f1f5f9 100%);
-  border: 2px solid #e2e8f0;
-  color: #475569;
+/* Common Tables List Items */
+#tablesList li {
   border-radius: 16px;
   padding: 1rem 1.25rem;
   margin-bottom: 0.75rem;
@@ -602,15 +627,30 @@ body.theme-mysql #tablesList li {
   font-weight: 500;
 }
 
-body.theme-mysql #tablesList li::before {
+#tablesList li::before {
   content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.1), transparent);
   transition: all 0.8s var(--quantum-smooth);
+}
+
+/* MySQL Tables List */
+body.theme-mysql #tablesList::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #3b82f6, #f97316);
+  border-radius: 3px;
+}
+
+body.theme-mysql #tablesList li {
+  background: linear-gradient(135deg, #f8fafc 0%, #fff7ed 50%, #f1f5f9 100%);
+  border: 2px solid #e2e8f0;
+  color: #475569;
+}
+
+body.theme-mysql #tablesList li::before {
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.1), transparent);
 }
 
 body.theme-mysql #tablesList li:hover {
@@ -625,6 +665,60 @@ body.theme-mysql #tablesList li:hover::before {
   left: 100%;
 }
 
+/* PostgreSQL Tables List */
+body.theme-postgresql #tablesList::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #475569, #94a3b8);
+  border-radius: 3px;
+}
+
+body.theme-postgresql #tablesList li {
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.6) 0%, rgba(51, 65, 85, 0.8) 100%);
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  color: #e2e8f0;
+}
+
+body.theme-postgresql #tablesList li::before {
+  background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.1), transparent);
+}
+
+body.theme-postgresql #tablesList li:hover {
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.8) 0%, rgba(51, 65, 85, 0.9) 100%);
+  border-color: #94a3b8;
+  transform: translateX(12px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+body.theme-postgresql #tablesList li:hover::before {
+  left: 100%;
+}
+
+/* MongoDB Tables List */
+body.theme-mongodb #tablesList::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  border-radius: 3px;
+}
+
+body.theme-mongodb #tablesList li {
+  background: linear-gradient(135deg, rgba(4, 120, 87, 0.6) 0%, rgba(6, 95, 70, 0.8) 100%);
+  border: 2px solid rgba(52, 211, 153, 0.3);
+  color: #ecfdf5;
+}
+
+body.theme-mongodb #tablesList li::before {
+  background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.1), transparent);
+}
+
+body.theme-mongodb #tablesList li:hover {
+  background: linear-gradient(135deg, rgba(4, 120, 87, 0.8) 0%, rgba(6, 95, 70, 0.9) 100%);
+  border-color: #34d399;
+  transform: translateX(12px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(16, 185, 129, 0.3);
+}
+
+body.theme-mongodb #tablesList li:hover::before {
+  left: 100%;
+}
+
 /* Chat Container */
 .chat-container {
   flex: 1;
@@ -635,6 +729,7 @@ body.theme-mysql #tablesList li:hover::before {
   border-radius: 28px;
 }
 
+/* MySQL Chat Container */
 body.theme-mysql .chat-container {
   background: linear-gradient(
     135deg,
@@ -648,6 +743,36 @@ body.theme-mysql .chat-container {
   border: 3px solid transparent;
   background-clip: padding-box;
   box-shadow: 0 32px 64px rgba(59, 130, 246, 0.2), 0 16px 32px rgba(249, 115, 22, 0.15);
+}
+
+/* PostgreSQL Chat Container */
+body.theme-postgresql .chat-container {
+  background: linear-gradient(
+    135deg,
+    rgba(30, 41, 59, 0.95) 0%,
+    rgba(51, 65, 85, 0.9) 25%,
+    rgba(71, 85, 105, 0.85) 50%,
+    rgba(51, 65, 85, 0.9) 75%,
+    rgba(30, 41, 59, 0.95) 100%
+  );
+  backdrop-filter: blur(40px) saturate(150%);
+  border: 3px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4);
+}
+
+/* MongoDB Chat Container */
+body.theme-mongodb .chat-container {
+  background: linear-gradient(
+    135deg,
+    rgba(6, 78, 59, 0.95) 0%,
+    rgba(6, 95, 70, 0.9) 25%,
+    rgba(4, 120, 87, 0.85) 50%,
+    rgba(5, 150, 105, 0.8) 75%,
+    rgba(16, 185, 129, 0.75) 100%
+  );
+  backdrop-filter: blur(40px) saturate(180%);
+  border: 3px solid rgba(52, 211, 153, 0.4);
+  box-shadow: 0 32px 64px rgba(16, 185, 129, 0.3);
 }
 
 .chat-header {
@@ -695,7 +820,9 @@ body.theme-mysql .chat-container {
   color: #dc2626;
   transform: scale(1.1);
 }
-
+body.theme-mysql .conversation-item:not(.active) .conversation-title {
+  color: #1e40af; /* Bleu foncé pour contraster avec le fond clair */
+}
 body.theme-mysql .chat-messages {
   flex: 1;
   padding: 2rem;
@@ -759,9 +886,6 @@ body.theme-mysql .chat-messages::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
-body.theme-mysql .conversation-item:not(.active) .conversation-title {
-  color: #1e40af; /* Bleu foncé pour contraster avec le fond clair */
-}
 body.theme-mysql .user-message .message-content {
   background: linear-gradient(135deg, #f97316 0%, #fb923c 25%, #3b82f6 75%, #2563eb 100%);
   background-size: 200% 200%;
@@ -965,6 +1089,7 @@ body.theme-postgresql::before {
   }
 }
 
+
 /* PostgreSQL Header */
 body.theme-postgresql header {
   background: linear-gradient(
@@ -1079,31 +1204,12 @@ body.theme-postgresql .conversation-item.active {
   color: white;
 }
 
-body.theme-postgresql .db-details {
-  background: linear-gradient(135deg, rgba(71, 85, 105, 0.6) 0%, rgba(51, 65, 85, 0.8) 100%);
-  border: 2px solid rgba(148, 163, 184, 0.3);
-  border-left: 6px solid #94a3b8;
-  color: #e2e8f0;
-}
+/* PostgreSQL DB Details - Using common style */
 
-body.theme-postgresql .db-details strong {
-  color: #cbd5e1;
-}
-
-body.theme-postgresql #tablesList li {
-  background: linear-gradient(135deg, rgba(71, 85, 105, 0.6) 0%, rgba(51, 65, 85, 0.8) 100%);
-  border: 2px solid rgba(148, 163, 184, 0.2);
-  color: #e2e8f0;
-}
-
-body.theme-postgresql #tablesList li:hover {
-  background: linear-gradient(135deg, rgba(71, 85, 105, 0.8) 0%, rgba(51, 65, 85, 0.9) 100%);
-  border-color: #94a3b8;
-}
+/* PostgreSQL Tables List - Using common style */
 
 /* PostgreSQL Chat */
 body.theme-postgresql .chat-container {
-  flex: 1;
   background: linear-gradient(
     135deg,
     rgba(30, 41, 59, 0.95) 0%,
@@ -1381,31 +1487,12 @@ body.theme-mongodb .conversation-item.active {
   color: white;
 }
 
-body.theme-mongodb .db-details {
-  background: linear-gradient(135deg, rgba(4, 120, 87, 0.6) 0%, rgba(6, 95, 70, 0.8) 100%);
-  border: 2px solid rgba(52, 211, 153, 0.4);
-  border-left: 6px solid #34d399;
-  color: #ecfdf5;
-}
+/* MongoDB DB Details - Using common style */
 
-body.theme-mongodb .db-details strong {
-  color: #6ee7b7;
-}
-
-body.theme-mongodb #tablesList li {
-  background: linear-gradient(135deg, rgba(4, 120, 87, 0.6) 0%, rgba(6, 95, 70, 0.8) 100%);
-  border: 2px solid rgba(52, 211, 153, 0.3);
-  color: #ecfdf5;
-}
-
-body.theme-mongodb #tablesList li:hover {
-  background: linear-gradient(135deg, rgba(4, 120, 87, 0.8) 0%, rgba(6, 95, 70, 0.9) 100%);
-  border-color: #34d399;
-}
+/* MongoDB Tables List - Using common style */
 
 /* MongoDB Chat */
 body.theme-mongodb .chat-container {
-  flex: 1;
   background: linear-gradient(
     135deg,
     rgba(6, 78, 59, 0.95) 0%,
