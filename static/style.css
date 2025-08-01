@@ -228,6 +228,7 @@ body.theme-mysql header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0; /* Prevent header from shrinking */
 }
 
 body.theme-mysql header::before {
@@ -339,11 +340,14 @@ body.theme-mysql .db-selector select {
   flex: 1;
   gap: 40px;
   overflow: hidden;
+  min-height: 0; /* Important for flex children to shrink */
 }
-
-/* 💫 MySQL Premium Sidebar */
+body.theme-mysql .conversation-item:not(.active) .conversation-title {
+  color: #1e40af; /* Bleu foncé pour contraster avec le fond clair */
+}
+/* 💫 MySQL Premium Sidebar with Global Scroll */
 body.theme-mysql .sidebar {
-  width: 350px;
+  width: 500px;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.98) 0%,
@@ -361,9 +365,24 @@ body.theme-mysql .sidebar {
   transform: translateZ(30px);
   transition: all 0.8s var(--quantum-elastic);
   position: relative;
-  overflow: hidden;
+  overflow-y: auto; /* Global scroll for entire sidebar */
   display: flex;
   flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
+}
+
+body.theme-mysql .sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.theme-mysql .sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body.theme-mysql .sidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #3b82f6, #f97316);
+  border-radius: 4px;
 }
 
 body.theme-mysql .sidebar::before {
@@ -377,6 +396,7 @@ body.theme-mysql .sidebar::before {
   background-size: 200% 100%;
   animation: mysqlSidebarFlow 8s linear infinite;
   border-radius: 28px 28px 0 0;
+  z-index: 1;
 }
 
 @keyframes mysqlSidebarFlow {
@@ -433,7 +453,7 @@ body.theme-mysql .sidebar::before {
 
 .conversations-list {
   max-height: 300px;
-  overflow-y: auto;
+  overflow-y: auto; /* Keep individual scroll for conversations */
   scrollbar-width: thin;
   scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
 }
@@ -461,7 +481,7 @@ body.theme-mysql .sidebar::before {
   transition: all 0.6s var(--quantum-bounce);
   position: relative;
   overflow: hidden;
-  text-align: center; /* Centered conversation names */
+  text-align: center;
 }
 
 .conversation-item::before {
@@ -497,11 +517,11 @@ body.theme-mysql .sidebar::before {
 .conversation-title {
   font-weight: 600;
   margin-bottom: 0.5rem;
-  white-space: normal; /* Changed from nowrap to normal */
-  overflow: visible; /* Changed from hidden to visible */
-  text-overflow: clip; /* Changed from ellipsis to clip */
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
   font-size: 1rem;
-  word-break: break-word; /* Added for long words */
+  word-break: break-word;
 }
 
 .conversation-date {
@@ -526,7 +546,7 @@ body.theme-mysql .sidebar::before {
 .db-info {
   padding: 2rem;
   flex: 1;
-  overflow-y: auto;
+  min-height: 0; /* Allow shrinking */
 }
 
 .db-info h3 {
@@ -601,7 +621,7 @@ body.theme-mongodb .db-details strong {
   background: transparent;
   border: none;
   border-radius: 0;
-  max-height: 250px;
+  max-height: 250px; /* Keep individual scroll for tables */
   overflow-y: auto;
   list-style: none;
   scrollbar-width: thin;
@@ -719,7 +739,7 @@ body.theme-mongodb #tablesList li:hover::before {
   left: 100%;
 }
 
-/* Chat Container */
+/* Chat Container - No empty space below send bar */
 .chat-container {
   flex: 1;
   display: flex;
@@ -727,6 +747,7 @@ body.theme-mongodb #tablesList li:hover::before {
   overflow: hidden;
   transform: translateZ(20px);
   border-radius: 28px;
+  min-height: 0; /* Important for flex children to shrink */
 }
 
 /* MySQL Chat Container */
@@ -782,6 +803,7 @@ body.theme-mongodb .chat-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0; /* Prevent header from shrinking */
 }
 
 .chat-header h3 {
@@ -820,9 +842,7 @@ body.theme-mongodb .chat-container {
   color: #dc2626;
   transform: scale(1.1);
 }
-body.theme-mysql .conversation-item:not(.active) .conversation-title {
-  color: #1e40af; /* Bleu foncé pour contraster avec le fond clair */
-}
+
 body.theme-mysql .chat-messages {
   flex: 1;
   padding: 2rem;
@@ -835,6 +855,7 @@ body.theme-mysql .chat-messages {
   );
   scrollbar-width: thin;
   scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
+  min-height: 0; /* Allow shrinking */
 }
 
 body.theme-mysql .chat-messages::-webkit-scrollbar {
@@ -929,12 +950,12 @@ body.theme-mysql .bot-message .message-content {
   }
 }
 
-/* Chat Input */
+/* Chat Input - Fixed at bottom, no empty space */
 .chat-input {
   padding: 2rem;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
   border-top: 2px solid rgba(59, 130, 246, 0.2);
-  margin-top: auto; /* Pushes the input to the bottom */
+  flex-shrink: 0; /* Prevent input from shrinking */
 }
 
 .input-group {
@@ -1089,7 +1110,6 @@ body.theme-postgresql::before {
   }
 }
 
-
 /* PostgreSQL Header */
 body.theme-postgresql header {
   background: linear-gradient(
@@ -1109,6 +1129,7 @@ body.theme-postgresql header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
 }
 
 body.theme-postgresql header h1 {
@@ -1160,7 +1181,7 @@ body.theme-postgresql .db-selector select {
   }
 }
 
-/* PostgreSQL Sidebar */
+/* PostgreSQL Sidebar with Global Scroll */
 body.theme-postgresql .sidebar {
   background: linear-gradient(
     135deg,
@@ -1174,6 +1195,22 @@ body.theme-postgresql .sidebar {
   border: 3px solid rgba(148, 163, 184, 0.3);
   border-radius: 28px;
   box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4);
+  overflow-y: auto; /* Global scroll for entire sidebar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+}
+
+body.theme-postgresql .sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.theme-postgresql .sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body.theme-postgresql .sidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #475569, #94a3b8);
+  border-radius: 4px;
 }
 
 body.theme-postgresql .conversations-header h3,
@@ -1204,25 +1241,7 @@ body.theme-postgresql .conversation-item.active {
   color: white;
 }
 
-/* PostgreSQL DB Details - Using common style */
-
-/* PostgreSQL Tables List - Using common style */
-
 /* PostgreSQL Chat */
-body.theme-postgresql .chat-container {
-  background: linear-gradient(
-    135deg,
-    rgba(30, 41, 59, 0.95) 0%,
-    rgba(51, 65, 85, 0.9) 25%,
-    rgba(71, 85, 105, 0.85) 50%,
-    rgba(51, 65, 85, 0.9) 75%,
-    rgba(30, 41, 59, 0.95) 100%
-  );
-  backdrop-filter: blur(40px) saturate(150%);
-  border: 3px solid rgba(148, 163, 184, 0.3);
-  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4);
-}
-
 body.theme-postgresql .chat-header {
   padding: 2rem;
   background: linear-gradient(135deg, rgba(71, 85, 105, 0.3) 0%, rgba(148, 163, 184, 0.2) 100%);
@@ -1230,6 +1249,7 @@ body.theme-postgresql .chat-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
 }
 
 body.theme-postgresql .chat-header h3 {
@@ -1250,6 +1270,7 @@ body.theme-postgresql .chat-messages {
   );
   scrollbar-width: thin;
   scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+  min-height: 0;
 }
 
 body.theme-postgresql .chat-messages::-webkit-scrollbar {
@@ -1395,6 +1416,7 @@ body.theme-mongodb header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
 }
 
 body.theme-mongodb header h1 {
@@ -1444,7 +1466,7 @@ body.theme-mongodb .db-selector select {
   }
 }
 
-/* MongoDB Sidebar */
+/* MongoDB Sidebar with Global Scroll */
 body.theme-mongodb .sidebar {
   background: linear-gradient(
     135deg,
@@ -1458,6 +1480,22 @@ body.theme-mongodb .sidebar {
   border: 3px solid rgba(52, 211, 153, 0.4);
   border-radius: 28px;
   box-shadow: 0 32px 64px rgba(16, 185, 129, 0.3);
+  overflow-y: auto; /* Global scroll for entire sidebar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(52, 211, 153, 0.3) transparent;
+}
+
+body.theme-mongodb .sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.theme-mongodb .sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body.theme-mongodb .sidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  border-radius: 4px;
 }
 
 body.theme-mongodb .conversations-header h3,
@@ -1487,25 +1525,7 @@ body.theme-mongodb .conversation-item.active {
   color: white;
 }
 
-/* MongoDB DB Details - Using common style */
-
-/* MongoDB Tables List - Using common style */
-
 /* MongoDB Chat */
-body.theme-mongodb .chat-container {
-  background: linear-gradient(
-    135deg,
-    rgba(6, 78, 59, 0.95) 0%,
-    rgba(6, 95, 70, 0.9) 25%,
-    rgba(4, 120, 87, 0.85) 50%,
-    rgba(5, 150, 105, 0.8) 75%,
-    rgba(16, 185, 129, 0.75) 100%
-  );
-  backdrop-filter: blur(40px) saturate(180%);
-  border: 3px solid rgba(52, 211, 153, 0.4);
-  box-shadow: 0 32px 64px rgba(16, 185, 129, 0.3);
-}
-
 body.theme-mongodb .chat-header {
   padding: 2rem;
   background: linear-gradient(135deg, rgba(4, 120, 87, 0.4) 0%, rgba(52, 211, 153, 0.3) 100%);
@@ -1513,6 +1533,7 @@ body.theme-mongodb .chat-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
 }
 
 body.theme-mongodb .chat-header h3 {
@@ -1532,6 +1553,7 @@ body.theme-mongodb .chat-messages {
   );
   scrollbar-width: thin;
   scrollbar-color: rgba(52, 211, 153, 0.3) transparent;
+  min-height: 0;
 }
 
 body.theme-mongodb .chat-messages::-webkit-scrollbar {

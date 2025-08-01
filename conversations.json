@@ -48,6 +48,60 @@
       "created_at": "2025-08-01T11:39:32.108943",
       "updated_at": "2025-08-01T11:39:40.484347",
       "messages": []
+    },
+    "c5e261f2-93f3-4c2b-a0c0-e007aee312f0": {
+      "id": "c5e261f2-93f3-4c2b-a0c0-e007aee312f0",
+      "title": "Conversation MYSQL - 01/08/2025 12:36",
+      "db_type": "mysql",
+      "created_at": "2025-08-01T12:36:28.742144",
+      "updated_at": "2025-08-01T12:36:45.377759",
+      "messages": [
+        {
+          "id": "f11ab7c3-068d-47c8-ba05-c44d74974fb4",
+          "content": "wich are our tanmes",
+          "sender": "user",
+          "timestamp": "2025-08-01T12:36:28.755539"
+        },
+        {
+          "id": "1260bb49-0370-420a-9c68-ad5bec038867",
+          "content": "We have 37 tables in our database. They are: columns_priv, component, db, default_roles, engine_cost, func, general_log, global_grants, gtid_executed, help_category, help_keyword, help_relation, help_topic, innodb_index_stats, innodb_table_stats, password_history, plugin, procs_priv, proxies_priv, replication_asynchronous_connection_failover, replication_asynchronous_connection_failover_managed, replication_group_configuration_version, replication_group_member_actions, role_edges, server_cost, servers, slave_master_info, slave_relay_log_info, slave_worker_info, slow_log, tables_priv, time_zone, time_zone_leap_second, time_zone_name, time_zone_transition, time_zone_transition_type, and user.",
+          "sender": "bot",
+          "timestamp": "2025-08-01T12:36:35.678821"
+        },
+        {
+          "id": "76fd7be1-f11d-4898-a9fb-eed9da02c774",
+          "content": "name of tables",
+          "sender": "user",
+          "timestamp": "2025-08-01T12:36:43.822475"
+        },
+        {
+          "id": "388a1034-303a-4ad1-b1de-9df012651229",
+          "content": "Here are the table names: columns_priv, component, db, default_roles, engine_cost, func, general_log, global_grants, gtid_executed, help_category, help_keyword, help_relation, help_topic, innodb_index_stats, innodb_table_stats, password_history, plugin, procs_priv, proxies_priv, replication_asynchronous_connection_failover, replication_asynchronous_connection_failover_managed, replication_group_configuration_version, replication_group_member_actions, role_edges, server_cost, servers, slave_master_info, slave_relay_log_info, slave_worker_info, slow_log, tables_priv, time_zone, time_zone_leap_second, time_zone_name, time_zone_transition, time_zone_transition_type, user.",
+          "sender": "bot",
+          "timestamp": "2025-08-01T12:36:45.377710"
+        }
+      ]
+    },
+    "fce947b6-440b-448d-a820-69c9a503b36f": {
+      "id": "fce947b6-440b-448d-a820-69c9a503b36f",
+      "title": "Conversation MYSQL - 01/08/2025 12:36",
+      "db_type": "mysql",
+      "created_at": "2025-08-01T12:36:34.541888",
+      "updated_at": "2025-08-01T12:36:36.057374",
+      "messages": [
+        {
+          "id": "a46c98a1-b028-4f07-be03-22d0ba72a081",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-08-01T12:36:34.542625"
+        },
+        {
+          "id": "d6bda24c-ebe3-4e53-bc20-0752aa56efdc",
+          "content": "Hi! I'm here to help you with information about database tables. What would you like to know?",
+          "sender": "bot",
+          "timestamp": "2025-08-01T12:36:36.057350"
+        }
+      ]
     }
   },
   "postgresql": {
@@ -65,6 +119,62 @@
       "db_type": "postgresql",
       "created_at": "2025-08-01T11:11:04.102446",
       "updated_at": "2025-08-01T11:11:04.102482",
+      "messages": []
+    },
+    "dd341388-54c1-4fa3-9406-f6a23bf0e6f7": {
+      "id": "dd341388-54c1-4fa3-9406-f6a23bf0e6f7",
+      "title": "Conversation POSTGRESQL - 01/08/2025 12:50",
+      "db_type": "postgresql",
+      "created_at": "2025-08-01T12:50:15.142297",
+      "updated_at": "2025-08-01T12:50:15.142303",
+      "messages": []
+    },
+    "c9d6ae1e-0178-4eea-b1c9-5e38e9189bd4": {
+      "id": "c9d6ae1e-0178-4eea-b1c9-5e38e9189bd4",
+      "title": "Conversation POSTGRESQL - 01/08/2025 12:50",
+      "db_type": "postgresql",
+      "created_at": "2025-08-01T12:50:15.304745",
+      "updated_at": "2025-08-01T12:50:15.304752",
+      "messages": []
+    },
+    "b29e8a1c-cebe-4fe2-8384-5860e64589b7": {
+      "id": "b29e8a1c-cebe-4fe2-8384-5860e64589b7",
+      "title": "Conversation POSTGRESQL - 01/08/2025 12:50",
+      "db_type": "postgresql",
+      "created_at": "2025-08-01T12:50:15.465949",
+      "updated_at": "2025-08-01T12:50:15.465955",
+      "messages": []
+    },
+    "e41980fa-9091-4014-a844-b61e495d8386": {
+      "id": "e41980fa-9091-4014-a844-b61e495d8386",
+      "title": "Conversation POSTGRESQL - 01/08/2025 12:50",
+      "db_type": "postgresql",
+      "created_at": "2025-08-01T12:50:15.633420",
+      "updated_at": "2025-08-01T12:50:15.633425",
+      "messages": []
+    },
+    "e0243526-0a97-46dd-bb7b-aee49d53b61a": {
+      "id": "e0243526-0a97-46dd-bb7b-aee49d53b61a",
+      "title": "Conversation POSTGRESQL - 01/08/2025 12:50",
+      "db_type": "postgresql",
+      "created_at": "2025-08-01T12:50:15.795280",
+      "updated_at": "2025-08-01T12:50:15.795285",
+      "messages": []
+    },
+    "cd4743ad-2847-4f98-b7d5-efe44e6a4803": {
+      "id": "cd4743ad-2847-4f98-b7d5-efe44e6a4803",
+      "title": "Conversation POSTGRESQL - 01/08/2025 12:50",
+      "db_type": "postgresql",
+      "created_at": "2025-08-01T12:50:15.951515",
+      "updated_at": "2025-08-01T12:50:15.951522",
+      "messages": []
+    },
+    "b1107e3e-66be-48c7-9f52-0966498c9a72": {
+      "id": "b1107e3e-66be-48c7-9f52-0966498c9a72",
+      "title": "Conversation POSTGRESQL - 01/08/2025 12:50",
+      "db_type": "postgresql",
+      "created_at": "2025-08-01T12:50:16.136278",
+      "updated_at": "2025-08-01T12:50:16.136310",
       "messages": []
     }
   },
