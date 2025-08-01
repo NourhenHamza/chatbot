@@ -759,6 +759,9 @@ body.theme-mysql .chat-messages::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
+body.theme-mysql .conversation-item:not(.active) .conversation-title {
+  color: #1e40af; /* Bleu foncé pour contraster avec le fond clair */
+}
 body.theme-mysql .user-message .message-content {
   background: linear-gradient(135deg, #f97316 0%, #fb923c 25%, #3b82f6 75%, #2563eb 100%);
   background-size: 200% 200%;
