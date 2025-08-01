@@ -224,6 +224,10 @@ body.theme-mysql header {
   overflow: hidden;
   transform: translateZ(50px);
   transition: all 0.8s var(--quantum-elastic);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 body.theme-mysql header::before {
@@ -289,6 +293,18 @@ body.theme-mysql header h1 {
 }
 
 /* 🚀 MySQL Quantum Selector */
+body.theme-mysql .db-selector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+body.theme-mysql .db-selector label {
+  font-weight: 600;
+  color: #1e40af;
+  font-size: 1.1rem;
+}
+
 body.theme-mysql .db-selector select {
   background: linear-gradient(135deg, #3b82f6 0%, #f97316 50%, #ea580c 100%);
   background-size: 200% 200%;
@@ -297,10 +313,12 @@ body.theme-mysql .db-selector select {
   border-radius: 25px;
   font-weight: 700;
   font-size: 17px;
+  padding: 0.75rem 1.5rem;
   box-shadow: 0 16px 32px rgba(59, 130, 246, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0
     rgba(0, 0, 0, 0.1);
   animation: mysqlSelectorPulse 4s ease-in-out infinite;
   transition: all 0.6s var(--quantum-bounce);
+  cursor: pointer;
 }
 
 @keyframes mysqlSelectorPulse {
@@ -315,8 +333,17 @@ body.theme-mysql .db-selector select {
   }
 }
 
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  flex: 1;
+  gap: 40px;
+  overflow: hidden;
+}
+
 /* 💫 MySQL Premium Sidebar */
 body.theme-mysql .sidebar {
+  width: 350px;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.98) 0%,
@@ -335,7 +362,8 @@ body.theme-mysql .sidebar {
   transition: all 0.8s var(--quantum-elastic);
   position: relative;
   overflow: hidden;
-  min-height: 600px;
+  display: flex;
+  flex-direction: column;
 }
 
 body.theme-mysql .sidebar::before {
@@ -360,11 +388,205 @@ body.theme-mysql .sidebar::before {
   }
 }
 
+/* Conversations Section */
+.conversations-section {
+  padding: 2rem;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  flex-shrink: 0;
+}
+
+.conversations-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.conversations-header h3 {
+  color: #1e40af;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+
+.new-conversation-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.6s var(--quantum-bounce);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+.new-conversation-btn:hover {
+  transform: scale(1.15) rotate(90deg);
+  box-shadow: 0 12px 24px rgba(249, 115, 22, 0.4);
+}
+
+.conversations-list {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
+}
+
+.conversations-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.conversations-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.conversations-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #3b82f6, #f97316);
+  border-radius: 3px;
+}
+
+.conversation-item {
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #fff7ed 50%, #f1f5f9 100%);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.6s var(--quantum-bounce);
+  position: relative;
+  overflow: hidden;
+  text-align: center; /* Centered conversation names */
+}
+
+.conversation-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transition: all 0.8s var(--quantum-smooth);
+}
+
+.conversation-item:hover {
+  background: linear-gradient(135deg, #eff6ff 0%, #fff7ed 50%, #dbeafe 100%);
+  border-color: #f97316;
+  transform: translateX(8px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(249, 115, 22, 0.3);
+}
+
+.conversation-item:hover::before {
+  left: 100%;
+}
+
+.conversation-item.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+  color: white;
+  border-color: transparent;
+  transform: translateX(12px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+}
+
+.conversation-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  white-space: normal; /* Changed from nowrap to normal */
+  overflow: visible; /* Changed from hidden to visible */
+  text-overflow: clip; /* Changed from ellipsis to clip */
+  font-size: 1rem;
+  word-break: break-word; /* Added for long words */
+}
+
+.conversation-date {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.loading, .error, .no-conversations {
+  text-align: center;
+  padding: 1.5rem;
+  color: #64748b;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.error {
+  color: #dc2626;
+}
+
+/* Database Info Section */
+.db-info {
+  padding: 2rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.db-info h3 {
+  color: #1e40af;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+
 body.theme-mysql .db-details {
   background: linear-gradient(135deg, #eff6ff 0%, #fff7ed 50%, #eff6ff 100%);
-  border: 1px solid #bfdbfe;
-  border-left: 4px solid #f97316;
+  border: 2px solid #bfdbfe;
+  border-left: 6px solid #f97316;
   color: #1e40af;
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.1);
+}
+
+.db-details p {
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.db-details strong {
+  color: #f97316;
+  font-weight: 700;
+}
+
+.tables-section h4 {
+  color: #1e40af;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#tablesList {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  list-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
+}
+
+#tablesList::-webkit-scrollbar {
+  width: 6px;
+}
+
+#tablesList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#tablesList::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #3b82f6, #f97316);
+  border-radius: 3px;
 }
 
 body.theme-mysql #tablesList li {
@@ -372,20 +594,47 @@ body.theme-mysql #tablesList li {
   border: 2px solid #e2e8f0;
   color: #475569;
   border-radius: 16px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
   position: relative;
   overflow: hidden;
   transition: all 0.6s var(--quantum-bounce);
+  font-weight: 500;
+}
+
+body.theme-mysql #tablesList li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.1), transparent);
+  transition: all 0.8s var(--quantum-smooth);
 }
 
 body.theme-mysql #tablesList li:hover {
   background: linear-gradient(135deg, #eff6ff 0%, #fff7ed 50%, #dbeafe 100%);
   border-color: #f97316;
   color: #ea580c;
-  transform: translateX(16px) translateZ(10px) rotateY(2deg);
-  box-shadow: 0 16px 32px rgba(249, 115, 22, 0.3);
+  transform: translateX(12px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(249, 115, 22, 0.3);
 }
 
-/* MySQL Chat Container */
+body.theme-mysql #tablesList li:hover::before {
+  left: 100%;
+}
+
+/* Chat Container */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateZ(20px);
+  border-radius: 28px;
+}
+
 body.theme-mysql .chat-container {
   background: linear-gradient(
     135deg,
@@ -398,65 +647,216 @@ body.theme-mysql .chat-container {
   backdrop-filter: blur(40px) saturate(200%);
   border: 3px solid transparent;
   background-clip: padding-box;
-  border-radius: 28px;
   box-shadow: 0 32px 64px rgba(59, 130, 246, 0.2), 0 16px 32px rgba(249, 115, 22, 0.15);
 }
 
+.chat-header {
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(249, 115, 22, 0.1) 100%);
+  border-bottom: 2px solid rgba(59, 130, 246, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h3 {
+  color: #1e40af;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+
+.chat-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.edit-title-btn, .delete-conversation-btn {
+  background: linear-gradient(135deg, #f8fafc 0%, #fff7ed 100%);
+  border: 2px solid rgba(59, 130, 246, 0.2);
+  padding: 0.75rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.6s var(--quantum-bounce);
+  color: #64748b;
+}
+
+.edit-title-btn:hover {
+  background: linear-gradient(135deg, #eff6ff 0%, #fff7ed 100%);
+  border-color: #3b82f6;
+  color: #3b82f6;
+  transform: scale(1.1);
+}
+
+.delete-conversation-btn:hover {
+  background: linear-gradient(135deg, #fef2f2 0%, #fff7ed 100%);
+  border-color: #dc2626;
+  color: #dc2626;
+  transform: scale(1.1);
+}
+
 body.theme-mysql .chat-messages {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
   background: linear-gradient(
     135deg,
     rgba(248, 250, 252, 0.8) 0%,
     rgba(255, 247, 237, 0.6) 50%,
     rgba(239, 246, 255, 0.8) 100%
   );
-  border-radius: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
+}
+
+body.theme-mysql .chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.theme-mysql .chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body.theme-mysql .chat-messages::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #3b82f6, #f97316);
+  border-radius: 4px;
+}
+
+.message {
+  margin-bottom: 2rem;
+  display: flex;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px) scale(0.95); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+  }
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.bot-message {
+  justify-content: flex-start;
+}
+
+.message-content {
+  max-width: 75%;
+  padding: 1.5rem 2rem;
+  border-radius: 24px;
+  word-wrap: break-word;
+  line-height: 1.6;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
 }
 
 body.theme-mysql .user-message .message-content {
   background: linear-gradient(135deg, #f97316 0%, #fb923c 25%, #3b82f6 75%, #2563eb 100%);
+  background-size: 200% 200%;
   color: white;
-  border-radius: 20px 20px 4px 20px;
-  box-shadow: 0 12px 25px rgba(249, 115, 22, 0.4), 0 6px 15px rgba(59, 130, 246, 0.3);
+  border-radius: 24px 24px 6px 24px;
+  box-shadow: 0 16px 32px rgba(249, 115, 22, 0.4), 0 8px 16px rgba(59, 130, 246, 0.3);
   font-weight: 600;
+  animation: userMessageGlow 3s ease-in-out infinite;
+}
+
+@keyframes userMessageGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+    box-shadow: 0 16px 32px rgba(249, 115, 22, 0.4), 0 8px 16px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.5), 0 10px 20px rgba(249, 115, 22, 0.4);
+  }
 }
 
 body.theme-mysql .bot-message .message-content {
   background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 25%, #f97316 75%, #fb923c 100%);
+  background-size: 200% 200%;
   color: white;
   border: none;
-  border-radius: 20px 20px 20px 4px;
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3), 0 4px 12px rgba(249, 115, 22, 0.2);
+  border-radius: 24px 24px 24px 6px;
+  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.3), 0 6px 12px rgba(249, 115, 22, 0.2);
   font-weight: 600;
+  animation: botMessageGlow 4s ease-in-out infinite;
+}
+
+@keyframes botMessageGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+    box-shadow: 0 12px 24px rgba(59, 130, 246, 0.3), 0 6px 12px rgba(249, 115, 22, 0.2);
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 0 16px 32px rgba(249, 115, 22, 0.4), 0 8px 16px rgba(59, 130, 246, 0.3);
+  }
+}
+
+/* Chat Input */
+.chat-input {
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+  border-top: 2px solid rgba(59, 130, 246, 0.2);
+  margin-top: auto; /* Pushes the input to the bottom */
+}
+
+.input-group {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 body.theme-mysql #messageInput {
+  flex: 1;
   background: linear-gradient(135deg, #ffffff 0%, #fff7ed 100%);
-  border: 2px solid #e5e7eb;
+  border: 3px solid rgba(59, 130, 246, 0.2);
   color: #1e40af;
-  border-radius: 25px;
+  border-radius: 30px;
+  padding: 1.25rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.6s var(--quantum-bounce);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.1);
 }
 
 body.theme-mysql #messageInput:focus {
   border-color: #f97316;
-  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.15), 0 12px 24px rgba(59, 130, 246, 0.2);
+  transform: scale(1.02);
+}
+
+body.theme-mysql #messageInput::placeholder {
+  color: rgba(30, 64, 175, 0.6);
+  font-weight: 500;
 }
 
 /* 🚀 ULTRA-PREMIUM SEND BUTTON */
 #sendButton {
-  padding: 28px 48px;
+  padding: 1.5rem 3rem;
   border: none;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 800;
-  min-height: 80px;
+  min-height: 70px;
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   backdrop-filter: blur(20px);
   transform-style: preserve-3d;
   transition: all 0.6s var(--quantum-elastic);
-  border-radius: 25px;
+  border-radius: 30px;
   font-family: "Inter", sans-serif;
 }
 
@@ -465,7 +865,7 @@ body.theme-mysql #sendButton {
   background: linear-gradient(135deg, #3b82f6 0%, #2563eb 25%, #f97316 50%, #ea580c 75%, #dc2626 100%);
   background-size: 300% 300%;
   color: white;
-  box-shadow: 0 16px 32px rgba(59, 130, 246, 0.4), 0 8px 16px rgba(249, 115, 22, 0.3), inset 0 2px 0
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4), 0 10px 20px rgba(249, 115, 22, 0.3), inset 0 2px 0
     rgba(255, 255, 255, 0.2);
   animation: mysqlButtonPulse 4s ease-in-out infinite;
 }
@@ -475,13 +875,12 @@ body.theme-mysql #sendButton {
   100% {
     background-position: 0% 50%;
     transform: scale(1);
-    box-shadow: 0 16px 32px rgba(59, 130, 246, 0.4), 0 8px 16px rgba(249, 115, 22, 0.3), inset 0 2px 0
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4), 0 10px 20px rgba(249, 115, 22, 0.3), inset 0 2px 0
       rgba(255, 255, 255, 0.2);
   }
   50% {
     background-position: 100% 50%;
-    transform: scale(1.02);
-    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.5), 0 12px 24px rgba(249, 115, 22, 0.4), inset 0 2px 0
+    box-shadow: 0 24px 48px rgba(59, 130, 246, 0.5), 0 12px 24px rgba(249, 115, 22, 0.4), inset 0 2px 0
       rgba(255, 255, 255, 0.3);
   }
 }
@@ -508,7 +907,7 @@ body.theme-mysql #sendButton::after {
 }
 
 body.theme-mysql #sendButton:hover {
-  transform: translateY(-8px) scale(1.08) rotateZ(-1deg);
+  transform: translateY(-6px) scale(1.08) rotateZ(-1deg);
   box-shadow: 0 32px 64px rgba(59, 130, 246, 0.6), 0 16px 32px rgba(249, 115, 22, 0.5), inset 0 2px 0
     rgba(255, 255, 255, 0.4);
   animation-duration: 2s;
@@ -523,7 +922,276 @@ body.theme-mysql #sendButton:hover::after {
 }
 
 body.theme-mysql #sendButton:active {
-  transform: translateY(-4px) scale(0.98);
+  transform: translateY(-3px) scale(0.98);
+}
+
+body.theme-mysql #sendButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  animation: none;
+}
+
+/* ===========================================
+   🐘 POSTGRESQL THEME - ELEGANT DARK BLUE
+   =========================================== */
+
+body.theme-postgresql {
+  background: radial-gradient(ellipse at center, #1e293b 0%, #0f172a 50%, #000000 100%);
+  background-attachment: fixed;
+}
+
+body.theme-postgresql::before {
+  background-image: radial-gradient(circle at 30% 40%, rgba(71, 85, 105, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(148, 163, 184, 0.3) 0%, transparent 50%),
+    radial-gradient(2px 2px at 40px 50px, rgba(71, 85, 105, 0.5), transparent),
+    radial-gradient(1px 1px at 90px 30px, rgba(148, 163, 184, 0.4), transparent);
+  background-size: 350px 350px, 450px 450px, 120px 120px, 180px 180px;
+  animation: postgresqlQuantumField 30s ease-in-out infinite;
+}
+
+@keyframes postgresqlQuantumField {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(15px) translateY(-10px) rotate(180deg) scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+/* PostgreSQL Header */
+body.theme-postgresql header {
+  background: linear-gradient(
+    135deg,
+    rgba(30, 41, 59, 0.95) 0%,
+    rgba(51, 65, 85, 0.9) 25%,
+    rgba(71, 85, 105, 0.85) 50%,
+    rgba(51, 65, 85, 0.9) 75%,
+    rgba(30, 41, 59, 0.95) 100%
+  );
+  backdrop-filter: blur(40px) saturate(150%);
+  border: 3px solid rgba(148, 163, 184, 0.3);
+  color: #e2e8f0;
+  border-radius: 28px;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4), inset 0 2px 0 rgba(148, 163, 184, 0.2);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.theme-postgresql header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: transparent;
+  background: linear-gradient(135deg, #475569 0%, #64748b 25%, #94a3b8 50%, #cbd5e1 75%, #e2e8f0 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: postgresqlTextFlow 8s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(148, 163, 184, 0.3);
+  font-style: italic;
+}
+
+@keyframes postgresqlTextFlow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+body.theme-postgresql .db-selector select {
+  background: linear-gradient(135deg, #475569 0%, #64748b 50%, #94a3b8 100%);
+  background-size: 200% 200%;
+  color: #e2e8f0;
+  border: 2px solid rgba(148, 163, 184, 0.3);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+  animation: postgresqlSelectorFlow 5s ease-in-out infinite;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+@keyframes postgresqlSelectorFlow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* PostgreSQL Sidebar */
+body.theme-postgresql .sidebar {
+  background: linear-gradient(
+    135deg,
+    rgba(30, 41, 59, 0.95) 0%,
+    rgba(51, 65, 85, 0.9) 25%,
+    rgba(71, 85, 105, 0.85) 50%,
+    rgba(51, 65, 85, 0.9) 75%,
+    rgba(30, 41, 59, 0.95) 100%
+  );
+  backdrop-filter: blur(40px) saturate(150%);
+  border: 3px solid rgba(148, 163, 184, 0.3);
+  border-radius: 28px;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4);
+}
+
+body.theme-postgresql .conversations-header h3,
+body.theme-postgresql .db-info h3 {
+  color: #e2e8f0;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+body.theme-postgresql .new-conversation-btn {
+  background: linear-gradient(135deg, #475569 0%, #94a3b8 100%);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+body.theme-postgresql .conversation-item {
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.6) 0%, rgba(51, 65, 85, 0.8) 100%);
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  color: #e2e8f0;
+}
+
+body.theme-postgresql .conversation-item:hover {
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.8) 0%, rgba(51, 65, 85, 0.9) 100%);
+  border-color: #94a3b8;
+}
+
+body.theme-postgresql .conversation-item.active {
+  background: linear-gradient(135deg, #475569 0%, #94a3b8 100%);
+  color: white;
+}
+
+body.theme-postgresql .db-details {
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.6) 0%, rgba(51, 65, 85, 0.8) 100%);
+  border: 2px solid rgba(148, 163, 184, 0.3);
+  border-left: 6px solid #94a3b8;
+  color: #e2e8f0;
+}
+
+body.theme-postgresql .db-details strong {
+  color: #cbd5e1;
+}
+
+body.theme-postgresql #tablesList li {
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.6) 0%, rgba(51, 65, 85, 0.8) 100%);
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  color: #e2e8f0;
+}
+
+body.theme-postgresql #tablesList li:hover {
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.8) 0%, rgba(51, 65, 85, 0.9) 100%);
+  border-color: #94a3b8;
+}
+
+/* PostgreSQL Chat */
+body.theme-postgresql .chat-container {
+  flex: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 41, 59, 0.95) 0%,
+    rgba(51, 65, 85, 0.9) 25%,
+    rgba(71, 85, 105, 0.85) 50%,
+    rgba(51, 65, 85, 0.9) 75%,
+    rgba(30, 41, 59, 0.95) 100%
+  );
+  backdrop-filter: blur(40px) saturate(150%);
+  border: 3px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4);
+}
+
+body.theme-postgresql .chat-header {
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.3) 0%, rgba(148, 163, 184, 0.2) 100%);
+  border-bottom: 2px solid rgba(148, 163, 184, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.theme-postgresql .chat-header h3 {
+  color: #e2e8f0;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+body.theme-postgresql .chat-messages {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.6) 0%,
+    rgba(30, 41, 59, 0.4) 50%,
+    rgba(51, 65, 85, 0.6) 100%
+  );
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+}
+
+body.theme-postgresql .chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.theme-postgresql .chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body.theme-postgresql .chat-messages::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #475569, #94a3b8);
+  border-radius: 4px;
+}
+
+body.theme-postgresql .user-message .message-content {
+  background: linear-gradient(135deg, #475569 0%, #64748b 50%, #94a3b8 100%);
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+body.theme-postgresql .bot-message .message-content {
+  background: linear-gradient(135deg, #64748b 0%, #94a3b8 50%, #cbd5e1 100%);
+  color: #1e293b;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+body.theme-postgresql #messageInput {
+  flex: 1;
+  background: linear-gradient(135deg, rgba(71, 85, 105, 0.8) 0%, rgba(51, 65, 85, 0.9) 100%);
+  border: 3px solid rgba(148, 163, 184, 0.3);
+  color: #e2e8f0;
+  border-radius: 30px;
+  padding: 1.25rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.6s var(--quantum-bounce);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+body.theme-postgresql #messageInput:focus {
+  border-color: #94a3b8;
+  box-shadow: 0 0 0 4px rgba(148, 163, 184, 0.2), 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+body.theme-postgresql #messageInput::placeholder {
+  color: rgba(226, 232, 240, 0.6);
 }
 
 /* PostgreSQL Send Button */
@@ -549,38 +1217,280 @@ body.theme-postgresql #sendButton {
   }
 }
 
-body.theme-postgresql #sendButton::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.3), transparent);
-  transition: all 0.8s var(--quantum-smooth);
-}
-
 body.theme-postgresql #sendButton::after {
   content: "⚡";
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%) scale(0);
-  font-size: 1.5rem;
-  transition: all 0.6s var(--quantum-bounce);
 }
 
 body.theme-postgresql #sendButton:hover {
-  transform: translateY(-8px) scale(1.08) rotateZ(1deg);
+  transform: translateY(-6px) scale(1.08) rotateZ(1deg);
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), inset 0 2px 0 rgba(255, 255, 255, 0.2);
 }
 
-body.theme-postgresql #sendButton:hover::before {
-  left: 100%;
+body.theme-postgresql #sendButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  animation: none;
 }
 
-body.theme-postgresql #sendButton:hover::after {
-  transform: translateY(-50%) scale(1) rotate(-360deg);
+/* ===========================================
+   🍃 MONGODB THEME - VIBRANT GREEN NATURE
+   =========================================== */
+
+body.theme-mongodb {
+  background: radial-gradient(ellipse at bottom, #064e3b 0%, #065f46 25%, #047857 50%, #059669 75%, #000000 100%);
+  background-attachment: fixed;
+}
+
+body.theme-mongodb::before {
+  background-image: radial-gradient(circle at 40% 30%, rgba(16, 185, 129, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 60% 70%, rgba(5, 150, 105, 0.3) 0%, transparent 50%),
+    radial-gradient(2px 2px at 50px 40px, rgba(16, 185, 129, 0.5), transparent),
+    radial-gradient(1px 1px at 100px 20px, rgba(52, 211, 153, 0.4), transparent);
+  background-size: 400px 400px, 500px 500px, 140px 140px, 200px 200px;
+  animation: mongodbQuantumField 35s ease-in-out infinite;
+}
+
+@keyframes mongodbQuantumField {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    opacity: 0.8;
+  }
+  33% {
+    transform: translateX(-10px) translateY(15px) rotate(120deg) scale(1.1);
+    opacity: 1;
+  }
+  66% {
+    transform: translateX(20px) translateY(-5px) rotate(240deg) scale(0.95);
+    opacity: 0.7;
+  }
+}
+
+/* MongoDB Header */
+body.theme-mongodb header {
+  background: linear-gradient(
+    135deg,
+    rgba(6, 78, 59, 0.95) 0%,
+    rgba(6, 95, 70, 0.9) 25%,
+    rgba(4, 120, 87, 0.85) 50%,
+    rgba(5, 150, 105, 0.8) 75%,
+    rgba(16, 185, 129, 0.75) 100%
+  );
+  backdrop-filter: blur(40px) saturate(180%);
+  border: 3px solid rgba(52, 211, 153, 0.4);
+  color: #ecfdf5;
+  border-radius: 28px;
+  box-shadow: 0 32px 64px rgba(16, 185, 129, 0.3), inset 0 2px 0 rgba(52, 211, 153, 0.3);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.theme-mongodb header h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: transparent;
+  background: linear-gradient(135deg, #064e3b 0%, #047857 25%, #10b981 50%, #34d399 75%, #6ee7b7 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: mongodbTextGrow 10s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(52, 211, 153, 0.4);
+}
+
+@keyframes mongodbTextGrow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+body.theme-mongodb .db-selector select {
+  background: linear-gradient(135deg, #10b981 0%, #059669 25%, #047857 50%, #065f46 75%, #064e3b 100%);
+  background-size: 200% 200%;
+  color: white;
+  border: 2px solid rgba(52, 211, 153, 0.4);
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 16px 32px rgba(16, 185, 129, 0.4);
+  animation: mongodbSelectorGrow 6s ease-in-out infinite;
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes mongodbSelectorGrow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* MongoDB Sidebar */
+body.theme-mongodb .sidebar {
+  background: linear-gradient(
+    135deg,
+    rgba(6, 78, 59, 0.95) 0%,
+    rgba(6, 95, 70, 0.9) 25%,
+    rgba(4, 120, 87, 0.85) 50%,
+    rgba(5, 150, 105, 0.8) 75%,
+    rgba(16, 185, 129, 0.75) 100%
+  );
+  backdrop-filter: blur(40px) saturate(180%);
+  border: 3px solid rgba(52, 211, 153, 0.4);
+  border-radius: 28px;
+  box-shadow: 0 32px 64px rgba(16, 185, 129, 0.3);
+}
+
+body.theme-mongodb .conversations-header h3,
+body.theme-mongodb .db-info h3 {
+  color: #ecfdf5;
+  font-family: "Poppins", sans-serif;
+}
+
+body.theme-mongodb .new-conversation-btn {
+  background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  box-shadow: 0 8px 16px rgba(16, 185, 129, 0.4);
+}
+
+body.theme-mongodb .conversation-item {
+  background: linear-gradient(135deg, rgba(4, 120, 87, 0.6) 0%, rgba(6, 95, 70, 0.8) 100%);
+  border: 2px solid rgba(52, 211, 153, 0.3);
+  color: #ecfdf5;
+}
+
+body.theme-mongodb .conversation-item:hover {
+  background: linear-gradient(135deg, rgba(4, 120, 87, 0.8) 0%, rgba(6, 95, 70, 0.9) 100%);
+  border-color: #34d399;
+}
+
+body.theme-mongodb .conversation-item.active {
+  background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  color: white;
+}
+
+body.theme-mongodb .db-details {
+  background: linear-gradient(135deg, rgba(4, 120, 87, 0.6) 0%, rgba(6, 95, 70, 0.8) 100%);
+  border: 2px solid rgba(52, 211, 153, 0.4);
+  border-left: 6px solid #34d399;
+  color: #ecfdf5;
+}
+
+body.theme-mongodb .db-details strong {
+  color: #6ee7b7;
+}
+
+body.theme-mongodb #tablesList li {
+  background: linear-gradient(135deg, rgba(4, 120, 87, 0.6) 0%, rgba(6, 95, 70, 0.8) 100%);
+  border: 2px solid rgba(52, 211, 153, 0.3);
+  color: #ecfdf5;
+}
+
+body.theme-mongodb #tablesList li:hover {
+  background: linear-gradient(135deg, rgba(4, 120, 87, 0.8) 0%, rgba(6, 95, 70, 0.9) 100%);
+  border-color: #34d399;
+}
+
+/* MongoDB Chat */
+body.theme-mongodb .chat-container {
+  flex: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(6, 78, 59, 0.95) 0%,
+    rgba(6, 95, 70, 0.9) 25%,
+    rgba(4, 120, 87, 0.85) 50%,
+    rgba(5, 150, 105, 0.8) 75%,
+    rgba(16, 185, 129, 0.75) 100%
+  );
+  backdrop-filter: blur(40px) saturate(180%);
+  border: 3px solid rgba(52, 211, 153, 0.4);
+  box-shadow: 0 32px 64px rgba(16, 185, 129, 0.3);
+}
+
+body.theme-mongodb .chat-header {
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(4, 120, 87, 0.4) 0%, rgba(52, 211, 153, 0.3) 100%);
+  border-bottom: 2px solid rgba(52, 211, 153, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.theme-mongodb .chat-header h3 {
+  color: #ecfdf5;
+  font-family: "Poppins", sans-serif;
+}
+
+body.theme-mongodb .chat-messages {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background: linear-gradient(
+    135deg,
+    rgba(6, 78, 59, 0.6) 0%,
+    rgba(4, 120, 87, 0.4) 50%,
+    rgba(5, 150, 105, 0.6) 100%
+  );
+  scrollbar-width: thin;
+  scrollbar-color: rgba(52, 211, 153, 0.3) transparent;
+}
+
+body.theme-mongodb .chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.theme-mongodb .chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body.theme-mongodb .chat-messages::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  border-radius: 4px;
+}
+
+body.theme-mongodb .user-message .message-content {
+  background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+body.theme-mongodb .bot-message .message-content {
+  background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+body.theme-mongodb #messageInput {
+  flex: 1;
+  background: linear-gradient(135deg, rgba(4, 120, 87, 0.8) 0%, rgba(6, 95, 70, 0.9) 100%);
+  border: 3px solid rgba(52, 211, 153, 0.4);
+  color: #ecfdf5;
+  border-radius: 30px;
+  padding: 1.25rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.6s var(--quantum-bounce);
+  box-shadow: 0 8px 16px rgba(16, 185, 129, 0.1);
+}
+
+body.theme-mongodb #messageInput:focus {
+  border-color: #34d399;
+  box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.3), 0 12px 24px rgba(16, 185, 129, 0.2);
+  transform: scale(1.02);
+}
+
+body.theme-mongodb #messageInput::placeholder {
+  color: rgba(236, 253, 245, 0.6);
 }
 
 /* MongoDB Send Button */
@@ -598,872 +1508,230 @@ body.theme-mongodb #sendButton {
   100% {
     background-position: 0% 50%;
     transform: scale(1);
-  }
-  50% {
-    background-position: 100% 50%;
-    transform: scale(1.03);
-  }
-}
-
-body.theme-mongodb #sendButton::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: all 0.8s var(--quantum-smooth);
-}
-
-body.theme-mongodb #sendButton::after {
-  content: "🌿";
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%) scale(0);
-  font-size: 1.5rem;
-  transition: all 0.6s var(--quantum-bounce);
-}
-
-body.theme-mongodb #sendButton:hover {
-  transform: translateY(-8px) scale(1.08) rotateZ(-2deg);
-  box-shadow: 0 24px 48px rgba(16, 185, 129, 0.6), inset 0 2px 0 rgba(255, 255, 255, 0.3);
-}
-
-body.theme-mongodb #sendButton:hover::before {
-  left: 100%;
-}
-
-body.theme-mongodb #sendButton:hover::after {
-  transform: translateY(-50%) scale(1) rotate(360deg);
-}
-
-/* ===========================================
-   🔘 POSTGRESQL THEME - NEURAL ELEGANCE
-   =========================================== */
-
-body.theme-postgresql {
-  background: radial-gradient(ellipse at center, #1e293b 0%, #334155 25%, #0f172a 50%, #000000 100%);
-  background-attachment: fixed;
-}
-
-body.theme-postgresql::before {
-  background-image: radial-gradient(circle at 30% 70%, rgba(148, 163, 184, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 70% 30%, rgba(203, 213, 225, 0.15) 0%, transparent 50%),
-    radial-gradient(1px 1px at 40px 60px, rgba(148, 163, 184, 0.3), transparent),
-    radial-gradient(2px 2px at 120px 40px, rgba(203, 213, 225, 0.2), transparent);
-  background-size: 400px 400px, 300px 300px, 80px 80px, 120px 120px;
-  animation: postgresqlNeuralField 30s ease-in-out infinite;
-}
-
-@keyframes postgresqlNeuralField {
-  0%,
-  100% {
-    transform: translateX(0) translateY(0) rotate(0deg) scale(1);
-    opacity: 0.7;
-  }
-  25% {
-    transform: translateX(-10px) translateY(15px) rotate(90deg) scale(1.05);
-    opacity: 0.9;
-  }
-  50% {
-    transform: translateX(15px) translateY(-10px) rotate(180deg) scale(0.95);
-    opacity: 0.8;
-  }
-  75% {
-    transform: translateX(-5px) translateY(-20px) rotate(270deg) scale(1.1);
-    opacity: 0.6;
-  }
-}
-
-/* 🌌 PostgreSQL Cosmic Header */
-body.theme-postgresql header {
-  background: linear-gradient(
-    135deg,
-    rgba(15, 23, 42, 0.98) 0%,
-    rgba(30, 41, 59, 0.95) 25%,
-    rgba(51, 65, 85, 0.92) 50%,
-    rgba(30, 41, 59, 0.95) 75%,
-    rgba(15, 23, 42, 0.98) 100%
-  );
-  backdrop-filter: blur(40px) saturate(180%) brightness(110%);
-  border: 3px solid transparent;
-  background-clip: padding-box;
-  color: #e2e8f0;
-  border-radius: 32px;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4), 0 20px 40px rgba(148, 163, 184, 0.1), inset 0 2px 0
-    rgba(255, 255, 255, 0.1), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  transform: translateZ(50px);
-  transition: all 0.8s var(--quantum-elastic);
-}
-
-body.theme-postgresql header h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 3.4rem;
-  font-weight: 800;
-  font-style: italic;
-  color: transparent;
-  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 25%, #94a3b8 50%, #cbd5e1 75%, #e2e8f0 100%);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: postgresqlTextFlow 8s ease-in-out infinite;
-  text-shadow: 0 0 40px rgba(148, 163, 184, 0.4);
-  letter-spacing: -0.02em;
-  position: relative;
-  z-index: 2;
-}
-
-@keyframes postgresqlTextFlow {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-body.theme-postgresql .db-selector select {
-  background: linear-gradient(135deg, #475569 0%, #334155 50%, #1e293b 100%);
-  background-size: 200% 200%;
-  color: #e2e8f0;
-  border: 2px solid rgba(148, 163, 184, 0.3);
-  border-radius: 30px;
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-  font-style: italic;
-  font-size: 17px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.1);
-  animation: postgresqlSelectorNeural var(--neural-pulse) ease-in-out infinite;
-  transition: all 0.6s var(--quantum-bounce);
-}
-
-body.theme-postgresql .sidebar {
-  background: linear-gradient(
-    135deg,
-    rgba(15, 23, 42, 0.95) 0%,
-    rgba(30, 41, 59, 0.92) 50%,
-    rgba(15, 23, 42, 0.95) 100%
-  );
-  backdrop-filter: blur(40px) saturate(180%);
-  border: 3px solid transparent;
-  background-clip: padding-box;
-  border-radius: 32px;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.1);
-  transform: translateZ(30px);
-  transition: all 0.8s var(--quantum-elastic);
-  position: relative;
-  overflow: hidden;
-}
-
-body.theme-postgresql .chat-container {
-  background: linear-gradient(
-    135deg,
-    rgba(15, 23, 42, 0.95) 0%,
-    rgba(30, 41, 59, 0.92) 50%,
-    rgba(15, 23, 42, 0.95) 100%
-  );
-  backdrop-filter: blur(40px) saturate(180%);
-  border: 3px solid transparent;
-  background-clip: padding-box;
-  border-radius: 32px;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.1);
-}
-
-body.theme-postgresql .chat-messages {
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.3) 0%, rgba(51, 65, 85, 0.2) 100%);
-}
-
-body.theme-postgresql .user-message .message-content {
-  background: linear-gradient(135deg, #475569 0%, #334155 100%);
-  color: #e2e8f0;
-  border-radius: 24px 24px 4px 24px;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-}
-
-body.theme-postgresql .bot-message .message-content {
-  background: linear-gradient(135deg, rgba(71, 85, 105, 0.8) 0%, rgba(100, 116, 139, 0.6) 100%);
-  color: #e2e8f0;
-  border: 1px solid #64748b;
-  border-radius: 24px 24px 24px 4px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  font-family: "Inter", sans-serif;
-}
-
-body.theme-postgresql #messageInput {
-  background: linear-gradient(135deg, rgba(71, 85, 105, 0.6) 0%, rgba(100, 116, 139, 0.4) 100%);
-  border: 2px solid #475569;
-  color: #e2e8f0;
-  border-radius: 30px;
-  font-family: "Inter", sans-serif;
-}
-
-body.theme-postgresql #messageInput:focus {
-  border-color: #94a3b8;
-  box-shadow: 0 0 0 4px rgba(148, 163, 184, 0.2);
-}
-
-/* ===========================================
-   🟢 MONGODB THEME - ORGANIC QUANTUM
-   =========================================== */
-
-body.theme-mongodb {
-  background: radial-gradient(ellipse at bottom, #064e3b 0%, #065f46 25%, #047857 50%, #000000 100%);
-  background-attachment: fixed;
-}
-
-body.theme-mongodb::before {
-  background-image: radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.25) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(52, 211, 153, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 60% 60%, rgba(110, 231, 183, 0.15) 0%, transparent 50%),
-    radial-gradient(2px 2px at 50px 30px, rgba(16, 185, 129, 0.4), transparent),
-    radial-gradient(1px 1px at 100px 80px, rgba(52, 211, 153, 0.3), transparent);
-  background-size: 350px 350px, 250px 250px, 400px 400px, 120px 120px, 80px 80px;
-  animation: mongoOrganicField 35s ease-in-out infinite;
-}
-
-@keyframes mongoOrganicField {
-  0%,
-  100% {
-    transform: translateX(0) translateY(0) rotate(0deg) scale(1);
-    opacity: 0.8;
-  }
-  20% {
-    transform: translateX(15px) translateY(-10px) rotate(72deg) scale(1.05);
-    opacity: 1;
-  }
-  40% {
-    transform: translateX(-10px) translateY(20px) rotate(144deg) scale(0.95);
-    opacity: 0.9;
-  }
-  60% {
-    transform: translateX(20px) translateY(5px) rotate(216deg) scale(1.1);
-    opacity: 0.7;
-  }
-  80% {
-    transform: translateX(-5px) translateY(-15px) rotate(288deg) scale(1.02);
-    opacity: 0.85;
-  }
-}
-
-body.theme-mongodb header {
-  background: linear-gradient(
-    135deg,
-    rgba(6, 78, 59, 0.98) 0%,
-    rgba(6, 95, 70, 0.95) 25%,
-    rgba(4, 120, 87, 0.92) 50%,
-    rgba(6, 95, 70, 0.95) 75%,
-    rgba(6, 78, 59, 0.98) 100%
-  );
-  backdrop-filter: blur(40px) saturate(200%) brightness(110%);
-  border: 3px solid transparent;
-  background-clip: padding-box;
-  color: #d1fae5;
-  border-radius: 40px;
-  box-shadow: 0 32px 64px rgba(16, 185, 129, 0.3), 0 16px 32px rgba(16, 185, 129, 0.2), inset 0 2px 0
-    rgba(255, 255, 255, 0.1), inset 0 -2px 0 rgba(16, 185, 129, 0.1);
-  position: relative;
-  overflow: hidden;
-  transform: translateZ(50px);
-  transition: all 0.8s var(--quantum-elastic);
-}
-
-body.theme-mongodb header h1 {
-  font-family: "Poppins", sans-serif;
-  font-size: 3.3rem;
-  font-weight: 800;
-  color: transparent;
-  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 20%, #6ee7b7 40%, #34d399 60%, #10b981 80%, #d1fae5 100%);
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: mongoTextGrow 7s ease-in-out infinite;
-  text-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
-  letter-spacing: -0.02em;
-  position: relative;
-  z-index: 2;
-}
-
-@keyframes mongoTextGrow {
-  0%,
-  100% {
-    background-position: 0% 50%;
-    transform: scale(1);
+    box-shadow: 0 16px 32px rgba(16, 185, 129, 0.5), inset 0 2px 0 rgba(255, 255, 255, 0.2);
   }
   50% {
     background-position: 100% 50%;
     transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(16, 185, 129, 0.6), inset 0 2px 0 rgba(255, 255, 255, 0.3);
   }
 }
 
-body.theme-mongodb .db-selector select {
-  background: linear-gradient(135deg, #10b981 0%, #059669 30%, #047857 60%, #065f46 100%);
-  background-size: 300% 300%;
-  color: white;
-  border: 2px solid rgba(16, 185, 129, 0.3);
-  border-radius: 35px;
-  font-family: "Poppins", sans-serif;
+body.theme-mongodb #sendButton::after {
+  content: "🌱";
+}
+
+body.theme-mongodb #sendButton:hover {
+  transform: translateY(-6px) scale(1.08) rotateZ(-0.5deg);
+  box-shadow: 0 32px 64px rgba(16, 185, 129, 0.6), inset 0 2px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Modals */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.95) 100%);
+  backdrop-filter: blur(40px);
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  animation: modalAppear 0.6s var(--quantum-bounce);
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-content h4 {
+  margin-bottom: 1.5rem;
+  color: #1e40af;
+  font-size: 1.5rem;
   font-weight: 700;
-  font-size: 17px;
-  box-shadow: 0 16px 32px rgba(16, 185, 129, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.2);
-  animation: mongoSelectorGrow 5s ease-in-out infinite;
+  font-family: "Inter", sans-serif;
+}
+
+.modal-content p {
+  margin-bottom: 2rem;
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+#newTitleInput {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 3px solid rgba(59, 130, 246, 0.2);
+  border-radius: 16px;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  outline: none;
   transition: all 0.6s var(--quantum-bounce);
-}
-
-body.theme-mongodb .sidebar {
-  background: linear-gradient(135deg, rgba(6, 78, 59, 0.95) 0%, rgba(6, 95, 70, 0.92) 50%, rgba(6, 78, 59, 0.95) 100%);
-  backdrop-filter: blur(40px) saturate(200%);
-  border: 3px solid transparent;
-  background-clip: padding-box;
-  border-radius: 40px;
-  box-shadow: 0 32px 64px rgba(16, 185, 129, 0.25), inset 0 2px 0 rgba(255, 255, 255, 0.1);
-  transform: translateZ(30px);
-  transition: all 0.8s var(--quantum-elastic);
-  position: relative;
-  overflow: hidden;
-}
-
-body.theme-mongodb .chat-container {
-  background: linear-gradient(135deg, rgba(6, 78, 59, 0.95) 0%, rgba(6, 95, 70, 0.92) 50%, rgba(6, 78, 59, 0.95) 100%);
-  backdrop-filter: blur(40px) saturate(200%);
-  border: 3px solid transparent;
-  background-clip: padding-box;
-  border-radius: 40px;
-  box-shadow: 0 32px 64px rgba(16, 185, 129, 0.25), inset 0 2px 0 rgba(255, 255, 255, 0.1);
-}
-
-body.theme-mongodb .chat-messages {
-  background: linear-gradient(135deg, rgba(6, 95, 70, 0.3) 0%, rgba(4, 120, 87, 0.2) 100%);
-}
-
-body.theme-mongodb .user-message .message-content {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: white;
-  border-radius: 25px 25px 5px 25px;
-  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
-  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  color: #1e40af;
   font-weight: 500;
 }
 
-body.theme-mongodb .bot-message .message-content {
-  background: linear-gradient(135deg, rgba(52, 211, 153, 0.2) 0%, rgba(16, 185, 129, 0.15) 100%);
-  color: #d1fae5;
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  border-radius: 25px 25px 25px 5px;
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
-  font-family: "Poppins", sans-serif;
+#newTitleInput:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.15);
+  transform: scale(1.02);
 }
 
-body.theme-mongodb #messageInput {
-  background: linear-gradient(135deg, rgba(52, 211, 153, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%);
-  border: 2px solid rgba(16, 185, 129, 0.3);
-  color: #d1fae5;
-  border-radius: 35px;
-  font-family: "Poppins", sans-serif;
+.modal-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
 }
 
-body.theme-mongodb #messageInput:focus {
-  border-color: #10b981;
-  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+.save-btn, .delete-btn, .cancel-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.6s var(--quantum-bounce);
+  min-width: 120px;
+  font-family: "Inter", sans-serif;
 }
 
-/* Enhanced Database Logos with Themes */
-body.theme-mysql .db-selector::before {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3e%3cpath d='M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H.002c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 1.72.384 3.564.422 5.53z'/%3e%3c/svg%3e");
-  filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.6));
+.save-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+  color: white;
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
 }
 
-body.theme-postgresql .db-selector::before {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e2e8f0'%3e%3cpath d='M17.128 0C15.892 0 14.758.256 13.726.768c-.515.256-1.03.64-1.288 1.152-.128.256-.128.512-.128.768v.384c0 .128 0 .256.128.384.128.128.256.128.384.128h.256c.128 0 .256 0 .384-.128.128-.128.128-.256.128-.384v-.256c0-.128 0-.256.128-.384.128-.128.256-.256.512-.384.512-.256 1.024-.384 1.536-.384 1.024 0 1.92.512 2.432 1.28.256.384.384.896.384 1.408v.256c0 .128 0 .256-.128.384-.128.128-.256.128-.384.128h-.256c-.128 0-.256 0-.384.128-.128.128-.128.256-.128.384v.256c0 .128 0 .256.128.384.128.128.256.128.384.128h.256c.512 0 .896-.128 1.28-.384.384-.256.64-.64.768-1.024.128-.384.128-.768.128-1.152V3.84c0-1.024-.256-1.92-.768-2.688C19.432.384 18.408 0 17.128 0z'/%3e%3c/svg%3e");
-  filter: drop-shadow(0 0 8px rgba(148, 163, 184, 0.6));
+.save-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(249, 115, 22, 0.4);
 }
 
-body.theme-mongodb .db-selector::before {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3e%3cpath d='M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z'/%3e%3c/svg%3e");
-  filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.6));
+.delete-btn {
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  color: white;
+  box-shadow: 0 8px 16px rgba(220, 38, 38, 0.3);
 }
 
-/* 🌟 ENHANCED DATABASE LOGOS */
-body.theme-mysql .db-selector::before,
-body.theme-postgresql .db-selector::before,
-body.theme-mongodb .db-selector::before {
-  width: 40px;
-  height: 40px;
-  animation: logoQuantumPulse 4s ease-in-out infinite;
+.delete-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(220, 38, 38, 0.4);
 }
 
-@keyframes logoQuantumPulse {
-  0%,
-  100% {
-    transform: translateY(-50%) scale(1) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-50%) scale(1.15) rotate(5deg);
-  }
+.cancel-btn {
+  background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+  color: white;
+  box-shadow: 0 8px 16px rgba(107, 114, 128, 0.3);
 }
 
-/* 🎨 ULTRA-RESPONSIVE QUANTUM DESIGN */
-@media (max-width: 1600px) {
-  .container {
-    padding: 32px;
-    gap: 32px;
-  }
-  .sidebar {
-    width: 400px;
-  }
+.cancel-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(107, 114, 128, 0.4);
 }
 
+/* Responsive Design */
 @media (max-width: 1200px) {
   .container {
-    padding: 24px;
-    gap: 24px;
+    padding: 20px;
+    gap: 20px;
   }
+  
   .sidebar {
-    width: 360px;
+    width: 300px;
   }
+  
   header h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem !important;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 20px;
-    gap: 20px;
+    padding: 15px;
+    gap: 15px;
   }
-
+  
+  header {
+    padding: 1.5rem !important;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  header h1 {
+    font-size: 2rem !important;
+  }
+  
   .main-content {
     flex-direction: column;
+    gap: 20px;
   }
-
+  
   .sidebar {
     width: 100%;
-    max-height: 400px;
-    order: 2;
+    max-height: 50vh;
   }
-
+  
+  .conversations-section {
+    padding: 1.5rem;
+  }
+  
+  .db-info {
+    padding: 1.5rem;
+  }
+  
   .chat-container {
-    order: 1;
-    min-height: 700px;
+    min-height: 50vh;
   }
-
-  header {
-    flex-direction: column;
-    gap: 32px;
-    text-align: center;
-    padding: 36px;
+  
+  .chat-header,
+  .chat-input {
+    padding: 1.5rem;
   }
-
-  header h1 {
-    font-size: 2.2rem;
+  
+  .chat-messages {
+    padding: 1.5rem;
   }
-
+  
   .message-content {
     max-width: 90%;
+    padding: 1.25rem 1.5rem;
   }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 16px;
-    gap: 16px;
+  
+  .input-group {
+    gap: 1rem;
   }
-
-  header {
-    padding: 28px;
-  }
-
-  header h1 {
-    font-size: 1.9rem;
-  }
-
-  .sidebar {
-    padding: 28px;
-    max-height: 350px;
-  }
-
-  .chat-messages {
-    padding: 24px;
-  }
-
-  .chat-input {
-    padding: 24px;
-  }
-
-  .message-content {
-    padding: 24px 28px;
-    font-size: 1rem;
-  }
-
-  #messageInput,
+  
   #sendButton {
-    min-height: 70px;
+    padding: 1.25rem 2rem;
+    font-size: 1rem;
+    min-height: 60px;
+  }
+  
+  .modal-content {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+    padding: 2rem;
   }
 }
 
-/* Base Layout Structure */
-header {
-  padding: 48px 56px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.db-selector {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  position: relative;
-  z-index: 1;
-}
-
-.db-selector label {
-  font-weight: 800;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-}
-
-.db-selector select {
-  padding: 22px 28px 22px 80px;
-  cursor: pointer;
-  outline: none;
-  min-width: 220px;
-  appearance: none;
-  position: relative;
-  font-size: 18px;
-  font-weight: 800;
-}
-
-.db-selector::before {
-  content: "";
-  position: absolute;
-  left: 28px;
-  top: 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.main-content {
-  display: flex;
-  flex: 1;
-  gap: 40px;
-  overflow: hidden;
-}
-
-.sidebar {
-  width: 480px;
-  padding: 48px;
-  overflow-y: auto;
-  position: relative;
-}
-
-.db-info h3 {
-  margin-bottom: 40px;
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.db-details {
-  padding: 40px;
-  margin-bottom: 48px;
-  position: relative;
-  overflow: hidden;
-}
-
-.db-details p {
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-  line-height: 1.9;
-  font-weight: 600;
-}
-
-.db-details strong {
-  font-weight: 900;
-}
-
-.tables-section h4 {
-  margin-bottom: 32px;
-  font-size: 1.6rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-#tablesList {
-  list-style: none;
-  max-height: 400px;
-  overflow-y: auto;
-  padding-right: 12px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(249, 115, 22, 0.5) transparent;
-}
-
-#tablesList::-webkit-scrollbar {
-  width: 8px;
-}
-
-#tablesList::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-}
-
-#tablesList::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #f97316, #3b82f6);
-  border-radius: 10px;
-}
-
-#tablesList::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #ea580c, #2563eb);
-}
-
-#tablesList li {
-  padding: 24px 32px;
-  margin-bottom: 16px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-.chat-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  position: relative;
-  transform: translateZ(30px);
-  transition: all 0.8s var(--quantum-elastic);
-}
-
-.chat-container:hover {
-  transform: translateZ(50px) rotateY(1deg);
-}
-
-.chat-messages {
-  flex: 1;
-  padding: 48px;
-  overflow-y: auto;
-  position: relative;
-}
-
-.message {
-  margin-bottom: 40px;
-  display: flex;
-  align-items: flex-start;
-  animation: quantumMessageSlide 1s var(--quantum-elastic);
-  transform-style: preserve-3d;
-}
-
-@keyframes quantumMessageSlide {
-  from {
-    opacity: 0;
-    transform: translateY(40px) translateZ(-30px) rotateX(-15deg) scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) translateZ(0) rotateX(0deg) scale(1);
-  }
-}
-
-.user-message {
-  justify-content: flex-end;
-  margin-left: 20%;
-}
-
-.bot-message {
-  justify-content: flex-start;
-  margin-right: 20%;
-}
-
-.message-content {
-  max-width: 75%;
-  padding: 28px 36px;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  word-wrap: break-word;
-  position: relative;
-  transition: all 0.8s var(--quantum-elastic);
-  transform-style: preserve-3d;
-  backdrop-filter: blur(20px);
-  border: 2px solid transparent;
-  background-clip: padding-box;
-}
-
-.message-content:hover {
-  transform: translateZ(15px) rotateX(3deg) scale(1.02);
-}
-
-.chat-input {
-  padding: 48px;
-  position: relative;
-}
-
-.input-group {
-  display: flex;
-  gap: 24px;
-  align-items: flex-end;
-  position: relative;
-}
-
-#messageInput {
-  flex: 1;
-  padding: 28px 36px;
-  outline: none;
-  font-size: 1.1rem;
-  font-family: inherit;
-  transition: all 0.8s var(--quantum-elastic);
-  resize: none;
-  min-height: 80px;
-  max-height: 160px;
-  font-weight: 500;
-  backdrop-filter: blur(20px);
-  border: 3px solid transparent;
-  background-clip: padding-box;
-}
-
-#messageInput:focus {
-  transform: translateY(-4px) scale(1.02);
-}
-
-/* 🔮 QUANTUM ACCESSIBILITY */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-*:focus-visible {
-  outline: 4px solid currentColor;
-  outline-offset: 4px;
-  border-radius: 8px;
-}
-
-::selection {
-  background: rgba(255, 255, 255, 0.3);
-  color: inherit;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body.theme-mysql .user-message .message-content {
-  background: linear-gradient(135deg, #f97316 0%, #fb923c 25%, #3b82f6 75%, #2563eb 100%);
-  color: white;
-  border-radius: 20px 20px 4px 20px;
-  box-shadow: 0 12px 25px rgba(249, 115, 22, 0.4), 0 6px 15px rgba(59, 130, 246, 0.3);
-  font-weight: 600;
-}
-
-body.theme-mysql .bot-message .message-content {
-  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 25%, #f97316 75%, #fb923c 100%);
-  color: white;
-  border: none;
-  border-radius: 20px 20px 20px 4px;
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3), 0 4px 12px rgba(249, 115, 22, 0.2);
-  font-weight: 600;
-}
-
-body.theme-postgresql #tablesList {
-  list-style: none;
-  max-height: 400px;
-  overflow-y: auto;
-  padding-right: 12px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(148, 163, 184, 0.5) transparent;
-}
-
-body.theme-postgresql #tablesList::-webkit-scrollbar {
-  width: 6px;
-}
-
-body.theme-postgresql #tablesList::-webkit-scrollbar-track {
-  background: rgba(148, 163, 184, 0.1);
-  border-radius: 3px;
-}
-
-body.theme-postgresql #tablesList::-webkit-scrollbar-thumb {
-  background: #64748b;
-  border-radius: 3px;
-}
-
-body.theme-postgresql #tablesList::-webkit-scrollbar-thumb:hover {
-  background: #475569;
-}
-
-body.theme-mongodb #tablesList {
-  list-style: none;
-  max-height: 400px;
-  overflow-y: auto;
-  padding-right: 12px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(16, 185, 129, 0.5) transparent;
-}
-
-body.theme-mongodb #tablesList::-webkit-scrollbar {
-  width: 6px;
-}
-
-body.theme-mongodb #tablesList::-webkit-scrollbar-track {
-  background: rgba(16, 185, 129, 0.1);
-  border-radius: 3px;
-}
-
-body.theme-mongodb #tablesList::-webkit-scrollbar-thumb {
-  background: #10b981;
-  border-radius: 3px;
-}
-
-body.theme-mongodb #tablesList::-webkit-scrollbar-thumb:hover {
-  background: #059669;
-}
-
-body.theme-mysql #tablesList {
-  list-style: none;
-  max-height: 400px;
-  overflow-y: auto;
-  padding-right: 12px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(249, 115, 22, 0.5) transparent;
-}
-
-body.theme-mysql #tablesList::-webkit-scrollbar {
-  width: 6px;
-}
-
-body.theme-mysql #tablesList::-webkit-scrollbar-track {
-  background: rgba(249, 115, 22, 0.1);
-  border-radius: 3px;
-}
-
-body.theme-mysql #tablesList::-webkit-scrollbar-thumb {
-  background: #f97316;
-  border-radius: 3px;
-}
-
-body.theme-mysql #tablesList::-webkit-scrollbar-thumb:hover {
-  background: #ea580c;
-}

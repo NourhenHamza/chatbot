@@ -1,0 +1,151 @@
+{
+  "mysql": {
+    "dd895cf6-1ea6-4d41-8877-59db0757cd7c": {
+      "id": "dd895cf6-1ea6-4d41-8877-59db0757cd7c",
+      "title": "Conversation MYSQL - 01/08/2025 11:06",
+      "db_type": "mysql",
+      "created_at": "2025-08-01T11:06:58.856122",
+      "updated_at": "2025-08-01T11:07:10.420020",
+      "messages": [
+        {
+          "id": "64af8d8d-ab71-4036-8e07-ffcae3ce0523",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-08-01T11:07:03.619942"
+        },
+        {
+          "id": "033e9060-dddc-48c9-b924-fd4490185057",
+          "content": "Hi! I'm here to help you with information about database tables. What would you like to know?",
+          "sender": "bot",
+          "timestamp": "2025-08-01T11:07:04.991412"
+        },
+        {
+          "id": "e8c3ea1c-3ff4-490c-b043-2cca184bb5ad",
+          "content": "cv ??",
+          "sender": "user",
+          "timestamp": "2025-08-01T11:07:08.993477"
+        },
+        {
+          "id": "1460ae47-90de-4a27-8919-89c9273c3f1e",
+          "content": "I think you meant to ask \"What tables are available?\"   There are 37 tables available, including columns_priv, component, db, default_roles, engine_cost, func, and many more.",
+          "sender": "bot",
+          "timestamp": "2025-08-01T11:07:10.419979"
+        }
+      ]
+    },
+    "a62a8ab0-b90b-4574-91d5-903efbd3fde7": {
+      "id": "a62a8ab0-b90b-4574-91d5-903efbd3fde7",
+      "title": "Conversation 2",
+      "db_type": "mysql",
+      "created_at": "2025-08-01T11:07:50.779016",
+      "updated_at": "2025-08-01T11:08:03.954795",
+      "messages": []
+    }
+  },
+  "postgresql": {
+    "4883e13b-2d10-4f51-b9e3-381a6812919d": {
+      "id": "4883e13b-2d10-4f51-b9e3-381a6812919d",
+      "title": "Conversation POSTGRESQL - 01/08/2025 11:11",
+      "db_type": "postgresql",
+      "created_at": "2025-08-01T11:11:02.241628",
+      "updated_at": "2025-08-01T11:11:02.241649",
+      "messages": []
+    },
+    "a616288a-22d2-437b-900d-270bc3e9ca35": {
+      "id": "a616288a-22d2-437b-900d-270bc3e9ca35",
+      "title": "Conversation POSTGRESQL - 01/08/2025 11:11",
+      "db_type": "postgresql",
+      "created_at": "2025-08-01T11:11:04.102446",
+      "updated_at": "2025-08-01T11:11:04.102482",
+      "messages": []
+    }
+  },
+  "mongodb": {
+    "8c22945d-8869-4cf6-8c5e-62721d5f9b68": {
+      "id": "8c22945d-8869-4cf6-8c5e-62721d5f9b68",
+      "title": "Conversation MONGODB - 01/08/2025 11:07",
+      "db_type": "mongodb",
+      "created_at": "2025-08-01T11:07:24.255174",
+      "updated_at": "2025-08-01T11:07:26.001296",
+      "messages": [
+        {
+          "id": "3d9eea82-8a9c-4240-93c3-4cac3444d4e0",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-08-01T11:07:24.257462"
+        },
+        {
+          "id": "cfc31f71-45a7-46cf-90e2-6065d2bfd9a1",
+          "content": "Hi! I'm here to help you with the patient data. What would you like to know?",
+          "sender": "bot",
+          "timestamp": "2025-08-01T11:07:26.001286"
+        }
+      ]
+    },
+    "91cb998d-7ba5-4da1-b2bf-b7b8e5a5877e": {
+      "id": "91cb998d-7ba5-4da1-b2bf-b7b8e5a5877e",
+      "title": "Conversation MONGODB - 01/08/2025 11:22",
+      "db_type": "mongodb",
+      "created_at": "2025-08-01T11:22:16.533842",
+      "updated_at": "2025-08-01T11:22:16.533849",
+      "messages": []
+    },
+    "a70751af-1cd7-4572-9e8a-121ef434fcc4": {
+      "id": "a70751af-1cd7-4572-9e8a-121ef434fcc4",
+      "title": "Conversation MONGODB - 01/08/2025 11:22",
+      "db_type": "mongodb",
+      "created_at": "2025-08-01T11:22:17.211003",
+      "updated_at": "2025-08-01T11:22:17.211035",
+      "messages": []
+    },
+    "02db8216-735b-4c6a-ab62-cdacc32769af": {
+      "id": "02db8216-735b-4c6a-ab62-cdacc32769af",
+      "title": "Conversation MONGODB - 01/08/2025 11:22",
+      "db_type": "mongodb",
+      "created_at": "2025-08-01T11:22:17.474363",
+      "updated_at": "2025-08-01T11:22:17.474374",
+      "messages": []
+    },
+    "b40f177b-a686-4f92-b6bf-03fb3209c49a": {
+      "id": "b40f177b-a686-4f92-b6bf-03fb3209c49a",
+      "title": "Conversation MONGODB - 01/08/2025 11:22",
+      "db_type": "mongodb",
+      "created_at": "2025-08-01T11:22:18.460260",
+      "updated_at": "2025-08-01T11:22:18.460265",
+      "messages": []
+    },
+    "62912e0c-9c94-4386-ad62-6a06a8c4023d": {
+      "id": "62912e0c-9c94-4386-ad62-6a06a8c4023d",
+      "title": "Conversation MONGODB - 01/08/2025 11:26",
+      "db_type": "mongodb",
+      "created_at": "2025-08-01T11:26:29.812032",
+      "updated_at": "2025-08-01T11:26:49.606276",
+      "messages": [
+        {
+          "id": "666c56e0-96e5-402c-97a0-f8f7ca857eb1",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-08-01T11:26:29.814637"
+        },
+        {
+          "id": "02440e15-faf6-4f07-b6b9-18817302aa77",
+          "content": "Hi! I'm here to help you with the patient data. What would you like to know?",
+          "sender": "bot",
+          "timestamp": "2025-08-01T11:26:31.152862"
+        },
+        {
+          "id": "351cded6-5b17-40dd-a668-d26ec4d85551",
+          "content": "how are you",
+          "sender": "user",
+          "timestamp": "2025-08-01T11:26:34.036765"
+        },
+        {
+          "id": "e19185da-b4d1-46eb-b2a5-3aec91b769fa",
+          "content": "I'm doing well, thank you for asking! I'm ready to assist you with any questions you may have about the patient data I have access to.",
+          "sender": "bot",
+          "timestamp": "2025-08-01T11:26:49.606253"
+        }
+      ]
+    }
+  }
+}
