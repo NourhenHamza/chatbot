@@ -102,6 +102,123 @@
           "timestamp": "2025-08-01T12:36:36.057350"
         }
       ]
+    },
+    "c5018434-b4af-4934-9f44-313f64a05182": {
+      "id": "c5018434-b4af-4934-9f44-313f64a05182",
+      "title": "Conversation MYSQL - 01/08/2025 13:13",
+      "db_type": "mysql",
+      "created_at": "2025-08-01T13:13:10.231725",
+      "updated_at": "2025-08-01T13:15:08.844968",
+      "messages": [
+        {
+          "id": "8cf4aa7e-dcf1-47cd-b325-44c0ed1bba30",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-08-01T13:13:10.235408"
+        },
+        {
+          "id": "b48bdf2e-8fbe-4981-804d-b3607eca8485",
+          "content": "Hi! I'm here to help you with information about database tables. What would you like to know?",
+          "sender": "bot",
+          "timestamp": "2025-08-01T13:13:11.783311"
+        },
+        {
+          "id": "da5e99b3-25ee-4b06-b049-3558ae1a395e",
+          "content": "give me details about aircrafts",
+          "sender": "user",
+          "timestamp": "2025-08-01T13:13:38.986252"
+        },
+        {
+          "id": "e88ad713-5f39-4308-8ee0-b1f7bb5cbfee",
+          "content": "There are three aircrafts in the database. The first one is an Airbus A380 with a capacity of 853 passengers, the second one is a Boeing B737 with a capacity of 215 passengers, and the third one is an Airbus A320 with a capacity of 180 passengers.",
+          "sender": "bot",
+          "timestamp": "2025-08-01T13:13:40.469764"
+        },
+        {
+          "id": "44aa51d9-ab0f-4285-bc1d-80d900eea4eb",
+          "content": "nor for airlines",
+          "sender": "user",
+          "timestamp": "2025-08-01T13:13:49.045622"
+        },
+        {
+          "id": "41169c91-35a7-4013-aabc-020725ccb7f8",
+          "content": "I apologize, but I don't have any information on \"nor for airlines\" as my database is currently empty. If you could provide more context or clarify what you're looking for, I'd be happy to try and assist you.",
+          "sender": "bot",
+          "timestamp": "2025-08-01T13:13:50.607808"
+        },
+        {
+          "id": "eae19c28-1905-4ae1-ac0b-9f95905d4c89",
+          "content": "now",
+          "sender": "user",
+          "timestamp": "2025-08-01T13:13:55.576776"
+        },
+        {
+          "id": "0fddbd24-9151-4fd4-8566-b070494699eb",
+          "content": "The airport database has five tables: aircrafts, airlines, bookings, flights, and passengers.",
+          "sender": "bot",
+          "timestamp": "2025-08-01T13:13:57.050941"
+        },
+        {
+          "id": "26cceaf8-8934-4560-972c-c0c64a1a112f",
+          "content": "now for airlines",
+          "sender": "user",
+          "timestamp": "2025-08-01T13:14:11.080828"
+        },
+        {
+          "id": "f2d75323-82c9-466c-ba0f-e925dbb89a19",
+          "content": "There are three airlines in the database: Air France from France with IATA code AF, Lufthansa from Germany with IATA code LH, and Emirates from the UAE with IATA code EK.",
+          "sender": "bot",
+          "timestamp": "2025-08-01T13:14:12.305626"
+        },
+        {
+          "id": "9f651383-45e8-41f8-a862-895b1b11f69a",
+          "content": "bookings",
+          "sender": "user",
+          "timestamp": "2025-08-01T13:14:29.231366"
+        },
+        {
+          "id": "37a6b92a-10ea-427b-904a-a67420ca171e",
+          "content": "There are 3 bookings in total.",
+          "sender": "bot",
+          "timestamp": "2025-08-01T13:14:30.433409"
+        },
+        {
+          "id": "7ad9bb76-0387-4333-8317-f242b5a1ff12",
+          "content": "which persone has bouked",
+          "sender": "user",
+          "timestamp": "2025-08-01T13:14:45.915137"
+        },
+        {
+          "id": "93097a8c-f577-40f2-aa76-1c083c649602",
+          "content": "Erreur: Error querying data for table passengers: (pymysql.err.OperationalError) (1109, \"Unknown table 'p' in field list\")\n[SQL: SELECT p.first_name]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-08-01T13:14:46.794681"
+        },
+        {
+          "id": "cb68d9b1-cdf0-449c-b1f9-cc9871894dd1",
+          "content": "which persone has booked",
+          "sender": "user",
+          "timestamp": "2025-08-01T13:14:58.974087"
+        },
+        {
+          "id": "9cf5cbfb-f726-4136-a798-1a759a77686c",
+          "content": "Erreur: Error querying data for table passengers: (pymysql.err.OperationalError) (1109, \"Unknown table 'p' in field list\")\n[SQL: SELECT p.first_name]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-08-01T13:14:59.968276"
+        },
+        {
+          "id": "efd36101-b823-41be-b288-9a51214c7313",
+          "content": "what are passengers",
+          "sender": "user",
+          "timestamp": "2025-08-01T13:15:07.548730"
+        },
+        {
+          "id": "ff1d4930-d214-430a-a429-ca7dedd87c25",
+          "content": "There are 3 passengers: Jean Dupont from France, Anna Müller from Germany, and Mohamed Ali from the UAE.",
+          "sender": "bot",
+          "timestamp": "2025-08-01T13:15:08.844922"
+        }
+      ]
     }
   },
   "postgresql": {
@@ -176,6 +293,48 @@
       "created_at": "2025-08-01T12:50:16.136278",
       "updated_at": "2025-08-01T12:50:16.136310",
       "messages": []
+    },
+    "6ca13936-a224-41bb-a440-cb5db553655b": {
+      "id": "6ca13936-a224-41bb-a440-cb5db553655b",
+      "title": "Conversation POSTGRESQL - 01/08/2025 13:22",
+      "db_type": "postgresql",
+      "created_at": "2025-08-01T13:22:57.059009",
+      "updated_at": "2025-08-01T13:22:58.666645",
+      "messages": [
+        {
+          "id": "09d66b68-77d5-4a75-9dd2-09ecf9265fa1",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-08-01T13:22:57.059966"
+        },
+        {
+          "id": "70839d9b-e980-4318-b54d-f7e9a4428953",
+          "content": "Hi! I'm happy to help you with any questions you have. However, I don't have any data to work with right now. Could you please provide me with some context or ask a specific question?",
+          "sender": "bot",
+          "timestamp": "2025-08-01T13:22:58.666626"
+        }
+      ]
+    },
+    "34b4d581-0a7b-4f61-9fb7-f00ad55abd11": {
+      "id": "34b4d581-0a7b-4f61-9fb7-f00ad55abd11",
+      "title": "Conversation POSTGRESQL - 01/08/2025 13:23",
+      "db_type": "postgresql",
+      "created_at": "2025-08-01T13:23:02.873471",
+      "updated_at": "2025-08-01T13:23:04.307523",
+      "messages": [
+        {
+          "id": "ff4d0d34-1774-4b3c-976b-77b8f774961e",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-08-01T13:23:02.881579"
+        },
+        {
+          "id": "26eca3b5-9941-4d23-82b5-bbf9fae212f1",
+          "content": "Hi! I have access to four tables: categories, users, orders, and products. What would you like to know about them?",
+          "sender": "bot",
+          "timestamp": "2025-08-01T13:23:04.307494"
+        }
+      ]
     }
   },
   "mongodb": {
@@ -200,44 +359,12 @@
         }
       ]
     },
-    "91cb998d-7ba5-4da1-b2bf-b7b8e5a5877e": {
-      "id": "91cb998d-7ba5-4da1-b2bf-b7b8e5a5877e",
-      "title": "Conversation MONGODB - 01/08/2025 11:22",
-      "db_type": "mongodb",
-      "created_at": "2025-08-01T11:22:16.533842",
-      "updated_at": "2025-08-01T11:22:16.533849",
-      "messages": []
-    },
-    "a70751af-1cd7-4572-9e8a-121ef434fcc4": {
-      "id": "a70751af-1cd7-4572-9e8a-121ef434fcc4",
-      "title": "Conversation MONGODB - 01/08/2025 11:22",
-      "db_type": "mongodb",
-      "created_at": "2025-08-01T11:22:17.211003",
-      "updated_at": "2025-08-01T11:22:17.211035",
-      "messages": []
-    },
-    "02db8216-735b-4c6a-ab62-cdacc32769af": {
-      "id": "02db8216-735b-4c6a-ab62-cdacc32769af",
-      "title": "Conversation MONGODB - 01/08/2025 11:22",
-      "db_type": "mongodb",
-      "created_at": "2025-08-01T11:22:17.474363",
-      "updated_at": "2025-08-01T11:22:17.474374",
-      "messages": []
-    },
-    "b40f177b-a686-4f92-b6bf-03fb3209c49a": {
-      "id": "b40f177b-a686-4f92-b6bf-03fb3209c49a",
-      "title": "Conversation MONGODB - 01/08/2025 11:22",
-      "db_type": "mongodb",
-      "created_at": "2025-08-01T11:22:18.460260",
-      "updated_at": "2025-08-01T11:22:18.460265",
-      "messages": []
-    },
     "62912e0c-9c94-4386-ad62-6a06a8c4023d": {
       "id": "62912e0c-9c94-4386-ad62-6a06a8c4023d",
-      "title": "Conversation MONGODB - 01/08/2025 11:26",
+      "title": "medications list",
       "db_type": "mongodb",
       "created_at": "2025-08-01T11:26:29.812032",
-      "updated_at": "2025-08-01T11:26:49.606276",
+      "updated_at": "2025-08-02T20:36:46.858030",
       "messages": [
         {
           "id": "666c56e0-96e5-402c-97a0-f8f7ca857eb1",
@@ -262,6 +389,195 @@
           "content": "I'm doing well, thank you for asking! I'm ready to assist you with any questions you may have about the patient data I have access to.",
           "sender": "bot",
           "timestamp": "2025-08-01T11:26:49.606253"
+        }
+      ]
+    },
+    "ff6821fe-8b81-4c44-9782-e77e33887545": {
+      "id": "ff6821fe-8b81-4c44-9782-e77e33887545",
+      "title": "Patients under than 40",
+      "db_type": "mongodb",
+      "created_at": "2025-08-02T20:31:00.216794",
+      "updated_at": "2025-08-02T20:35:47.304565",
+      "messages": [
+        {
+          "id": "0fab06d6-2f3b-489b-9766-7f16fc2fb22f",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:31:00.224417"
+        },
+        {
+          "id": "4982b98b-e89d-454b-838d-1c997822d245",
+          "content": "Hi! I'm here to help you with the patient data. What would you like to know?",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:31:01.347487"
+        },
+        {
+          "id": "649dbae0-2d26-411a-b9ef-0d23011afce0",
+          "content": "Show all collections in db",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:31:06.528164"
+        },
+        {
+          "id": "f2c5a13b-6ee5-468e-9f72-96f96bfdef7f",
+          "content": "There are 3 medications in the database. Patient 1 is taking Metformin 500mg oral and Lisinopril 10mg oral, while Patient 2 is taking Albuterol 90mcg inhaler.",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:31:07.983313"
+        },
+        {
+          "id": "469976a1-5e1b-4d6b-b497-ae60c50bf737",
+          "content": "How many patients are in the database?\"",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:31:32.586039"
+        },
+        {
+          "id": "c605d664-03b1-44c3-b06c-2cb18905381f",
+          "content": "There are 2 patients in the database.",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:31:33.762934"
+        },
+        {
+          "id": "134dbcb6-0117-4104-9760-4be2510eda8e",
+          "content": "give me the names of patients",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:31:44.984831"
+        },
+        {
+          "id": "9baa5a93-bea5-4dad-91dd-e7cc7b190187",
+          "content": "The patients' names are John Doe and Jane Smith.",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:31:46.254284"
+        },
+        {
+          "id": "fba6df56-ef22-4ce9-86c0-3c381aca2d5b",
+          "content": "List all medications",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:31:57.011279"
+        },
+        {
+          "id": "b436ce39-53cd-42fb-af98-c03afdc29e5d",
+          "content": "Here are the medications listed: Metformin, Lisinopril, and Albuterol.",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:31:58.237275"
+        },
+        {
+          "id": "b172e2e3-5568-4454-b71f-a35f9df201dd",
+          "content": "Find patient John Doe's records",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:32:12.634960"
+        },
+        {
+          "id": "acfff82a-6409-4695-b457-51fa0e30bc2a",
+          "content": "John Doe is a 45-year-old male patient with hypertension and diabetes. His last visit was on July 15, 2025.",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:32:14.530923"
+        },
+        {
+          "id": "ddc4ec7c-49ad-40c3-b5b0-3d641c763bdc",
+          "content": "What appointments are scheduled for August 2025?",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:32:25.949903"
+        },
+        {
+          "id": "a436293e-5b70-4fba-9370-f98a71a1fd6a",
+          "content": "There are two appointments scheduled for August 2025. Dr. Smith has a follow-up appointment with patient 1 on August 10, and Dr. Johnson has an annual checkup with patient 2 on August 15.",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:32:27.523419"
+        },
+        {
+          "id": "33e0a019-1158-4347-b881-5bdbe7ade3bc",
+          "content": "Find patients older than 40 with diabetes\"",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:32:49.171310"
+        },
+        {
+          "id": "74f93d2a-8f91-4ad9-886e-213e1e28ba37",
+          "content": "There is one patient older than 40 with diabetes: John Doe, who is 45 years old.",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:32:50.812909"
+        },
+        {
+          "id": "5221b53d-4953-46ef-bf52-335239ca5cdb",
+          "content": "Show all appointments for diabetic patients",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:33:02.660255"
+        },
+        {
+          "id": "618d88dc-fa70-41cf-a757-5a5e84617f13",
+          "content": "There is one appointment for a diabetic patient: John Doe, who has diabetes and hypertension, and his last visit was on July 15, 2025.",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:33:04.080698"
+        },
+        {
+          "id": "8e7e052a-2bd2-425b-ba95-c0fc92f4b3a4",
+          "content": "Group medications by type (oral, etc.)\"",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:33:17.373847"
+        },
+        {
+          "id": "3d7e92ae-a651-4cff-b720-03a69a49a8db",
+          "content": "Here are the medications grouped by type:  Oral medications: Metformin (500mg), Lisinopril (10mg) Inhaler medications: Albuterol (90mcg)",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:33:18.729713"
+        },
+        {
+          "id": "93b5ac43-a9c9-4c2d-8b56-eae92c9fb694",
+          "content": "What fields are in the patients collection?",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:33:33.919016"
+        },
+        {
+          "id": "36746e5f-2dd3-480c-822c-484e5a531137",
+          "content": "The patients collection has the following fields: patient_id, name, age, gender, conditions, and last_visit.",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:33:35.318522"
+        },
+        {
+          "id": "f07df5db-e550-4fc8-a9d6-29a8e38d2825",
+          "content": "what are the name of my collections",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:33:47.569635"
+        },
+        {
+          "id": "25fac1a7-2c53-428a-80d5-139942f1aca8",
+          "content": "You don't have any collections. The data appears to be a list of patient documents, and each document has a unique identifier (_id) and various fields such as patient_id, name, age, gender, conditions, and last_visit.",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:33:48.811210"
+        },
+        {
+          "id": "0b7bb60e-9f85-466f-af41-dde0f5ef99b9",
+          "content": "What indexes exist on these collections?",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:33:57.746879"
+        },
+        {
+          "id": "5960e3fe-57bd-4640-a19c-8fd3a63d7c19",
+          "content": "There are no explicit indexes defined in the provided data. However, based on the metadata, it can be inferred that there is an implicit index on the _id field, which is a unique identifier for each document.",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:33:59.284485"
+        },
+        {
+          "id": "66fdfa44-46c9-4829-be9b-561334c0fc10",
+          "content": "How would I add a new field to all patient records?",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:34:11.079968"
+        },
+        {
+          "id": "10de9a95-21c5-4a6d-8677-73755a761133",
+          "content": "To add a new field to all patient records, you would need to update each document in the collection by adding the new field with its corresponding value. For example, if you want to add a field called \"medication\" with a value of \"none\" to all patient records, you would update each document to include this new field.",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:34:12.485967"
+        },
+        {
+          "id": "41e163cf-0e3b-4273-b21c-70c734c803ec",
+          "content": "Explain the relationships between collections",
+          "sender": "user",
+          "timestamp": "2025-08-02T20:34:24.457837"
+        },
+        {
+          "id": "35eec558-cb91-4a6c-ab65-f185f4d95eda",
+          "content": "Based on the provided data, it appears that there is only one collection, which stores patient information. Each document in this collection represents a unique patient, with fields such as patient ID, name, age, gender, medical conditions, and the date of their last visit.",
+          "sender": "bot",
+          "timestamp": "2025-08-02T20:34:26.002908"
         }
       ]
     }

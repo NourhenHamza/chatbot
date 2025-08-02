@@ -951,11 +951,50 @@ body.theme-mysql .bot-message .message-content {
 }
 
 /* Chat Input - Fixed at bottom, no empty space */
-.chat-input {
+body.theme-mysql .chat-input {
   padding: 2rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(248, 250, 252, 0.95) 25%,
+    rgba(255, 247, 237, 0.92) 50%,
+    rgba(248, 250, 252, 0.95) 75%,
+    rgba(255, 255, 255, 0.98) 100%
+  );
   border-top: 2px solid rgba(59, 130, 246, 0.2);
-  flex-shrink: 0; /* Prevent input from shrinking */
+  flex-shrink: 0;
+}
+body.theme-postgresql .tables-section h4 {
+  color: #ffffff !important; /* Force white text */
+}
+body.theme-postgresql .chat-input {
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 41, 59, 0.95) 0%,
+    rgba(51, 65, 85, 0.9) 25%,
+    rgba(71, 85, 105, 0.85) 50%,
+    rgba(51, 65, 85, 0.9) 75%,
+    rgba(30, 41, 59, 0.95) 100%
+  );
+  border-top: 2px solid rgba(148, 163, 184, 0.3);
+  flex-shrink: 0;
+}
+body.theme-mongodb .tables-section h4 {
+  color: #ffffff !important; /* Force white text */
+}
+body.theme-mongodb .chat-input {
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(6, 78, 59, 0.95) 0%,
+    rgba(6, 95, 70, 0.9) 25%,
+    rgba(4, 120, 87, 0.85) 50%,
+    rgba(5, 150, 105, 0.8) 75%,
+    rgba(16, 185, 129, 0.75) 100%
+  );
+  border-top: 2px solid rgba(52, 211, 153, 0.4);
+  flex-shrink: 0;
 }
 
 .input-group {
