@@ -219,6 +219,113 @@
           "timestamp": "2025-08-01T13:15:08.844922"
         }
       ]
+    },
+    "e674ec14-1cb8-4f31-a972-c465a08c6684": {
+      "id": "e674ec14-1cb8-4f31-a972-c465a08c6684",
+      "title": "Conversation MYSQL - 11/09/2025 17:11",
+      "db_type": "mysql",
+      "created_at": "2025-09-11T17:11:24.008182",
+      "updated_at": "2025-09-11T17:11:24.429495",
+      "messages": [
+        {
+          "id": "18957462-718d-40ad-b3ed-e5c115ee0934",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-11T17:11:24.014186"
+        },
+        {
+          "id": "8feedfd6-4c6b-4355-9107-5826b4ef9bd1",
+          "content": "Erreur: Error fetching table names: Failed to connect to mysql: (pymysql.err.OperationalError) (1045, \"Access denied for user 'root'@'localhost' (using password: YES)\")\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-09-11T17:11:24.429495"
+        }
+      ]
+    },
+    "3415ad7f-34f9-4dbe-b200-0a28feb1a37a": {
+      "id": "3415ad7f-34f9-4dbe-b200-0a28feb1a37a",
+      "title": "Conversation MYSQL - 11/09/2025 17:11",
+      "db_type": "mysql",
+      "created_at": "2025-09-11T17:11:32.536054",
+      "updated_at": "2025-09-11T17:11:33.077069",
+      "messages": [
+        {
+          "id": "5f0db21b-9589-4768-8331-9f92edb06010",
+          "content": "fuck u",
+          "sender": "user",
+          "timestamp": "2025-09-11T17:11:32.540071"
+        },
+        {
+          "id": "8540b3c1-193c-4d52-bcb9-c6b4ec5fc5aa",
+          "content": "Erreur: Error fetching table names: Failed to connect to mysql: (pymysql.err.OperationalError) (1045, \"Access denied for user 'root'@'localhost' (using password: YES)\")\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-09-11T17:11:33.077069"
+        }
+      ]
+    },
+    "43c154a8-e598-4a4f-9ac3-9b664615dd59": {
+      "id": "43c154a8-e598-4a4f-9ac3-9b664615dd59",
+      "title": "Conversation MYSQL - 16/09/2025 00:13",
+      "db_type": "mysql",
+      "created_at": "2025-09-16T00:13:28.896765",
+      "updated_at": "2025-09-16T00:13:28.901758",
+      "messages": [
+        {
+          "id": "ad5277d3-c83a-457c-8ead-74f64e6f8070",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-16T00:13:28.901758"
+        }
+      ]
+    },
+    "6ba5284f-a125-48d3-8a04-8c950e2e6eae": {
+      "id": "6ba5284f-a125-48d3-8a04-8c950e2e6eae",
+      "title": "Conversation MYSQL - 17/09/2025 01:47",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T01:47:19.381904",
+      "updated_at": "2025-09-17T01:47:19.567590",
+      "messages": [
+        {
+          "id": "17dc266b-41b8-47c8-8313-a4687fdf3311",
+          "content": "what is my db",
+          "sender": "user",
+          "timestamp": "2025-09-17T01:47:19.384910"
+        },
+        {
+          "id": "dbbdf9a5-0ecf-4873-b754-98b51d4fa269",
+          "content": "Erreur: Error fetching table names: Failed to connect to mysql: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods",
+          "sender": "bot",
+          "timestamp": "2025-09-17T01:47:19.567590"
+        }
+      ]
+    },
+    "479fbd2e-e182-4c74-b5df-3fe3a70a0d4b": {
+      "id": "479fbd2e-e182-4c74-b5df-3fe3a70a0d4b",
+      "title": "Conversation MYSQL - 17/09/2025 01:47",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T01:47:44.965237",
+      "updated_at": "2025-09-17T01:47:45.205000",
+      "messages": [
+        {
+          "id": "8d0c19c8-3dfd-49de-a188-3aab86210210",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-17T01:47:44.969239"
+        },
+        {
+          "id": "a7492e7b-385f-4e97-b74d-b49b79bb07b9",
+          "content": "Erreur: Error fetching table names: Failed to connect to mysql: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods",
+          "sender": "bot",
+          "timestamp": "2025-09-17T01:47:45.205000"
+        }
+      ]
+    },
+    "cc228e57-dd65-4c21-85f3-22cd2daf7735": {
+      "id": "cc228e57-dd65-4c21-85f3-22cd2daf7735",
+      "title": "Conversation MYSQL - 17/09/2025 02:08",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T02:08:34.496469",
+      "updated_at": "2025-09-17T02:08:34.496469",
+      "messages": []
     }
   },
   "postgresql": {
@@ -335,15 +442,99 @@
           "timestamp": "2025-08-01T13:23:04.307494"
         }
       ]
+    },
+    "582392db-3791-4dc4-9a1c-323c45850a2c": {
+      "id": "582392db-3791-4dc4-9a1c-323c45850a2c",
+      "title": "Conversation POSTGRESQL - 15/09/2025 19:18",
+      "db_type": "postgresql",
+      "created_at": "2025-09-15T19:18:49.522194",
+      "updated_at": "2025-09-15T19:18:55.006865",
+      "messages": [
+        {
+          "id": "b311de4d-464e-48a9-a5d1-970f364f66d8",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-15T19:18:49.527204"
+        },
+        {
+          "id": "04b8be40-532d-49bc-bf10-cab7173c22fb",
+          "content": "Erreur: Connection error.",
+          "sender": "bot",
+          "timestamp": "2025-09-15T19:18:55.006865"
+        }
+      ]
+    },
+    "58fb3399-3fe0-4115-b473-9e2707c9ad15": {
+      "id": "58fb3399-3fe0-4115-b473-9e2707c9ad15",
+      "title": "Conversation POSTGRESQL - 15/09/2025 19:19",
+      "db_type": "postgresql",
+      "created_at": "2025-09-15T19:19:13.906970",
+      "updated_at": "2025-09-15T19:19:19.208542",
+      "messages": [
+        {
+          "id": "0b24e249-f262-4eb7-a731-3d2f1014a5d1",
+          "content": "why",
+          "sender": "user",
+          "timestamp": "2025-09-15T19:19:13.909966"
+        },
+        {
+          "id": "bc0e6421-60cf-4123-b938-8e51c8849573",
+          "content": "Erreur: Connection error.",
+          "sender": "bot",
+          "timestamp": "2025-09-15T19:19:19.208542"
+        }
+      ]
+    },
+    "123aa43c-8ddd-48a3-ae3e-f5348b504075": {
+      "id": "123aa43c-8ddd-48a3-ae3e-f5348b504075",
+      "title": "Conversation POSTGRESQL - 15/09/2025 20:24",
+      "db_type": "postgresql",
+      "created_at": "2025-09-15T20:24:28.389018",
+      "updated_at": "2025-09-15T20:24:29.537545",
+      "messages": [
+        {
+          "id": "9952ea9c-9569-4cac-b6e9-8180a136c385",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-15T20:24:28.395534"
+        },
+        {
+          "id": "ccf1876d-2656-42f8-a97d-0356ec18f0a6",
+          "content": "Erreur: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}",
+          "sender": "bot",
+          "timestamp": "2025-09-15T20:24:29.537545"
+        }
+      ]
+    },
+    "576c44b6-e5d3-46ac-837a-fd3a47e63ce8": {
+      "id": "576c44b6-e5d3-46ac-837a-fd3a47e63ce8",
+      "title": "Conversation POSTGRESQL - 17/09/2025 01:53",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T01:53:12.890445",
+      "updated_at": "2025-09-17T01:53:14.437169",
+      "messages": [
+        {
+          "id": "fb85e38b-0ad2-414c-baa8-e4cb5f0c1b86",
+          "content": "hello what is my db about",
+          "sender": "user",
+          "timestamp": "2025-09-17T01:53:12.898437"
+        },
+        {
+          "id": "b8625d97-768f-4256-a5c0-1c4377c234bd",
+          "content": "Your database appears to be related to an e-commerce system. It contains information about customers, orders, order items, and products.   You have a table for customers, which likely stores details about each customer. There's also a table for orders, which probably holds information about each order placed. The order items table seems to be where the specific items in each order are listed, and the products table likely contains details about the products being sold.   Is there something specific you'd like to know or a task you'd like help with regarding your database?",
+          "sender": "bot",
+          "timestamp": "2025-09-17T01:53:14.437169"
+        }
+      ]
     }
   },
   "mongodb": {
     "8c22945d-8869-4cf6-8c5e-62721d5f9b68": {
       "id": "8c22945d-8869-4cf6-8c5e-62721d5f9b68",
-      "title": "Conversation MONGODB - 01/08/2025 11:07",
+      "title": "first conversation",
       "db_type": "mongodb",
       "created_at": "2025-08-01T11:07:24.255174",
-      "updated_at": "2025-08-01T11:07:26.001296",
+      "updated_at": "2025-09-17T02:10:34.332813",
       "messages": [
         {
           "id": "3d9eea82-8a9c-4240-93c3-4cac3444d4e0",
@@ -578,6 +769,51 @@
           "content": "Based on the provided data, it appears that there is only one collection, which stores patient information. Each document in this collection represents a unique patient, with fields such as patient ID, name, age, gender, medical conditions, and the date of their last visit.",
           "sender": "bot",
           "timestamp": "2025-08-02T20:34:26.002908"
+        }
+      ]
+    },
+    "ef8bc4bf-c5b7-46c8-bfa3-ea7bc7e5a3b3": {
+      "id": "ef8bc4bf-c5b7-46c8-bfa3-ea7bc7e5a3b3",
+      "title": "Conversation MONGODB - 17/09/2025 01:52",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T01:52:05.114077",
+      "updated_at": "2025-09-17T01:52:37.968446",
+      "messages": [
+        {
+          "id": "396b8224-73bd-4d48-bd73-8e171a1a9c22",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-17T01:52:05.121076"
+        },
+        {
+          "id": "a5c70384-410d-476f-93ee-8431ffeb0427",
+          "content": "Hi! How can I assist you today? Do you have any questions about the provided patient data or would you like me to help with something else?",
+          "sender": "bot",
+          "timestamp": "2025-09-17T01:52:10.209419"
+        },
+        {
+          "id": "ad0c1420-2c6c-40a4-b9ac-505bd60b1373",
+          "content": "what is my db",
+          "sender": "user",
+          "timestamp": "2025-09-17T01:52:15.185290"
+        },
+        {
+          "id": "236e1ec0-218c-4fcf-b407-a41def19a75d",
+          "content": "It seems like you're asking about your database, but I don't have any information about you or your specific database. Could you provide more context or details about what you're referring to? That way, I can try to give you a more accurate and helpful response.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T01:52:16.728602"
+        },
+        {
+          "id": "a9b82715-acba-4ac2-94aa-56c786fd36a0",
+          "content": "what is my db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T01:52:34.197735"
+        },
+        {
+          "id": "615971e0-74e8-4b90-adb9-bf72751f162c",
+          "content": "Your database appears to store information about hospitals. Each entry, or document, in your database represents a hospital and contains details such as its name, type, address, contact information, departments offered, bed capacity, and availability of emergency services.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T01:52:37.968446"
         }
       ]
     }

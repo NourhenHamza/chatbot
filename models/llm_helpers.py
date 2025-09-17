@@ -42,7 +42,7 @@ class LanguageModelRequest:
         # Using GROQ_API_KEY instead of OpenAI
         groq_api_key = os.getenv("GROQ_API_KEY")
         self.chat_model = ChatGroq(
-            model_name="llama3-70b-8192",  # Using Llama model
+            model_name="meta-llama/llama-4-scout-17b-16e-instruct",  # Using Llama model
             groq_api_key=groq_api_key,
             temperature=0
         )
