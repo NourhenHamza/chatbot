@@ -322,6 +322,13 @@ body.theme-mysql .db-selector select {
   cursor: pointer;
 }
 
+body.theme-mysql .db-selector select option {
+  background-color: #1e40af !important;
+  color: white !important;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+
 @keyframes mysqlSelectorPulse {
   0%,
   100% {
@@ -373,16 +380,29 @@ body.theme-mysql .sidebar {
 }
 
 body.theme-mysql .sidebar::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 
 body.theme-mysql .sidebar::-webkit-scrollbar-track {
-  background: transparent;
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.8), rgba(255, 247, 237, 0.8));
+  border-radius: 20px;
+  border: 2px solid rgba(59, 130, 246, 0.1);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 body.theme-mysql .sidebar::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #3b82f6, #f97316);
-  border-radius: 4px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.4s var(--quantum-bounce);
+}
+
+body.theme-mysql .sidebar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #2563eb, #ea580c);
+  box-shadow: 0 8px 16px rgba(249, 115, 22, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 body.theme-mysql .sidebar::before {
@@ -459,16 +479,27 @@ body.theme-mysql .sidebar::before {
 }
 
 .conversations-list::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 
 .conversations-list::-webkit-scrollbar-track {
-  background: transparent;
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.6), rgba(255, 247, 237, 0.6));
+  border-radius: 18px;
+  border: 1px solid rgba(59, 130, 246, 0.1);
 }
 
 .conversations-list::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #3b82f6, #f97316);
-  border-radius: 3px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s var(--quantum-bounce);
+}
+
+.conversations-list::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #2563eb, #ea580c);
+  box-shadow: 0 6px 12px rgba(249, 115, 22, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
 }
 
 .conversation-item {
@@ -530,7 +561,9 @@ body.theme-mysql .sidebar::before {
   font-weight: 400;
 }
 
-.loading, .error, .no-conversations {
+.loading,
+.error,
+.no-conversations {
   text-align: center;
   padding: 1.5rem;
   color: #64748b;
@@ -660,13 +693,31 @@ body.theme-mongodb .db-details strong {
 /* MySQL Tables List */
 body.theme-mysql #tablesList::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #3b82f6, #f97316);
-  border-radius: 3px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.4s var(--quantum-bounce);
+}
+
+body.theme-mysql #tablesList::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #2563eb, #ea580c);
+  box-shadow: 0 8px 16px rgba(249, 115, 22, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: scale(1.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+body.theme-mysql #tablesList::-webkit-scrollbar-track {
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.8), rgba(255, 247, 237, 0.8));
+  border-radius: 15px;
+  border: 2px solid rgba(59, 130, 246, 0.1);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 body.theme-mysql #tablesList li {
   background: linear-gradient(135deg, #f8fafc 0%, #fff7ed 50%, #f1f5f9 100%);
   border: 2px solid #e2e8f0;
-  color: #475569;
+  color: #1e40af; /* Couleur plus visible - bleu foncé */
+  font-weight: 600; /* Texte plus gras pour une meilleure visibilité */
 }
 
 body.theme-mysql #tablesList li::before {
@@ -688,13 +739,31 @@ body.theme-mysql #tablesList li:hover::before {
 /* PostgreSQL Tables List */
 body.theme-postgresql #tablesList::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #475569, #94a3b8);
-  border-radius: 3px;
+  border-radius: 15px;
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 6px 12px rgba(71, 85, 105, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s var(--quantum-bounce);
+}
+
+body.theme-postgresql #tablesList::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #334155, #cbd5e1);
+  box-shadow: 0 8px 16px rgba(148, 163, 184, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: scale(1.15);
+  border-color: rgba(148, 163, 184, 0.4);
+}
+
+body.theme-postgresql #tablesList::-webkit-scrollbar-track {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(51, 65, 85, 0.6));
+  border-radius: 15px;
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 body.theme-postgresql #tablesList li {
   background: linear-gradient(135deg, rgba(71, 85, 105, 0.6) 0%, rgba(51, 65, 85, 0.8) 100%);
   border: 2px solid rgba(148, 163, 184, 0.2);
-  color: #e2e8f0;
+  color: #f1f5f9; /* Couleur plus visible - blanc cassé */
+  font-weight: 600; /* Texte plus gras pour une meilleure visibilité */
 }
 
 body.theme-postgresql #tablesList li::before {
@@ -715,13 +784,31 @@ body.theme-postgresql #tablesList li:hover::before {
 /* MongoDB Tables List */
 body.theme-mongodb #tablesList::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #10b981, #34d399);
-  border-radius: 3px;
+  border-radius: 15px;
+  border: 2px solid rgba(52, 211, 153, 0.2);
+  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.4s var(--quantum-bounce);
+}
+
+body.theme-mongodb #tablesList::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #059669, #6ee7b7);
+  box-shadow: 0 8px 16px rgba(52, 211, 153, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: scale(1.15);
+  border-color: rgba(52, 211, 153, 0.4);
+}
+
+body.theme-mongodb #tablesList::-webkit-scrollbar-track {
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.6), rgba(4, 120, 87, 0.6));
+  border-radius: 15px;
+  border: 2px solid rgba(52, 211, 153, 0.3);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 body.theme-mongodb #tablesList li {
   background: linear-gradient(135deg, rgba(4, 120, 87, 0.6) 0%, rgba(6, 95, 70, 0.8) 100%);
   border: 2px solid rgba(52, 211, 153, 0.3);
-  color: #ecfdf5;
+  color: #f0fdf4; /* Couleur plus visible - vert très clair */
+  font-weight: 600; /* Texte plus gras pour une meilleure visibilité */
 }
 
 body.theme-mongodb #tablesList li::before {
@@ -818,7 +905,8 @@ body.theme-mongodb .chat-container {
   gap: 1rem;
 }
 
-.edit-title-btn, .delete-conversation-btn {
+.edit-title-btn,
+.delete-conversation-btn {
   background: linear-gradient(135deg, #f8fafc 0%, #fff7ed 100%);
   border: 2px solid rgba(59, 130, 246, 0.2);
   padding: 0.75rem;
@@ -859,6 +947,32 @@ body.theme-mysql .chat-messages {
 }
 
 body.theme-mysql .chat-messages::-webkit-scrollbar {
+  width: 12px;
+}
+
+body.theme-mysql .chat-messages::-webkit-scrollbar-track {
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.6), rgba(255, 247, 237, 0.6));
+  border-radius: 20px;
+  border: 2px solid rgba(59, 130, 246, 0.1);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+body.theme-mysql .chat-messages::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #3b82f6, #f97316);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.4s var(--quantum-bounce);
+}
+
+body.theme-mysql .chat-messages::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #2563eb, #ea580c);
+  box-shadow: 0 8px 16px rgba(249, 115, 22, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+body.theme-mysql .chat-messages::-webkit-scrollbar {
   width: 8px;
 }
 
@@ -878,13 +992,13 @@ body.theme-mysql .chat-messages::-webkit-scrollbar-thumb {
 }
 
 @keyframes fadeIn {
-  from { 
-    opacity: 0; 
-    transform: translateY(20px) scale(0.95); 
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
   }
-  to { 
-    opacity: 1; 
-    transform: translateY(0) scale(1); 
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -918,7 +1032,8 @@ body.theme-mysql .user-message .message-content {
 }
 
 @keyframes userMessageGlow {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
     box-shadow: 0 16px 32px rgba(249, 115, 22, 0.4), 0 8px 16px rgba(59, 130, 246, 0.3);
   }
@@ -940,7 +1055,8 @@ body.theme-mysql .bot-message .message-content {
 }
 
 @keyframes botMessageGlow {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
     box-shadow: 0 12px 24px rgba(59, 130, 246, 0.3), 0 6px 12px rgba(249, 115, 22, 0.2);
   }
@@ -1210,6 +1326,13 @@ body.theme-postgresql .db-selector select {
   font-style: italic;
 }
 
+body.theme-postgresql .db-selector select option {
+  background-color: #334155 !important;
+  color: #e2e8f0 !important;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+
 @keyframes postgresqlSelectorFlow {
   0%,
   100% {
@@ -1237,6 +1360,32 @@ body.theme-postgresql .sidebar {
   overflow-y: auto; /* Global scroll for entire sidebar */
   scrollbar-width: thin;
   scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+}
+
+body.theme-postgresql .sidebar::-webkit-scrollbar {
+  width: 12px;
+}
+
+body.theme-postgresql .sidebar::-webkit-scrollbar-track {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(51, 65, 85, 0.6));
+  border-radius: 20px;
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+body.theme-postgresql .sidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #475569, #94a3b8);
+  border-radius: 20px;
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 6px 12px rgba(71, 85, 105, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s var(--quantum-bounce);
+}
+
+body.theme-postgresql .sidebar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #334155, #cbd5e1);
+  box-shadow: 0 8px 16px rgba(148, 163, 184, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+  border-color: rgba(148, 163, 184, 0.4);
 }
 
 body.theme-postgresql .sidebar::-webkit-scrollbar {
@@ -1301,15 +1450,36 @@ body.theme-postgresql .chat-messages {
   flex: 1;
   padding: 2rem;
   overflow-y: auto;
-  background: linear-gradient(
-    135deg,
-    rgba(15, 23, 42, 0.6) 0%,
-    rgba(30, 41, 59, 0.4) 50%,
-    rgba(51, 65, 85, 0.6) 100%
-  );
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.4) 50%, rgba(51, 65, 85, 0.6) 100%);
   scrollbar-width: thin;
   scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
   min-height: 0;
+}
+
+body.theme-postgresql .chat-messages::-webkit-scrollbar {
+  width: 12px;
+}
+
+body.theme-postgresql .chat-messages::-webkit-scrollbar-track {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6), rgba(30, 41, 59, 0.6));
+  border-radius: 20px;
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.theme-postgresql .chat-messages::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #475569, #94a3b8);
+  border-radius: 20px;
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 6px 12px rgba(71, 85, 105, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s var(--quantum-bounce);
+}
+
+body.theme-postgresql .chat-messages::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #334155, #cbd5e1);
+  box-shadow: 0 8px 16px rgba(148, 163, 184, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+  border-color: rgba(148, 163, 184, 0.4);
 }
 
 body.theme-postgresql .chat-messages::-webkit-scrollbar {
@@ -1495,6 +1665,13 @@ body.theme-mongodb .db-selector select {
   font-family: "Poppins", sans-serif;
 }
 
+body.theme-mongodb .db-selector select option {
+  background-color: #064e3b !important;
+  color: white !important;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+
 @keyframes mongodbSelectorGrow {
   0%,
   100% {
@@ -1522,6 +1699,32 @@ body.theme-mongodb .sidebar {
   overflow-y: auto; /* Global scroll for entire sidebar */
   scrollbar-width: thin;
   scrollbar-color: rgba(52, 211, 153, 0.3) transparent;
+}
+
+body.theme-mongodb .sidebar::-webkit-scrollbar {
+  width: 12px;
+}
+
+body.theme-mongodb .sidebar::-webkit-scrollbar-track {
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.6), rgba(4, 120, 87, 0.6));
+  border-radius: 20px;
+  border: 2px solid rgba(52, 211, 153, 0.3);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.theme-mongodb .sidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  border-radius: 20px;
+  border: 2px solid rgba(52, 211, 153, 0.2);
+  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.4s var(--quantum-bounce);
+}
+
+body.theme-mongodb .sidebar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #059669, #6ee7b7);
+  box-shadow: 0 8px 16px rgba(52, 211, 153, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+  border-color: rgba(52, 211, 153, 0.4);
 }
 
 body.theme-mongodb .sidebar::-webkit-scrollbar {
@@ -1584,15 +1787,36 @@ body.theme-mongodb .chat-messages {
   flex: 1;
   padding: 2rem;
   overflow-y: auto;
-  background: linear-gradient(
-    135deg,
-    rgba(6, 78, 59, 0.6) 0%,
-    rgba(4, 120, 87, 0.4) 50%,
-    rgba(5, 150, 105, 0.6) 100%
-  );
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.6) 0%, rgba(4, 120, 87, 0.4) 50%, rgba(5, 150, 105, 0.6) 100%);
   scrollbar-width: thin;
   scrollbar-color: rgba(52, 211, 153, 0.3) transparent;
   min-height: 0;
+}
+
+body.theme-mongodb .chat-messages::-webkit-scrollbar {
+  width: 12px;
+}
+
+body.theme-mongodb .chat-messages::-webkit-scrollbar-track {
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.6), rgba(4, 120, 87, 0.6));
+  border-radius: 20px;
+  border: 2px solid rgba(52, 211, 153, 0.3);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.theme-mongodb .chat-messages::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  border-radius: 20px;
+  border: 2px solid rgba(52, 211, 153, 0.2);
+  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.4s var(--quantum-bounce);
+}
+
+body.theme-mongodb .chat-messages::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #059669, #6ee7b7);
+  box-shadow: 0 8px 16px rgba(52, 211, 153, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+  border-color: rgba(52, 211, 153, 0.4);
 }
 
 body.theme-mongodb .chat-messages::-webkit-scrollbar {
@@ -1756,7 +1980,9 @@ body.theme-mongodb #sendButton:hover {
   justify-content: flex-end;
 }
 
-.save-btn, .delete-btn, .cancel-btn {
+.save-btn,
+.delete-btn,
+.cancel-btn {
   padding: 1rem 2rem;
   border: none;
   border-radius: 16px;
@@ -1807,11 +2033,11 @@ body.theme-mongodb #sendButton:hover {
     padding: 20px;
     gap: 20px;
   }
-  
+
   .sidebar {
     width: 300px;
   }
-  
+
   header h1 {
     font-size: 2.5rem !important;
   }
@@ -1822,63 +2048,63 @@ body.theme-mongodb #sendButton:hover {
     padding: 15px;
     gap: 15px;
   }
-  
+
   header {
     padding: 1.5rem !important;
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   header h1 {
     font-size: 2rem !important;
   }
-  
+
   .main-content {
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .sidebar {
     width: 100%;
     max-height: 50vh;
   }
-  
+
   .conversations-section {
     padding: 1.5rem;
   }
-  
+
   .db-info {
     padding: 1.5rem;
   }
-  
+
   .chat-container {
     min-height: 50vh;
   }
-  
+
   .chat-header,
   .chat-input {
     padding: 1.5rem;
   }
-  
+
   .chat-messages {
     padding: 1.5rem;
   }
-  
+
   .message-content {
     max-width: 90%;
     padding: 1.25rem 1.5rem;
   }
-  
+
   .input-group {
     gap: 1rem;
   }
-  
+
   #sendButton {
     padding: 1.25rem 2rem;
     font-size: 1rem;
     min-height: 60px;
   }
-  
+
   .modal-content {
     margin: 1rem;
     width: calc(100% - 2rem);
@@ -1886,3 +2112,146 @@ body.theme-mongodb #sendButton:hover {
   }
 }
 
+/* ===========================================
+   🎨 CUSTOM SELECT STYLES
+   =========================================== */
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+}
+
+.select-selected {
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition: all 0.6s var(--quantum-bounce);
+}
+
+.select-selected:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: white transparent transparent transparent;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.select-selected.select-arrow-active:after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.select-items div {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.select-items div:hover {
+  transform: translateX(5px);
+}
+
+.select-hide {
+  display: none;
+}
+
+/* MySQL Custom Select */
+body.theme-mysql .select-selected {
+  background: linear-gradient(135deg, #3b82f6 0%, #f97316 50%, #ea580c 100%);
+  background-size: 200% 200%;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 16px 32px rgba(59, 130, 246, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0
+    rgba(0, 0, 0, 0.1);
+  animation: mysqlSelectorPulse 4s ease-in-out infinite;
+  font-family: "Inter", sans-serif;
+}
+
+body.theme-mysql .select-items {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  border: 2px solid rgba(59, 130, 246, 0.3);
+}
+
+body.theme-mysql .select-items div {
+  color: white;
+  background: transparent;
+}
+
+body.theme-mysql .select-items div:hover {
+  background: rgba(249, 115, 22, 0.2);
+}
+
+/* PostgreSQL Custom Select */
+body.theme-postgresql .select-selected {
+  background: linear-gradient(135deg, #475569 0%, #64748b 50%, #94a3b8 100%);
+  background-size: 200% 200%;
+  color: #e2e8f0;
+  border: 2px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+  animation: postgresqlSelectorFlow 5s ease-in-out infinite;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+body.theme-postgresql .select-items {
+  background: linear-gradient(135deg, #334155 0%, #475569 100%);
+  border: 2px solid rgba(148, 163, 184, 0.3);
+}
+
+body.theme-postgresql .select-items div {
+  color: #e2e8f0;
+  background: transparent;
+}
+
+body.theme-postgresql .select-items div:hover {
+  background: rgba(148, 163, 184, 0.2);
+}
+
+/* MongoDB Custom Select */
+body.theme-mongodb .select-selected {
+  background: linear-gradient(135deg, #10b981 0%, #059669 25%, #047857 50%, #065f46 75%, #064e3b 100%);
+  background-size: 200% 200%;
+  color: white;
+  border: 2px solid rgba(52, 211, 153, 0.4);
+  box-shadow: 0 16px 32px rgba(16, 185, 129, 0.4);
+  animation: mongodbSelectorGrow 6s ease-in-out infinite;
+  font-family: "Poppins", sans-serif;
+}
+
+body.theme-mongodb .select-items {
+  background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+  border: 2px solid rgba(52, 211, 153, 0.3);
+}
+
+body.theme-mongodb .select-items div {
+  color: white;
+  background: transparent;
+}
+
+body.theme-mongodb .select-items div:hover {
+  background: rgba(52, 211, 153, 0.2);
+}

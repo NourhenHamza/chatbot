@@ -326,6 +326,630 @@
       "created_at": "2025-09-17T02:08:34.496469",
       "updated_at": "2025-09-17T02:08:34.496469",
       "messages": []
+    },
+    "7ac948f8-eee7-4167-a352-f374bee9f8a9": {
+      "id": "7ac948f8-eee7-4167-a352-f374bee9f8a9",
+      "title": "Conversation MYSQL - 17/09/2025 02:24",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T02:24:49.373115",
+      "updated_at": "2025-09-17T02:24:50.325956",
+      "messages": [
+        {
+          "id": "2b1be98b-adec-42b2-a6ff-0d44ac0574ef",
+          "content": "what is my db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:24:49.377120"
+        },
+        {
+          "id": "527ce6fd-d1ca-45ce-89ec-4ffa1cd47a9d",
+          "content": "Your database appears to be related to airline or flight information management. It contains tables such as aircraft, airlines, airports, baggage, bookings, flights, and passengers. This suggests that the database is used to store and manage data about flights, including details about the aircraft and airlines involved, the airports they operate from and to, passenger and baggage information, and flight bookings.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:24:50.321980"
+        },
+        {
+          "id": "8210d967-3829-4911-b469-f8d45ecf15b3",
+          "content": "Erreur: 'ConversationManager' object has no attribute 'auto_update_conversation_title'",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:24:50.325956"
+        }
+      ]
+    },
+    "0e181f46-35cd-4c9b-9fa5-01b8ed490e1d": {
+      "id": "0e181f46-35cd-4c9b-9fa5-01b8ed490e1d",
+      "title": "Déterminer lobjet de ma base donnée",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T02:56:13.415503",
+      "updated_at": "2025-09-17T02:56:24.079149",
+      "messages": [
+        {
+          "id": "6cb66375-4692-4e9a-8103-d6d0878e0fe1",
+          "content": "what is my db about",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:56:13.423457"
+        },
+        {
+          "id": "22644422-930a-4986-885a-8f155a0ae3f4",
+          "content": "Your database appears to be related to airline or flight information management. It contains tables such as aircraft, airlines, airports, baggage, bookings, flights, and passengers. This suggests that your database is designed to store and manage data related to flights, including information about the planes, airlines, airports, and people traveling on those flights.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:56:14.512773"
+        },
+        {
+          "id": "d6329564-b6e1-4a79-a203-2ce6549acaca",
+          "content": "merci",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:56:23.269545"
+        },
+        {
+          "id": "f03c7341-4d57-4639-8aa3-1b442f02191c",
+          "content": "De rien ! Il semble que vous ayez fourni une liste de tables de base de données MySQL. Si vous avez une question spécifique à ce sujet, n'hésitez pas à me la poser !",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:56:24.079149"
+        }
+      ]
+    },
+    "ae993436-936d-4c42-ae94-051e1cefa5cf": {
+      "id": "ae993436-936d-4c42-ae94-051e1cefa5cf",
+      "title": "Conversation MYSQL - 17/09/2025 02:57",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T02:57:13.219502",
+      "updated_at": "2025-09-17T02:57:49.080349",
+      "messages": [
+        {
+          "id": "2fbcfb4e-b103-4d8a-8eb5-bcea4a3870f5",
+          "content": "give me the name of all my passengers",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:57:22.193628"
+        },
+        {
+          "id": "0cb0fb57-e8ff-4e98-bfea-1650efe1c5a5",
+          "content": "Erreur: Error querying data for table passengers: (pymysql.err.ProgrammingError) (1064, \"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1\")\n[SQL: SELECT CONCAT(first_name]\n(Background on this error at: https://sqlalche.me/e/20/f405)",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:57:22.747156"
+        },
+        {
+          "id": "b7f145eb-8d4c-4c5f-9770-e823567e4e5a",
+          "content": "what are your arports",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:57:47.503245"
+        },
+        {
+          "id": "ad09c26a-c1c2-44c2-aeeb-d884cd727d98",
+          "content": "Erreur: Error querying data for table airports: (pymysql.err.OperationalError) (1054, \"Unknown column 'code' in 'field list'\")\n[SQL: SELECT code]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:57:49.080349"
+        }
+      ]
+    },
+    "472ece9d-5fb8-4130-887d-4b885f4450ad": {
+      "id": "472ece9d-5fb8-4130-887d-4b885f4450ad",
+      "title": "Définitions de DB en contexte médical",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T21:19:57.593232",
+      "updated_at": "2025-09-17T21:44:34.307960",
+      "messages": [
+        {
+          "id": "da39f498-a5e9-451d-b082-09095861684e",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-17T21:19:57.599234"
+        },
+        {
+          "id": "d6c3c463-fd23-45b1-acc2-9cabefbc16c8",
+          "content": "what is db about",
+          "sender": "user",
+          "timestamp": "2025-09-17T21:43:54.464841"
+        },
+        {
+          "id": "2f3ea2ba-237d-43ce-ba31-845264fd92bf",
+          "content": "The \"db\" table appears to be related to database management, specifically storing information about databases.   In a MySQL database context, it seems that this table would contain details about the databases that are present.   If you are looking for information on a specific database, I would need more context to provide a more detailed explanation.   In general, database management involves tasks such as creating, modifying, and deleting databases, as well as managing user access and permissions.   The \"db\" table likely plays a role in storing information that facilitates these tasks.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T21:43:55.698766"
+        },
+        {
+          "id": "acd1a018-5818-4459-b78b-610847dc46bb",
+          "content": "database aboit?",
+          "sender": "user",
+          "timestamp": "2025-09-17T21:44:12.526644"
+        },
+        {
+          "id": "6d0ad213-86db-4914-94c6-6174d1f502c6",
+          "content": "It seems like you're asking about the database. The provided data appears to be a list of database tables, likely from a MySQL database given the table names.   Some of the tables seem to be related to access control and permissions, such as `user`, `db`, `tables_priv`, and `global_grants`. Others seem to be related to database performance and logging, such as `slow_log` and `general_log`. There are also tables related to replication, server configuration, and time zones.  Without more context, it's difficult to provide more specific information. Could you please clarify what you would like to know about this database?",
+          "sender": "bot",
+          "timestamp": "2025-09-17T21:44:14.112023"
+        },
+        {
+          "id": "70ad84ac-cfb7-4ee8-88f5-828fc4814d92",
+          "content": "name of airports",
+          "sender": "user",
+          "timestamp": "2025-09-17T21:44:33.152504"
+        },
+        {
+          "id": "40c8d463-3f9d-4d44-8fe4-6e192ef66f7e",
+          "content": "Here are the names of the airports:  1. Charles de Gaulle Airport 2. John F. Kennedy International Airport 3. London Heathrow Airport 4. Dubai International Airport 5. Tunis-Carthage International Airport  If you'd like, I can also tell you that there are 5 airports in total. Let me know if you have any other question!",
+          "sender": "bot",
+          "timestamp": "2025-09-17T21:44:34.307960"
+        }
+      ]
+    },
+    "e1bd75fd-e747-41c8-8650-89d3868870b2": {
+      "id": "e1bd75fd-e747-41c8-8650-89d3868870b2",
+      "title": "Déterminer lobjet de ma base données",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T22:21:59.268176",
+      "updated_at": "2025-09-17T22:22:00.493105",
+      "messages": [
+        {
+          "id": "edce4c3b-5900-44e8-baf0-1e91a6a44e67",
+          "content": "what is my db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:21:59.279183"
+        },
+        {
+          "id": "3c00df67-9246-44c6-9336-c561ed3adde8",
+          "content": "Your database appears to be related to airline or flight information management. It contains tables such as aircraft, airlines, airports, baggage, bookings, flights, and passengers. This suggests that the database is used to store and manage data about flights, including details about the aircraft and airlines involved, the airports they operate from and to, passenger and baggage information, and flight bookings.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T22:22:00.196172"
+        }
+      ]
+    },
+    "3e7f8501-7360-4f34-aedf-b1ba8efb24ad": {
+      "id": "3e7f8501-7360-4f34-aedf-b1ba8efb24ad",
+      "title": "Conversation MYSQL - 17/09/2025 22:30",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T22:30:18.120505",
+      "updated_at": "2025-09-17T22:30:18.964809",
+      "messages": [
+        {
+          "id": "ea2ccd02-965b-431a-8575-b7b396f3683d",
+          "content": "what are the aireports?",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:30:18.127506"
+        },
+        {
+          "id": "da074c44-907a-45ec-a97f-6a0759a6da2a",
+          "content": "Erreur: Error querying data for table airports: (pymysql.err.OperationalError) (1054, \"Unknown column 'code' in 'field list'\")\n[SQL: SELECT code]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-09-17T22:30:18.964809"
+        }
+      ]
+    },
+    "3149c5b1-5adc-48f4-aa94-000648aa4568": {
+      "id": "3149c5b1-5adc-48f4-aa94-000648aa4568",
+      "title": "Objet de la base de données",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T22:30:36.493011",
+      "updated_at": "2025-09-17T22:30:38.291169",
+      "messages": [
+        {
+          "id": "dee4960a-ca1b-46fb-9a30-369f2a1da3c2",
+          "content": "what is the db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:30:36.498017"
+        },
+        {
+          "id": "aaac3def-6be1-4c48-a058-410a8e95a27e",
+          "content": "The db appears to be a MySQL database, given the numerous system table names that are recognizable from MySQL's information schema and system databases.  This database seems to store metadata and configuration information for a MySQL server. It includes tables that hold information about users, privileges, databases, tables, and other database objects.  Some of the key areas that this database covers include:  * User and privilege management, such as user accounts, passwords, and access control * Database and table metadata, including information about the structure and organization of the data * Server configuration and settings, such as cost and performance optimization * Replication and clustering, including configuration and status information * Time zone and localization settings  Overall, this database provides a comprehensive view of the MySQL server's configuration, schema, and runtime state.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T22:30:38.088686"
+        }
+      ]
+    },
+    "84a0a902-91f4-4c94-8912-e2c0727d65bc": {
+      "id": "84a0a902-91f4-4c94-8912-e2c0727d65bc",
+      "title": "New Conversation MYSQL - 09/17/2025, 10:31 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T22:31:18.261812",
+      "updated_at": "2025-09-17T22:31:24.414258",
+      "messages": [
+        {
+          "id": "94b3f520-e29c-4ced-a845-32cdb745b2cd",
+          "content": "what is my db about",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:31:23.519196"
+        },
+        {
+          "id": "54f6a2c5-9ffe-4214-9f3d-84ca5f78cb88",
+          "content": "Your database appears to be related to airline or flight information management. It contains tables such as aircraft, airlines, airports, baggage, bookings, flights, and passengers. This suggests that your database is designed to store and manage data related to flights, including information about the planes, airlines, airports, and people traveling on those flights.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T22:31:24.413262"
+        }
+      ]
+    },
+    "2e8a168c-d5f7-48d8-8ca7-bc0c223c298a": {
+      "id": "2e8a168c-d5f7-48d8-8ca7-bc0c223c298a",
+      "title": "New Conversation MYSQL - 09/17/2025, 10:31 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T22:31:30.103167",
+      "updated_at": "2025-09-17T22:31:30.103167",
+      "messages": []
+    },
+    "12b7db8a-40a9-4fa6-abec-0f791a9518e2": {
+      "id": "12b7db8a-40a9-4fa6-abec-0f791a9518e2",
+      "title": "New Conversation MYSQL - 09/17/2025, 10:32 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T22:32:47.165188",
+      "updated_at": "2025-09-17T22:32:56.478336",
+      "messages": [
+        {
+          "id": "c3f5358d-760c-47d6-b16e-c7ddc1bad851",
+          "content": "whatis the db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:32:55.057416"
+        },
+        {
+          "id": "03ddcbd4-c16a-4d3a-adff-bba3fb013330",
+          "content": "The provided data appears to be a list of database tables, likely from a MySQL database. The tables seem to be system tables that store metadata and configuration information for the database management system.  Some of the tables suggest that they store information about database and table privileges, such as `columns_priv`, `tables_priv`, `db`, and `user`. Others seem to be related to replication, logging, and server configuration, like `replication_asynchronous_connection_failover`, `general_log`, and `server_cost`.  There are also tables that store information about time zones, help topics, and plugins, such as `time_zone`, `help_topic`, and `plugin`.   Overall, this database seems to be an internal database used by a MySQL server to store its configuration, metadata, and system information.   If you are looking for a specific information, I can try to help you with that.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T22:32:56.478336"
+        }
+      ]
+    },
+    "47312486-6b71-4417-b794-0c5e5d489026": {
+      "id": "47312486-6b71-4417-b794-0c5e5d489026",
+      "title": "Liste des noms daéroports ?",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T22:34:45.654950",
+      "updated_at": "2025-09-17T22:34:47.180476",
+      "messages": [
+        {
+          "id": "4623790a-dd75-4f66-9c5f-13ab2834af75",
+          "content": "airport names?",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:34:45.667969"
+        },
+        {
+          "id": "39fd26c8-df64-49d0-8fb5-d1b7dae43c6d",
+          "content": "The airport names are Charles de Gaulle Airport, John F. Kennedy International Airport, London Heathrow Airport, Dubai International Airport, and Tunis-Carthage International Airport.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T22:34:46.983493"
+        }
+      ]
+    },
+    "955729fe-2d29-4230-b9a9-fc2e4e6f167c": {
+      "id": "955729fe-2d29-4230-b9a9-fc2e4e6f167c",
+      "title": "New Conversation MYSQL - 09/17/2025, 10:58 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T22:58:32.280694",
+      "updated_at": "2025-09-17T22:58:37.011266",
+      "messages": [
+        {
+          "id": "41efa521-aeee-4d17-ae3c-dafbbe02de5c",
+          "content": "my db about",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:58:37.011266"
+        }
+      ]
+    },
+    "4f9a26ab-bf98-4861-a583-1ae02afffe0a": {
+      "id": "4f9a26ab-bf98-4861-a583-1ae02afffe0a",
+      "title": "New Conversation MYSQL - 09/17/2025, 10:58 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T22:58:54.419465",
+      "updated_at": "2025-09-17T22:59:05.298912",
+      "messages": [
+        {
+          "id": "90bccaba-7ada-4a7a-a00b-e41c4e60faae",
+          "content": "what ismy db about ?",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:59:05.298912"
+        }
+      ]
+    },
+    "0909694d-37a2-4547-8937-afc9f2686f0c": {
+      "id": "0909694d-37a2-4547-8937-afc9f2686f0c",
+      "title": "New Conversation MYSQL - 09/17/2025 23:01",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T23:01:35.653159",
+      "updated_at": "2025-09-17T23:01:44.586953",
+      "messages": [
+        {
+          "id": "66b692f3-02e1-4e0a-8619-200965bd7785",
+          "content": "aireports name?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:01:35.665143"
+        },
+        {
+          "id": "c501714f-31e9-4e7c-a89e-ea6e71948ca9",
+          "content": "The names of the airports are Charles de Gaulle Airport, John F. Kennedy International Airport, London Heathrow Airport, Dubai International Airport, and Tunis-Carthage International Airport.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:01:44.586953"
+        }
+      ]
+    },
+    "b0bd6213-a1b9-4cff-bc0c-bd4bfb49226f": {
+      "id": "b0bd6213-a1b9-4cff-bc0c-bd4bfb49226f",
+      "title": "New Conversation MYSQL - 09/17/2025 23:11",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T23:11:51.209889",
+      "updated_at": "2025-09-17T23:11:53.357730",
+      "messages": [
+        {
+          "id": "95b39a0c-1a38-4be7-91dc-e4b660cd85eb",
+          "content": "my db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:11:51.219871"
+        },
+        {
+          "id": "f6f6702b-c03c-4b2f-9216-c8654ab71d39",
+          "content": "It appears you have a MySQL database with a wide range of system tables. These tables suggest that your database is used for managing and storing various types of data, possibly related to user authentication, database performance, and replication.  Some of the tables, like `user`, `db`, `tables_priv`, and `columns_priv`, seem to be related to access control and permissions. Others, such as `general_log`, `slow_log`, and `innodb_index_stats`, appear to be related to performance monitoring and optimization.  Additionally, there are tables related to replication, like `replication_asynchronous_connection_failover` and `slave_master_info`, which suggest that your database might be part of a replication setup.  There are also tables for storing help topics, keywords, and categories, which could be used for documentation or support purposes.  Overall, your database seems to be a comprehensive MySQL setup with a variety of features and functionalities. If you have a specific question about your database or need help with a particular issue, feel free to ask.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:11:53.357730"
+        }
+      ]
+    },
+    "f637badd-8519-47d0-b072-053c378106f3": {
+      "id": "f637badd-8519-47d0-b072-053c378106f3",
+      "title": "New Conversation MYSQL - 09/17/2025, 11:11 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T23:11:56.108762",
+      "updated_at": "2025-09-17T23:11:56.108762",
+      "messages": []
+    },
+    "3e18b011-7353-4bdc-adea-5d4d26b59cab": {
+      "id": "3e18b011-7353-4bdc-adea-5d4d26b59cab",
+      "title": "New Conversation MYSQL - 09/17/2025 23:13",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T23:13:48.094617",
+      "updated_at": "2025-09-17T23:13:51.197243",
+      "messages": [
+        {
+          "id": "4bd26182-32be-4008-b75c-5628fbd06abb",
+          "content": "airports names?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:13:48.103632"
+        },
+        {
+          "id": "a9bdaa10-d84a-4911-9fa3-3a110696b2e2",
+          "content": "Here are the airport names: Charles de Gaulle Airport, John F. Kennedy International Airport, London Heathrow Airport, Dubai International Airport, and Tunis-Carthage International Airport.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:13:51.197243"
+        }
+      ]
+    },
+    "82aa6ff5-6035-4341-ad07-40ab97e89dcb": {
+      "id": "82aa6ff5-6035-4341-ad07-40ab97e89dcb",
+      "title": "New Conversation MYSQL - 09/17/2025, 11:16 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T23:16:12.843004",
+      "updated_at": "2025-09-17T23:16:29.904745",
+      "messages": [
+        {
+          "id": "b4002b50-cd5b-42f5-aacd-f0b91cf3fe98",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:16:14.523205"
+        },
+        {
+          "id": "a693b7f7-f4d2-46f0-8d14-aba1be841e3a",
+          "content": "It seems like you've provided a list of database tables. What would you like to know or do with this information? I'm here to help.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:16:18.078448"
+        },
+        {
+          "id": "608c2a3f-7944-4504-bb29-0a6d51d449d6",
+          "content": "what is my db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:16:27.713027"
+        },
+        {
+          "id": "875eca1e-aa31-49e9-bcae-89b41beaf7a8",
+          "content": "Your database appears to be related to airline or flight information management. It contains tables such as aircraft, airlines, airports, baggage, bookings, flights, and passengers. This suggests that the database is used to store and manage data about flights, including details about the aircraft and airlines involved, the airports they operate from and to, passenger and baggage information, and flight bookings.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:16:29.904745"
+        }
+      ]
+    },
+    "6b44bbf5-0e25-4be5-8ff2-434abc1f1a5e": {
+      "id": "6b44bbf5-0e25-4be5-8ff2-434abc1f1a5e",
+      "title": "New Conversation MYSQL - 09/17/2025, 11:16 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T23:16:36.547756",
+      "updated_at": "2025-09-17T23:16:49.252404",
+      "messages": [
+        {
+          "id": "601d5b26-58a0-4063-8384-1ebe0353ca65",
+          "content": "my db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:16:42.513992"
+        },
+        {
+          "id": "2f69199a-ab25-4f9b-ba61-8ea66c58c640",
+          "content": "It seems like you're asking about the database. The provided data appears to be a list of tables within a MySQL database, based on the system tables and their purposes.   The database seems to be a MySQL system database, which stores metadata and configuration information for the database management system. It includes tables for storing information about users, privileges, databases, tables, and other database objects.  Some of the key tables in this database include 'user', 'db', 'tables_priv', and 'columns_priv', which store information about users, databases, tables, and columns, respectively. There are also tables for storing information about stored procedures, functions, and events, such as 'procs_priv' and 'func'.  Additionally, the database includes tables for replication, such as 'replication_asynchronous_connection_failover' and 'slave_master_info', which are used to manage replication between databases.  Overall, this database provides a comprehensive set of system tables that are used to manage and configure a MySQL database.   Can I help you with anything else about your database?",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:16:49.252404"
+        }
+      ]
+    },
+    "36f9018a-e9b3-4b50-8102-982203398842": {
+      "id": "36f9018a-e9b3-4b50-8102-982203398842",
+      "title": "Conversation MYSQL - 17/09/2025 23:19",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T23:19:09.004702",
+      "updated_at": "2025-09-17T23:19:12.034903",
+      "messages": [
+        {
+          "id": "ac0033c1-7933-4e9d-8dd6-2b9c29aac532",
+          "content": "what are my aiports",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:19:09.015721"
+        },
+        {
+          "id": "bb61689b-f398-4417-bfe1-454aad179280",
+          "content": "Erreur: Error querying data for table airports: (pymysql.err.OperationalError) (1054, \"Unknown column 'code' in 'field list'\")\n[SQL: SELECT code]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:19:12.034903"
+        }
+      ]
+    },
+    "b708de62-216f-42c7-9a9b-02f5fb785989": {
+      "id": "b708de62-216f-42c7-9a9b-02f5fb785989",
+      "title": "Conversation MYSQL - 17/09/2025 23:25",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T23:25:23.278912",
+      "updated_at": "2025-09-17T23:25:51.236687",
+      "messages": [
+        {
+          "id": "a98a565b-3c48-4433-b16b-0ec82afaa43f",
+          "content": "airports names?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:25:23.290986"
+        },
+        {
+          "id": "ec452f37-6f91-4946-a0d0-8098885438e3",
+          "content": "Erreur: Connection error.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:25:51.236687"
+        }
+      ]
+    },
+    "0d1af6f2-de6c-4495-9bf3-e6f6462b46eb": {
+      "id": "0d1af6f2-de6c-4495-9bf3-e6f6462b46eb",
+      "title": "New Conversation MYSQL - 09/17/2025, 11:26 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T23:26:04.840171",
+      "updated_at": "2025-09-17T23:26:04.840171",
+      "messages": []
+    },
+    "b1e5b518-3d11-4362-9447-e3dd6c6dc1d7": {
+      "id": "b1e5b518-3d11-4362-9447-e3dd6c6dc1d7",
+      "title": "New Conversation MYSQL - 09/17/2025, 11:26 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T23:26:16.580004",
+      "updated_at": "2025-09-17T23:26:36.853436",
+      "messages": [
+        {
+          "id": "b7c4ee4e-2da5-4c41-be2a-7eccdfb97655",
+          "content": "what are the names of airports?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:26:31.012505"
+        },
+        {
+          "id": "3ec1012b-1819-422e-9637-8e1c041d3445",
+          "content": "Erreur: Connection error.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:26:36.853436"
+        }
+      ]
+    },
+    "388a881f-2da0-4143-a2ad-7c7388e806b9": {
+      "id": "388a881f-2da0-4143-a2ad-7c7388e806b9",
+      "title": "New Conversation MYSQL - 09/17/2025, 11:27 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T23:27:11.990881",
+      "updated_at": "2025-09-17T23:27:32.112620",
+      "messages": [
+        {
+          "id": "65a6731f-34ae-4a07-b8a5-0b1c5966ccd7",
+          "content": "db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:27:26.162614"
+        },
+        {
+          "id": "41914b20-1496-4bfb-8d7e-17dbdd46874b",
+          "content": "Erreur: Connection error.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:27:32.112620"
+        }
+      ]
+    },
+    "98c43695-5015-4b3a-b090-088b8b2ebf87": {
+      "id": "98c43695-5015-4b3a-b090-088b8b2ebf87",
+      "title": "New Conversation MYSQL - 09/17/2025, 11:31 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T23:31:05.456902",
+      "updated_at": "2025-09-17T23:31:13.996846",
+      "messages": [
+        {
+          "id": "e8a1af0e-3b45-4da6-8b6f-6aab3945f465",
+          "content": "db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:31:10.079810"
+        },
+        {
+          "id": "642b25cd-e324-48da-8e4b-065e3ea18605",
+          "content": "The data provided appears to be a list of database tables. The table named \"db\" likely stores information about the databases in a MySQL server, including database names, users, and access privileges. It's used to manage access control and permissions for databases.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:31:13.996846"
+        }
+      ]
+    },
+    "b48ac00a-dac3-40a2-9934-a81e53d683cb": {
+      "id": "b48ac00a-dac3-40a2-9934-a81e53d683cb",
+      "title": "New Conversation MYSQL - 09/17/2025, 11:31 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-17T23:31:35.281479",
+      "updated_at": "2025-09-17T23:31:56.593677",
+      "messages": [
+        {
+          "id": "2f1eb58c-f649-4f0d-a0fa-b091bcf9b79b",
+          "content": "what are the names of airports?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:31:54.412772"
+        },
+        {
+          "id": "79f77fcd-2b74-48da-afa2-4b901a233f58",
+          "content": "The airports are Charles de Gaulle Airport, John F. Kennedy International Airport, London Heathrow Airport, Dubai International Airport, and Tunis-Carthage International Airport.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:31:56.593677"
+        }
+      ]
+    },
+    "ca589507-2522-43e6-8625-2cc29c8108fd": {
+      "id": "ca589507-2522-43e6-8625-2cc29c8108fd",
+      "title": "New Conversation MYSQL - 09/19/2025, 01:54 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-19T13:54:06.663633",
+      "updated_at": "2025-09-19T13:54:48.823110",
+      "messages": [
+        {
+          "id": "85d6c95f-893d-446d-8f1c-a83d62da1a0f",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-19T13:54:09.394666"
+        },
+        {
+          "id": "92f8a717-8417-4760-b595-53013bc48846",
+          "content": "It seems like you've provided a list of database tables. What would you like to know or do with this information? I'm here to help.",
+          "sender": "bot",
+          "timestamp": "2025-09-19T13:54:11.222658"
+        },
+        {
+          "id": "5a497848-2a1d-4999-869f-61a8d558f204",
+          "content": "give me details about aircrafts",
+          "sender": "user",
+          "timestamp": "2025-09-19T13:54:23.489961"
+        },
+        {
+          "id": "16e23f6d-9668-43b5-8398-32563e693f69",
+          "content": "There are five aircrafts in the provided data.   The first one is an Airbus A380 with registration F-HPJA and a capacity of 516. It's operated by an airline with ID 1 and has an active status.  The second aircraft is a Boeing 747-400 with registration G-CIVD and a capacity of 345. It belongs to an airline with ID 2 and is also active.  The third one is another Airbus A380 with registration A6-EUA, having a capacity of 615. This plane is operated by an airline with ID 3 and has an active status.  The fourth aircraft is an Airbus A320 with registration TS-ION and a capacity of 180. It belongs to an airline with ID 4 and is active.  The fifth one is a Boeing 757-200 with registration N661DN and a capacity of 199. This aircraft is operated by an airline with ID 5 and has an active status.  All of these aircrafts were created at the same time, on September 16, 2025, at 00:10:41.",
+          "sender": "bot",
+          "timestamp": "2025-09-19T13:54:24.732885"
+        },
+        {
+          "id": "41be51f7-d815-4837-be28-b6bd59e4acfc",
+          "content": "now for Airlines",
+          "sender": "user",
+          "timestamp": "2025-09-19T13:54:36.493354"
+        },
+        {
+          "id": "9c00d195-9cc6-4ef6-b31b-8b5c111ac79c",
+          "content": "Here are some airlines based on the data I have:  1. Air France, their code is AF, they are from France and their website is www.airfrance.com. 2. British Airways, their code is BA, they are from the UK and their website is www.britishairways.com. 3. Emirates, their code is EK, they are from the UAE and their website is www.emirates.com. 4. Tunisair, their code is TU, they are from Tunisia and their website is www.tunisair.com. 5. Delta Air Lines, their code is DL, they are from the USA and their website is www.delta.com.  Let me know if you'd like to know more about any of these airlines!",
+          "sender": "bot",
+          "timestamp": "2025-09-19T13:54:37.589266"
+        },
+        {
+          "id": "2e0a4d41-cc78-43f0-bb92-11a32ce4e8a4",
+          "content": "what are the passengers",
+          "sender": "user",
+          "timestamp": "2025-09-19T13:54:47.813799"
+        },
+        {
+          "id": "f199d9a6-e582-428b-b583-e17fcbff415c",
+          "content": "The passengers are Ahmed Ben Ali, Marie Dubois, John Smith, and Fatima Al-Zahra.   Here are their details:  - Ahmed Ben Ali, a 39-year-old from Tunisia,  - Marie Dubois, a 35-year-old from France,  - John Smith, a 47-year-old from the USA,  - Fatima Al-Zahra, a 33-year-old from the UAE.",
+          "sender": "bot",
+          "timestamp": "2025-09-19T13:54:48.823110"
+        }
+      ]
     }
   },
   "postgresql": {
@@ -524,6 +1148,605 @@
           "content": "Your database appears to be related to an e-commerce system. It contains information about customers, orders, order items, and products.   You have a table for customers, which likely stores details about each customer. There's also a table for orders, which probably holds information about each order placed. The order items table seems to be where the specific items in each order are listed, and the products table likely contains details about the products being sold.   Is there something specific you'd like to know or a task you'd like help with regarding your database?",
           "sender": "bot",
           "timestamp": "2025-09-17T01:53:14.437169"
+        }
+      ]
+    },
+    "f67a3bab-843d-4348-908e-3ba9e3cd30ca": {
+      "id": "f67a3bab-843d-4348-908e-3ba9e3cd30ca",
+      "title": "Conversation POSTGRESQL - 17/09/2025 02:23",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T02:23:20.167821",
+      "updated_at": "2025-09-17T02:23:55.753487",
+      "messages": [
+        {
+          "id": "adabe9a0-644e-4533-ad34-ae1f40ddc7dd",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:23:20.172826"
+        },
+        {
+          "id": "561dbc83-5b7a-4c40-b108-02eb470ae8e4",
+          "content": "It seems like you're looking for information related to a database with tables for customers, orders, order items, and products. What kind of information are you trying to find?",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:23:55.742890"
+        },
+        {
+          "id": "f72fd5cb-e818-469e-981f-a4e2c4c637a1",
+          "content": "Erreur: 'ConversationManager' object has no attribute 'auto_update_conversation_title'",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:23:55.753487"
+        }
+      ]
+    },
+    "1838d51c-d726-414d-b5ac-3b5fbebb5945": {
+      "id": "1838d51c-d726-414d-b5ac-3b5fbebb5945",
+      "title": "Conversation POSTGRESQL - 17/09/2025 02:24",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T02:24:17.427998",
+      "updated_at": "2025-09-17T02:24:18.325449",
+      "messages": [
+        {
+          "id": "71591aea-5bdd-426e-a1c2-c522e27c154c",
+          "content": "what is my db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:24:17.431005"
+        },
+        {
+          "id": "289b0ca0-43db-406d-ad10-40a0546ace76",
+          "content": "Your database appears to be related to an e-commerce system. It contains tables for customers, orders, order items, and products. This suggests that the database is used to store information about customer interactions, including their orders and the products they purchase.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:24:18.320456"
+        },
+        {
+          "id": "77a96d86-95ef-414c-afef-34016680833c",
+          "content": "Erreur: 'ConversationManager' object has no attribute 'auto_update_conversation_title'",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:24:18.325449"
+        }
+      ]
+    },
+    "875eb00f-1153-45dc-9ff7-818eed3ece81": {
+      "id": "875eb00f-1153-45dc-9ff7-818eed3ece81",
+      "title": "Conversation POSTGRESQL - 17/09/2025 02:58",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T02:58:12.309406",
+      "updated_at": "2025-09-17T02:58:13.079797",
+      "messages": [
+        {
+          "id": "4b1256d7-db7a-4e9f-8bd6-bac8ad09dcb8",
+          "content": "the name of your customers",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:58:12.316414"
+        },
+        {
+          "id": "91f5cfdf-cc4d-4749-96aa-220b83b5995e",
+          "content": "Erreur: Error querying data for table customers: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « first_name » n'existe pas\nLINE 1: SELECT first_name\n               ^\n\n[SQL: SELECT first_name]\n(Background on this error at: https://sqlalche.me/e/20/f405)",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:58:13.079797"
+        }
+      ]
+    },
+    "fd764429-4dff-46ee-a870-17e8bedc6cca": {
+      "id": "fd764429-4dff-46ee-a870-17e8bedc6cca",
+      "title": "Gestion de la Relation Client",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T02:58:25.604559",
+      "updated_at": "2025-09-17T02:58:28.780622",
+      "messages": [
+        {
+          "id": "4af43605-c346-40f3-b713-bc99a4c487c9",
+          "content": "your customers!",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:58:25.611544"
+        },
+        {
+          "id": "7153f45a-629b-4aa5-8db3-9fa62a8566f3",
+          "content": "We have two customers in our database. The first one is John Doe, who is located in Paris, France, and can be reached at john.doe@email.com or +33123456789. He was added to our database on September 15, 2025, at 7:05 AM.   The second customer is Jane Smith, residing in Lyon, France, with contact information jane.smith@email.com and +33987654321. She was also added on September 15, 2025, at 7:05 AM.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:58:28.593619"
+        }
+      ]
+    },
+    "7f30a6bf-c3b3-4abc-84b2-c7d7ca57cb47": {
+      "id": "7f30a6bf-c3b3-4abc-84b2-c7d7ca57cb47",
+      "title": "Début de la conversation médicale",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T21:20:18.481824",
+      "updated_at": "2025-09-17T21:42:44.467433",
+      "messages": [
+        {
+          "id": "a30242a9-4c9c-401f-9d6f-790c95cacf7e",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-17T21:20:18.485811"
+        },
+        {
+          "id": "641094a3-f6a1-4bca-8711-920afc4e159d",
+          "content": "It seems like you're looking for information related to a database with tables for customers, orders, order items, and products. What kind of information are you trying to find?",
+          "sender": "bot",
+          "timestamp": "2025-09-17T21:20:19.588937"
+        },
+        {
+          "id": "4d87d401-45f2-47ff-90ea-0afb69e5107b",
+          "content": "what is the database about",
+          "sender": "user",
+          "timestamp": "2025-09-17T21:20:32.891114"
+        },
+        {
+          "id": "7307a31c-0c4f-4acb-a074-0d10d14fe3c8",
+          "content": "The database appears to be related to an e-commerce system. It contains tables for customers, orders, order items, and products. This suggests that the database is used to store information about customer details, orders placed, the items within those orders, and the products being sold.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T21:20:35.138132"
+        },
+        {
+          "id": "95e79991-b1c7-4990-bfe4-1a227262fbbc",
+          "content": "cv ?",
+          "sender": "user",
+          "timestamp": "2025-09-17T21:42:14.166472"
+        },
+        {
+          "id": "ea9904bd-aba3-4271-9f2a-24e1de0f4e8a",
+          "content": "It seems like you're asking about CV, which typically stands for Curriculum Vitae, a detailed document of a person's professional and academic history. However, based on the data you've provided, which includes customers, orders, order items, and products, it seems we might be in a context related to business or e-commerce. If you're asking how a CV relates to this data or if you have a specific question about the data itself, could you provide more context? That way, I can give you a more accurate and helpful response.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T21:42:16.206643"
+        },
+        {
+          "id": "63246b94-4816-44dc-9dfa-d33bf8eae06d",
+          "content": "what is your name?",
+          "sender": "user",
+          "timestamp": "2025-09-17T21:42:32.737201"
+        },
+        {
+          "id": "1c78afa9-d033-4a01-8fd2-4828c0c96e3e",
+          "content": "My name is AI Assistant.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T21:42:33.670314"
+        },
+        {
+          "id": "302f06fe-d3a0-4ed1-99d9-fb00706a6f00",
+          "content": "can i call you baby?",
+          "sender": "user",
+          "timestamp": "2025-09-17T21:42:42.942722"
+        },
+        {
+          "id": "ddd7391e-4ed9-4cae-9e5d-2437260caccd",
+          "content": "That's a pretty casual and intimate term, I'd say we're just getting to know each other, so maybe we can stick to a more friendly and neutral conversation for now. What brings you here today?",
+          "sender": "bot",
+          "timestamp": "2025-09-17T21:42:44.467433"
+        }
+      ]
+    },
+    "6d75332d-02d4-46c8-8763-39659067516a": {
+      "id": "6d75332d-02d4-46c8-8763-39659067516a",
+      "title": "New Conversation POSTGRESQL - 09/17/2025, 10:28 PM",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T22:28:55.361132",
+      "updated_at": "2025-09-17T22:29:03.735363",
+      "messages": [
+        {
+          "id": "375e1b21-2c17-4fdb-8802-d1640d95bc08",
+          "content": "what is my db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:29:02.246439"
+        },
+        {
+          "id": "6df90967-bade-4836-b626-26f4e1b80881",
+          "content": "Your database appears to be related to an e-commerce system. It contains tables for customers, orders, order items, and products. This suggests that the database is used to store information about customer interactions, including their orders and the products they purchase.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T22:29:03.735363"
+        }
+      ]
+    },
+    "e77ca691-c74c-480a-80b5-0f9df77c46f6": {
+      "id": "e77ca691-c74c-480a-80b5-0f9df77c46f6",
+      "title": "New Conversation POSTGRESQL - 09/17/2025, 10:29 PM",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T22:29:10.168171",
+      "updated_at": "2025-09-17T22:29:44.603311",
+      "messages": [
+        {
+          "id": "3cbf15e7-4ca4-4d44-bfd8-ab039f347fa9",
+          "content": "what are the names of patients?",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:29:25.939611"
+        },
+        {
+          "id": "66d3c7fe-50a0-4950-ab9b-6569b733842f",
+          "content": "Erreur: Error querying data for table customers: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne « first_name » n'existe pas\nLINE 1: SELECT first_name\n               ^\n\n[SQL: SELECT first_name]\n(Background on this error at: https://sqlalche.me/e/20/f405)",
+          "sender": "bot",
+          "timestamp": "2025-09-17T22:29:27.192636"
+        },
+        {
+          "id": "cb4b70ce-15e7-4469-a861-b50413804334",
+          "content": "orders name?",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:29:43.901908"
+        },
+        {
+          "id": "7fc9ed99-4846-4a84-a9e4-85c590c5aca8",
+          "content": "Erreur: Error querying data for table orders: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne t2.name n'existe pas\nLINE 1: SELECT T2.name FROM orders AS T1 INNER JOIN order_items AS T...\n               ^\nHINT:  Peut-être que vous souhaitiez référencer la colonne « t3.name ».\n\n[SQL: SELECT T2.name FROM orders AS T1 INNER JOIN order_items AS T2 ON T1.id = T2.order_id INNER JOIN products AS T3 ON T2.product_id = T3.id;]\n(Background on this error at: https://sqlalche.me/e/20/f405)",
+          "sender": "bot",
+          "timestamp": "2025-09-17T22:29:44.603311"
+        }
+      ]
+    },
+    "64b618b4-692e-40d6-8ec2-d151109816f3": {
+      "id": "64b618b4-692e-40d6-8ec2-d151109816f3",
+      "title": "Base de données à propos ?",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T22:33:09.001876",
+      "updated_at": "2025-09-17T22:33:10.368368",
+      "messages": [
+        {
+          "id": "5ee54fbe-a3fd-4be1-b070-23ae75d15a3d",
+          "content": "db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:33:09.007895"
+        },
+        {
+          "id": "2b7cc2cf-151f-4a76-a849-8fb90add8b4c",
+          "content": "The database appears to be related to an e-commerce system. It contains tables for customers, orders, order items, and products, suggesting that it stores information about customer data, sales transactions, and product details.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T22:33:10.180018"
+        }
+      ]
+    },
+    "f7228d50-ade4-450b-bc1f-ba2afb35ceb4": {
+      "id": "f7228d50-ade4-450b-bc1f-ba2afb35ceb4",
+      "title": "New Conversation POSTGRESQL - 09/17/2025, 10:34 PM",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T22:34:03.482947",
+      "updated_at": "2025-09-17T22:34:08.266920",
+      "messages": [
+        {
+          "id": "fd252ff4-3bf3-460c-9a17-f33f3f083067",
+          "content": "db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:34:07.412658"
+        },
+        {
+          "id": "8a2154d2-a761-47a4-9293-3039f1ab4d7e",
+          "content": "The database appears to be related to an e-commerce system. It contains tables for customers, orders, order items, and products, suggesting that it stores information about customer data, sales transactions, and product details.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T22:34:08.266920"
+        }
+      ]
+    },
+    "dc4a6a2d-ce10-4ac6-8d1f-321cccb6958d": {
+      "id": "dc4a6a2d-ce10-4ac6-8d1f-321cccb6958d",
+      "title": "New Conversation POSTGRESQL - 09/17/2025, 10:34 PM",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T22:34:17.085913",
+      "updated_at": "2025-09-17T22:34:22.604911",
+      "messages": [
+        {
+          "id": "e690cd77-6949-4c0c-ab69-614c04fc4cb2",
+          "content": "db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:34:21.814912"
+        },
+        {
+          "id": "47b95474-1f23-4215-bc4d-872af4e813a2",
+          "content": "The database appears to be related to an e-commerce system. It contains tables for customers, orders, order items, and products, suggesting that it stores information about customer data, sales transactions, and product details.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T22:34:22.604911"
+        }
+      ]
+    },
+    "4120eb8b-d515-411c-ba90-4dd6678121dd": {
+      "id": "4120eb8b-d515-411c-ba90-4dd6678121dd",
+      "title": "New Conversation POSTGRESQL - 09/17/2025, 10:34 PM",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T22:34:25.071183",
+      "updated_at": "2025-09-17T22:34:25.071183",
+      "messages": []
+    },
+    "e0adb1ae-a75d-4aff-988b-3a95b56e4a76": {
+      "id": "e0adb1ae-a75d-4aff-988b-3a95b56e4a76",
+      "title": "New Conversation POSTGRESQL - 09/17/2025 22:59",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T22:59:43.792704",
+      "updated_at": "2025-09-17T22:59:46.937469",
+      "messages": [
+        {
+          "id": "08b66cc8-8d00-46a1-8242-1a1848c93b16",
+          "content": "what is my db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:59:43.800690"
+        },
+        {
+          "id": "9487ae5d-90af-4ee6-8b00-ff620b6216e0",
+          "content": "Your database appears to be related to an e-commerce system. It contains tables for customers, orders, order items, and products. This suggests that the database is used to store information about customer interactions, including their orders and the products they purchase.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T22:59:46.937469"
+        }
+      ]
+    },
+    "522bcf28-4dcb-4f74-8bc8-e777756f5228": {
+      "id": "522bcf28-4dcb-4f74-8bc8-e777756f5228",
+      "title": "New Conversation POSTGRESQL - 09/17/2025, 10:59 PM",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T22:59:53.017212",
+      "updated_at": "2025-09-17T23:01:55.041243",
+      "messages": [
+        {
+          "id": "827bb349-9e19-491c-a4b8-38c9176c0ea2",
+          "content": "orders name?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:00:02.496756"
+        },
+        {
+          "id": "d2ba1c2e-1886-47ba-8c2c-106c82a78d15",
+          "content": "Erreur: Error querying data for table orders: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne t2.name n'existe pas\nLINE 1: SELECT T2.name FROM orders AS T1 INNER JOIN order_items AS T...\n               ^\nHINT:  Peut-être que vous souhaitiez référencer la colonne « t3.name ».\n\n[SQL: SELECT T2.name FROM orders AS T1 INNER JOIN order_items AS T2 ON T1.id = T2.order_id INNER JOIN products AS T3 ON T2.product_id = T3.id;]\n(Background on this error at: https://sqlalche.me/e/20/f405)",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:01:55.041243"
+        }
+      ]
+    },
+    "9f41c66b-b3f6-4948-890a-a33da56953e2": {
+      "id": "9f41c66b-b3f6-4948-890a-a33da56953e2",
+      "title": "New Conversation POSTGRESQL - 09/17/2025, 11:01 PM",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T23:01:20.646116",
+      "updated_at": "2025-09-17T23:01:20.646116",
+      "messages": []
+    },
+    "8fce1a09-6ea9-46d2-8e16-a07e6ac54c54": {
+      "id": "8fce1a09-6ea9-46d2-8e16-a07e6ac54c54",
+      "title": "New Conversation POSTGRESQL - 09/17/2025 23:02",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T23:02:04.962330",
+      "updated_at": "2025-09-17T23:02:04.969300",
+      "messages": [
+        {
+          "id": "ad420334-5961-485d-96a8-9a4b0ec0ab20",
+          "content": "orders name?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:02:04.969300"
+        }
+      ]
+    },
+    "57bfd89c-2b33-44c6-a434-9b3605ba306f": {
+      "id": "57bfd89c-2b33-44c6-a434-9b3605ba306f",
+      "title": "New Conversation POSTGRESQL - 09/17/2025 23:04",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T23:04:46.288742",
+      "updated_at": "2025-09-17T23:04:51.312938",
+      "messages": [
+        {
+          "id": "23dd3910-485d-45d1-a837-8475ee21973e",
+          "content": "!",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:04:46.296744"
+        },
+        {
+          "id": "7c248689-62f6-4880-9881-646af7ebfc28",
+          "content": "Erreur: Connection error.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:04:51.312938"
+        }
+      ]
+    },
+    "bcaf19d1-88f8-47d7-b73c-28bd01c8b6e8": {
+      "id": "bcaf19d1-88f8-47d7-b73c-28bd01c8b6e8",
+      "title": "New Conversation POSTGRESQL - 09/17/2025 23:11",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T23:11:06.253282",
+      "updated_at": "2025-09-17T23:11:26.846143",
+      "messages": [
+        {
+          "id": "87c7d8fc-1e5e-414d-9746-69e6a018bbf6",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:11:06.261286"
+        },
+        {
+          "id": "74567cf4-b2c9-4a05-8a02-1b62dafff4e9",
+          "content": "It seems like you're looking for information related to a database with tables for customers, orders, order items, and products. What kind of information are you trying to find?",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:11:14.256546"
+        },
+        {
+          "id": "2a7a7c44-bd3b-4ea1-9f3d-88f1af6409c3",
+          "content": "whta is my db about",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:11:19.587871"
+        },
+        {
+          "id": "ffbd0045-ea33-4ad4-adb3-d0a742cbfb34",
+          "content": "Your database appears to be related to an e-commerce system. It contains tables for customers, orders, order items, and products. This suggests that the database is used to store information about customer interactions, sales transactions, and product details.   It likely tracks who customers are, what orders they've placed, the specific items within those orders, and the products that are available for purchase.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:11:26.846143"
+        }
+      ]
+    },
+    "391774da-5bf5-42f5-ad07-43870b82c8b7": {
+      "id": "391774da-5bf5-42f5-ad07-43870b82c8b7",
+      "title": "New Conversation POSTGRESQL - 09/17/2025, 11:11 PM",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T23:11:32.222957",
+      "updated_at": "2025-09-17T23:11:43.554014",
+      "messages": [
+        {
+          "id": "78f7115b-033a-41ed-8a3d-f35ca0dd397f",
+          "content": "my db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:11:37.255430"
+        },
+        {
+          "id": "9485838b-47e3-41ec-ba14-b46e996b8f94",
+          "content": "Your database appears to be related to an e-commerce system. It contains tables for customers, orders, order items, and products. This suggests that you can store information about your customers, their orders, the specific items within those orders, and the products you're selling.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:11:43.554014"
+        }
+      ]
+    },
+    "7cb79b16-aff5-4e00-9e50-d234f9b9ca87": {
+      "id": "7cb79b16-aff5-4e00-9e50-d234f9b9ca87",
+      "title": "New Conversation POSTGRESQL - 09/17/2025, 11:11 PM",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T23:11:45.948499",
+      "updated_at": "2025-09-17T23:11:45.948499",
+      "messages": []
+    },
+    "ef82b6c7-7257-410a-85ef-0fbfe635f94e": {
+      "id": "ef82b6c7-7257-410a-85ef-0fbfe635f94e",
+      "title": "Conversation POSTGRESQL - 17/09/2025 23:17",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T23:17:24.793599",
+      "updated_at": "2025-09-17T23:17:26.500713",
+      "messages": [
+        {
+          "id": "34f59179-3ce8-4aa5-a5da-0a4c2a7bd379",
+          "content": "orders names",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:17:24.815626"
+        },
+        {
+          "id": "72f197fc-e05b-4703-85da-fca8e7b80b0f",
+          "content": "Erreur: Error querying data for table orders: (psycopg2.errors.UndefinedColumn) ERREUR:  la colonne t2.name n'existe pas\nLINE 1: SELECT T2.name FROM orders AS T1 INNER JOIN order_items AS T...\n               ^\nHINT:  Peut-être que vous souhaitiez référencer la colonne « t3.name ».\n\n[SQL: SELECT T2.name FROM orders AS T1 INNER JOIN order_items AS T2 ON T1.id = T2.order_id INNER JOIN products AS T3 ON T2.product_id = T3.id GROUP BY T2.name;]\n(Background on this error at: https://sqlalche.me/e/20/f405)",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:17:26.500713"
+        }
+      ]
+    },
+    "da44aa14-9275-4899-9cc0-8786fd96839f": {
+      "id": "da44aa14-9275-4899-9cc0-8786fd96839f",
+      "title": "New Conversation POSTGRESQL - 09/17/2025, 11:17 PM",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T23:17:32.306525",
+      "updated_at": "2025-09-17T23:17:32.306525",
+      "messages": []
+    },
+    "edb98d76-7136-471f-b691-a0f9dc7387a6": {
+      "id": "edb98d76-7136-471f-b691-a0f9dc7387a6",
+      "title": "Order Inquiry and Status Request",
+      "db_type": "postgresql",
+      "created_at": "2025-09-17T23:18:37.393575",
+      "updated_at": "2025-09-17T23:18:40.344730",
+      "messages": [
+        {
+          "id": "1dd29ca7-070e-4a56-9bde-deeb1a27a516",
+          "content": "what are my orders",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:18:37.400578"
+        },
+        {
+          "id": "6a7e20f9-de1d-4081-b0d5-f10643f7cbbc",
+          "content": "You have two orders.   Order 1:  - Order ID: 1 - Customer ID: 1 - Order Date: September 15, 2025, 7:05:45 AM - Status: Completed - Total Amount: $1339.98 - Payment Method: Credit Card - Payment Status: Paid  Order 2:  - Order ID: 2 - Customer ID: 2 - Order Date: September 15, 2025, 7:05:45 AM - Status: Pending - Total Amount: $239.98 - Payment Method: PayPal - Payment Status: Pending",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:18:39.995602"
+        }
+      ]
+    },
+    "9c70a3f5-e36d-47ba-91ee-011a4d2c83f2": {
+      "id": "9c70a3f5-e36d-47ba-91ee-011a4d2c83f2",
+      "title": "Conversation POSTGRESQL - 19/09/2025 13:40",
+      "db_type": "postgresql",
+      "created_at": "2025-09-19T13:40:50.182107",
+      "updated_at": "2025-09-19T13:40:50.195830",
+      "messages": [
+        {
+          "id": "61fabe0b-5430-4e62-aea0-6f142757ec36",
+          "content": "what are my orders?",
+          "sender": "user",
+          "timestamp": "2025-09-19T13:40:50.195830"
+        }
+      ]
+    },
+    "d8c5c643-51f0-41ff-a47c-5a5d12dec384": {
+      "id": "d8c5c643-51f0-41ff-a47c-5a5d12dec384",
+      "title": "Order Inquiry and Status Request",
+      "db_type": "postgresql",
+      "created_at": "2025-09-19T13:41:03.614119",
+      "updated_at": "2025-09-19T13:41:05.166918",
+      "messages": [
+        {
+          "id": "9244bcfb-59d8-42f9-a801-acaba7dc3990",
+          "content": "what are my orders?",
+          "sender": "user",
+          "timestamp": "2025-09-19T13:41:03.625188"
+        },
+        {
+          "id": "0a591cb1-697c-45f8-a4cb-7330452be80b",
+          "content": "I don't have any information about your orders. This conversation just started, and I don't have access to any personal data or previous interactions. If you'd like to know about a specific order, you can try checking with the relevant store or website directly.",
+          "sender": "bot",
+          "timestamp": "2025-09-19T13:41:04.984352"
+        }
+      ]
+    },
+    "61cc3cfd-78e5-43ab-83ba-e9cf271bb12f": {
+      "id": "61cc3cfd-78e5-43ab-83ba-e9cf271bb12f",
+      "title": "Order Inquiry and Status Request",
+      "db_type": "postgresql",
+      "created_at": "2025-09-19T13:41:32.053946",
+      "updated_at": "2025-09-19T13:41:33.173550",
+      "messages": [
+        {
+          "id": "06078f43-7a98-4152-9afc-29a15be55e33",
+          "content": "what are my orders?",
+          "sender": "user",
+          "timestamp": "2025-09-19T13:41:32.063503"
+        },
+        {
+          "id": "3f6c5eda-cdd0-4e08-ad0c-086c3b7c89e8",
+          "content": "I don't have any information about your orders. This conversation just started, and I don't have access to any personal data or previous interactions. If you'd like to know about a specific order, you can try checking with the relevant store or website directly.",
+          "sender": "bot",
+          "timestamp": "2025-09-19T13:41:32.984780"
+        }
+      ]
+    },
+    "fb74391d-ee2e-473c-aa73-d1dae26eba00": {
+      "id": "fb74391d-ee2e-473c-aa73-d1dae26eba00",
+      "title": "New Conversation POSTGRESQL - 09/19/2025, 02:10 PM",
+      "db_type": "postgresql",
+      "created_at": "2025-09-19T14:10:04.693524",
+      "updated_at": "2025-09-19T14:10:18.315682",
+      "messages": [
+        {
+          "id": "94d037d4-43b3-4354-99be-bf275709e9aa",
+          "content": "what are the costumers?",
+          "sender": "user",
+          "timestamp": "2025-09-19T14:10:17.251015"
+        },
+        {
+          "id": "6babd9de-9af1-4db4-8b0c-607615049d3a",
+          "content": "The customers are John Doe and Jane Smith.   John's details are: - First name: John - Last name: Doe - Email: john.doe@email.com - Phone: +33123456789 - Address: 123 Rue de la Paix - City: Paris - Postal code: 75001 - Country: France  Jane's details are: - First name: Jane - Last name: Smith - Email: jane.smith@email.com - Phone: +33987654321 - Address: 456 Avenue des Champs - City: Lyon - Postal code: 69001 - Country: France",
+          "sender": "bot",
+          "timestamp": "2025-09-19T14:10:18.315682"
+        }
+      ]
+    },
+    "1c71737c-94f8-4158-8365-44b865d59bec": {
+      "id": "1c71737c-94f8-4158-8365-44b865d59bec",
+      "title": "Clarification on Customer Definition Needed",
+      "db_type": "postgresql",
+      "created_at": "2025-09-19T14:10:53.994405",
+      "updated_at": "2025-09-19T14:11:10.502502",
+      "messages": [
+        {
+          "id": "d03a6854-8b57-460c-94ed-efdd861a8295",
+          "content": "what are the costumers?",
+          "sender": "user",
+          "timestamp": "2025-09-19T14:10:54.010556"
+        },
+        {
+          "id": "0e7b58d9-18b2-4a87-842d-3ba8a4a92e96",
+          "content": "The customers are John Doe and Jane Smith.   John's details are: - First name: John - Last name: Doe - Email: john.doe@email.com - Phone: +33123456789 - Address: 123 Rue de la Paix - City: Paris - Postal code: 75001 - Country: France  Jane's details are: - First name: Jane - Last name: Smith - Email: jane.smith@email.com - Phone: +33987654321 - Address: 456 Avenue des Champs - City: Lyon - Postal code: 69001 - Country: France",
+          "sender": "bot",
+          "timestamp": "2025-09-19T14:10:55.089361"
+        },
+        {
+          "id": "0805006f-8871-4eb5-aacc-9ac18dd96897",
+          "content": "give me the wostumers who lives in Lyon",
+          "sender": "user",
+          "timestamp": "2025-09-19T14:11:09.571260"
+        },
+        {
+          "id": "6ab7aa8b-58c7-49c8-b04d-553839673816",
+          "content": "Based on the information I have, there is one customer who lives in Lyon.   The customer's name is Jane Smith. She lives at 456 Avenue des Champs, Lyon, 69001, France. Her contact details are jane.smith@email.com and +33987654321.",
+          "sender": "bot",
+          "timestamp": "2025-09-19T14:11:10.502502"
         }
       ]
     }
@@ -814,6 +2037,612 @@
           "content": "Your database appears to store information about hospitals. Each entry, or document, in your database represents a hospital and contains details such as its name, type, address, contact information, departments offered, bed capacity, and availability of emergency services.",
           "sender": "bot",
           "timestamp": "2025-09-17T01:52:37.968446"
+        }
+      ]
+    },
+    "620b9919-a228-454d-8843-93b5c2cab0ab": {
+      "id": "620b9919-a228-454d-8843-93b5c2cab0ab",
+      "title": "Début de la conversation",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T02:29:12.942051",
+      "updated_at": "2025-09-17T02:30:21.302757",
+      "messages": [
+        {
+          "id": "ba1dc31c-5619-4476-ae30-d67456628b5f",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:29:14.706087"
+        },
+        {
+          "id": "e2bafddb-922a-4979-be50-8cddf4066619",
+          "content": "Hi! How can I assist you today? Do you have any questions about the provided patient data or would you like me to help with something else?",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:29:15.512721"
+        },
+        {
+          "id": "a0a2439c-a0af-4cd2-ba7f-9cacbccaacdf",
+          "content": "how are u?",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:29:20.403774"
+        },
+        {
+          "id": "5383ead5-763a-4b9c-a502-9182c505b0d7",
+          "content": "Erreur: Error querying data for table : collection names cannot be empty",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:29:20.770878"
+        },
+        {
+          "id": "a274fbf2-8bfc-4b24-ba8f-37dc1673a608",
+          "content": "what is my db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:29:29.846329"
+        },
+        {
+          "id": "f14b1744-4b2d-4de6-95ad-1462ee37ef93",
+          "content": "Your database appears to store information about hospitals. Each entry, or document, in your database represents a hospital and contains details such as its name, type, address, contact information, departments offered, bed capacity, and availability of emergency services.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:29:30.667311"
+        },
+        {
+          "id": "fe3f2fa2-421f-4203-afab-c0c59ad8e4fd",
+          "content": "also?",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:29:36.969005"
+        },
+        {
+          "id": "d3f333fb-a261-4183-b452-eed6e01a79ca",
+          "content": "It seems like you started to ask a question but it got cut off. Based on the provided data, I can see that there are two appointment records.   The first appointment is scheduled for September 20, 2025, at 10:00 AM with Doctor DOC001 for a consultation regarding a routine cardiac checkup. The second appointment was on September 18, 2025, at 2:30 PM with Doctor DOC002 for a follow-up on vaccinations.   Could you please complete your question so I can provide a more accurate response?",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:29:37.954609"
+        },
+        {
+          "id": "39f86615-a96e-4a64-9d46-2bd43274f368",
+          "content": "what is the name of professors?",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:29:57.863143"
+        },
+        {
+          "id": "2c2cd388-96c5-4600-bb6c-f1fe9af0e322",
+          "content": "The professors' names are Dr. Karim Mansouri and Dr. Leila Gharbi.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:29:58.986149"
+        },
+        {
+          "id": "f7daafd9-87f2-43e5-a0fa-4313aa291f7e",
+          "content": "how old are they?",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:30:20.299849"
+        },
+        {
+          "id": "e8004971-b4e4-469d-8b50-f210c4d1a5be",
+          "content": "To determine their ages, we need to calculate the difference between their dates of birth and the current date.  Ahmed Ben Salah was born on May 15, 1980, and Amina Trabelsi was born on August 22, 1992.   As of September 17, 2025, Ahmed is 45 years old and Amina is 33 years old.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:30:21.302757"
+        }
+      ]
+    },
+    "92504c7f-f300-488f-861a-c5c65f8392c3": {
+      "id": "92504c7f-f300-488f-861a-c5c65f8392c3",
+      "title": "Conversation MONGODB - 17/09/2025 02:29",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T02:29:42.133440",
+      "updated_at": "2025-09-17T02:29:42.133440",
+      "messages": []
+    },
+    "9887e310-0060-4832-9652-c46f7d156306": {
+      "id": "9887e310-0060-4832-9652-c46f7d156306",
+      "title": "Début de la conversation",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T02:30:26.376063",
+      "updated_at": "2025-09-17T02:30:53.043395",
+      "messages": [
+        {
+          "id": "a95e0d55-cb04-418f-929f-b36610e14e2d",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:30:29.486513"
+        },
+        {
+          "id": "c87e07f5-c7c6-41c4-9890-67a4c7bdbb30",
+          "content": "Hi! How can I assist you today? Do you have any questions about the provided patient data or would you like me to help with something else?",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:30:30.232880"
+        },
+        {
+          "id": "b0dab168-5b10-43c7-bf1c-3d4661ebea92",
+          "content": "what is ùy bd about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:30:34.660878"
+        },
+        {
+          "id": "1bfaff95-7ca1-403e-bfd7-31c3fa0f6add",
+          "content": "I think there might be a small typo in your question. I'm assuming you meant to ask \"what is my bd about?\" or possibly \"what is BD about?\" but I'm going to take a guess that you meant to ask about \"blood type\" or something similar given the context of the data provided.  If that's the case, when we talk about blood type, or more specifically, blood type in the context of the provided data, it seems like you're referring to the blood types of individuals. For instance, one person has a blood type of O+, and another has A-.  Could you please clarify or provide more context about what \"ùy bd\" refers to? That way, I can give you a more accurate and helpful response.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:30:35.563899"
+        },
+        {
+          "id": "fe1c168a-a5ff-46ce-bcf4-736e257b9412",
+          "content": "yes",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:30:40.576471"
+        },
+        {
+          "id": "f7d418fb-567b-4e88-8555-966d21c1ba02",
+          "content": "It seems like you're ready to proceed. What would you like to know or discuss about the provided data, which appears to be patient medical records?",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:30:41.371471"
+        },
+        {
+          "id": "05d1931f-fa83-4cf6-b997-4749a18f4e78",
+          "content": "the medications",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:30:52.354162"
+        },
+        {
+          "id": "1c474f0d-0be5-4a0a-ba3a-4c68e217692e",
+          "content": "The patient is taking Lisinopril, 10mg once daily for 3 months.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:30:53.043395"
+        }
+      ]
+    },
+    "48377168-a1b8-4590-a914-d3a3e45e2a31": {
+      "id": "48377168-a1b8-4590-a914-d3a3e45e2a31",
+      "title": "Conversation MONGODB - 17/09/2025 02:30",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T02:30:57.183397",
+      "updated_at": "2025-09-17T02:30:57.183397",
+      "messages": []
+    },
+    "d6b0feaa-63e1-4188-93aa-393cc8965945": {
+      "id": "d6b0feaa-63e1-4188-93aa-393cc8965945",
+      "title": "Nombre de patients en attente",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T02:58:47.406940",
+      "updated_at": "2025-09-17T02:59:27.352258",
+      "messages": [
+        {
+          "id": "76f805ea-e5d2-488f-af58-49489cb96a2b",
+          "content": "how many patients we have",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:58:47.416963"
+        },
+        {
+          "id": "5a2ba1e9-5e67-4dbf-8e16-bc906fc8819f",
+          "content": "We have 2 patients. Their information includes Ahmed Ben Salah, a 45-year-old male, and Amina Trabelsi, a 32-year-old female.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:58:48.726240"
+        },
+        {
+          "id": "199e3e6d-992b-474a-9621-b2a852a18544",
+          "content": "how many languages do you talk",
+          "sender": "user",
+          "timestamp": "2025-09-17T02:59:26.614253"
+        },
+        {
+          "id": "4ae8b32d-bf07-4a9e-a790-d868ff94d184",
+          "content": "Erreur: Error querying data for table : collection names cannot be empty",
+          "sender": "bot",
+          "timestamp": "2025-09-17T02:59:27.352258"
+        }
+      ]
+    },
+    "9b1a8fce-3514-4931-9241-6367d97e0227": {
+      "id": "9b1a8fce-3514-4931-9241-6367d97e0227",
+      "title": "Conversation MONGODB - 17/09/2025 21:21",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T21:21:15.575324",
+      "updated_at": "2025-09-17T21:21:15.575324",
+      "messages": []
+    },
+    "3371450f-f3a5-4228-bebc-aaf1d03f7c80": {
+      "id": "3371450f-f3a5-4228-bebc-aaf1d03f7c80",
+      "title": "Conversation MONGODB - 17/09/2025 21:21",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T21:21:15.836067",
+      "updated_at": "2025-09-17T21:21:17.297062",
+      "messages": [
+        {
+          "id": "35bca1a7-992c-4c7e-ab26-a9e3f0af5f16",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-17T21:21:17.297062"
+        }
+      ]
+    },
+    "7ae14f0d-5c44-404a-99d3-77413072caf9": {
+      "id": "7ae14f0d-5c44-404a-99d3-77413072caf9",
+      "title": "Début de la conversation médicale",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T21:44:49.250242",
+      "updated_at": "2025-09-17T21:45:01.398203",
+      "messages": [
+        {
+          "id": "5afe4619-3c53-4589-a77d-59a0ce9a0ffc",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-17T21:44:49.259246"
+        },
+        {
+          "id": "2a95ee25-8491-4335-9c18-261a584c1ac4",
+          "content": "Hi! How can I assist you today? Do you have any questions about the provided patient data or would you like me to help with something else?",
+          "sender": "bot",
+          "timestamp": "2025-09-17T21:44:50.443269"
+        },
+        {
+          "id": "cf46eb81-8944-4a4c-92d2-daffb6800659",
+          "content": "what are my patients?",
+          "sender": "user",
+          "timestamp": "2025-09-17T21:44:59.677344"
+        },
+        {
+          "id": "670965ae-77de-4453-98c8-79af31ae763c",
+          "content": "You have two patients.   The first patient is Ahmed Ben Salah, a 45-year-old male with blood type O+. He was born on May 15, 1980, and can be contacted at +21612345678 or ahmed.bensalah@email.com. He lives at 123 Avenue Habib Bourguiba in Tunis, Tunisia. His emergency contact is Fatima Ben Salah, his wife, who can be reached at +21687654321. Ahmed has allergies to Penicillin and Peanuts, and he has Hypertension. He takes Lisinopril 10mg daily.  The second patient is Amina Trabelsi, a 33-year-old female with blood type A-. She was born on August 22, 1992, and can be contacted at +21698765432 or amina.trabelsi@email.com. She lives at 456 Rue de la République in Sfax, Tunisia. Her emergency contact is Mohamed Trabelsi, her father, who can be reached at +21656789123. Amina does not have any allergies, chronic conditions, or medications.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T21:45:01.398203"
+        }
+      ]
+    },
+    "8890085e-981a-401c-a38e-0f5b2b9bcaf7": {
+      "id": "8890085e-981a-401c-a38e-0f5b2b9bcaf7",
+      "title": "Conversation MONGODB - 17/09/2025 21:45",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T21:45:13.512153",
+      "updated_at": "2025-09-17T21:45:13.512153",
+      "messages": []
+    },
+    "94da255b-384f-4b26-b52b-a2f228c1c9f4": {
+      "id": "94da255b-384f-4b26-b52b-a2f228c1c9f4",
+      "title": "Conversation MONGODB - 17/09/2025 21:45",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T21:45:15.176150",
+      "updated_at": "2025-09-17T21:45:15.176150",
+      "messages": []
+    },
+    "63452788-0c82-4e70-b5e2-cb1b06eb6444": {
+      "id": "63452788-0c82-4e70-b5e2-cb1b06eb6444",
+      "title": "Recherche de noms de patients spécifiques",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T21:45:15.850070",
+      "updated_at": "2025-09-17T21:45:30.825529",
+      "messages": [
+        {
+          "id": "44029a9e-b599-4785-a35d-a12f73885589",
+          "content": "what are mu patients name",
+          "sender": "user",
+          "timestamp": "2025-09-17T21:45:29.002568"
+        },
+        {
+          "id": "94596d97-d6b7-4924-b6d0-bb2ed0de6599",
+          "content": "You have two patients in your data. Their names are Ahmed Ben Salah and Amina Trabelsi.   Ahmed Ben Salah is a 45-year-old male, and Amina Trabelsi is a 32-year-old female.   Would you like to know more about their medical history or contact information?",
+          "sender": "bot",
+          "timestamp": "2025-09-17T21:45:30.636409"
+        }
+      ]
+    },
+    "584b6728-b924-4af0-9a89-4e033c88b3f8": {
+      "id": "584b6728-b924-4af0-9a89-4e033c88b3f8",
+      "title": "Conversation MONGODB - 17/09/2025 21:45",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T21:45:37.602495",
+      "updated_at": "2025-09-17T21:45:37.602495",
+      "messages": []
+    },
+    "5609bbfc-0a71-4634-93a3-6219315c786d": {
+      "id": "5609bbfc-0a71-4634-93a3-6219315c786d",
+      "title": "Conversation MONGODB - 17/09/2025 22:21",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T22:21:02.074062",
+      "updated_at": "2025-09-17T22:21:02.074062",
+      "messages": []
+    },
+    "7ea42bc8-bcfb-491d-a439-3497fe9eac95": {
+      "id": "7ea42bc8-bcfb-491d-a439-3497fe9eac95",
+      "title": "Conversation MONGODB - 17/09/2025 22:21",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T22:21:02.076063",
+      "updated_at": "2025-09-17T22:21:18.742641",
+      "messages": [
+        {
+          "id": "604c4a05-4a57-42e6-9f07-9a41b07e386f",
+          "content": "the name of patients",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:21:18.742641"
+        }
+      ]
+    },
+    "7e6d9ed6-8e60-4ff3-9840-2ff340c59a6b": {
+      "id": "7e6d9ed6-8e60-4ff3-9840-2ff340c59a6b",
+      "title": "Déterminer lobjet de ma base données",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T22:21:50.103308",
+      "updated_at": "2025-09-17T22:21:51.983969",
+      "messages": [
+        {
+          "id": "2248aaa1-5f3a-4f7d-96e0-cffe06e4dc53",
+          "content": "what is my db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T22:21:50.114307"
+        },
+        {
+          "id": "60d53d8e-79d2-443c-bc12-dc3002e5a204",
+          "content": "Your database appears to store information about hospitals. Each entry, or document, in your database represents a hospital and contains details such as its name, type, address, contact information, departments offered, bed capacity, and availability of emergency services.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T22:21:51.534987"
+        }
+      ]
+    },
+    "b11bebe8-35b8-42cb-9eee-5a01d2f69e07": {
+      "id": "b11bebe8-35b8-42cb-9eee-5a01d2f69e07",
+      "title": "New Conversation MONGODB - 09/17/2025 23:12",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T23:12:04.472600",
+      "updated_at": "2025-09-17T23:12:35.355851",
+      "messages": [
+        {
+          "id": "287bb1e2-8cfa-4dd9-93f3-8fe49c41c674",
+          "content": "my db about?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:12:04.480569"
+        },
+        {
+          "id": "ea7a010e-45ed-4245-8c6c-9a63bc340f46",
+          "content": "Your database appears to contain information about hospitals. The specific document you've shared details a hospital named Hôpital Charles Nicolle, located in Tunis, Tunisia. It provides various details such as the hospital's type, address, contact information, departments offered, bed capacity, and whether it provides emergency services. This suggests your database is a repository of healthcare facilities, possibly for management, informational, or analytical purposes.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:12:21.379239"
+        },
+        {
+          "id": "fddb01dc-4af9-4e1b-84f8-68fa47f1c235",
+          "content": "patients name?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:12:32.622233"
+        },
+        {
+          "id": "f383aedf-5b87-48ad-9b28-efd7729956b8",
+          "content": "The patients' names are Ahmed Ben Salah and Amina Trabelsi.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:12:35.355851"
+        }
+      ]
+    },
+    "666a6a05-9b4f-4383-965b-d77b0293da8b": {
+      "id": "666a6a05-9b4f-4383-965b-d77b0293da8b",
+      "title": "New Conversation MONGODB - 09/17/2025, 11:12 PM",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T23:12:38.503935",
+      "updated_at": "2025-09-17T23:13:13.582217",
+      "messages": [
+        {
+          "id": "016188fb-5c5c-4a28-9c9a-777dd4c87a6a",
+          "content": "The patients' names are Ahmed Ben Salah and Amina Trabelsi.",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:12:40.067713"
+        },
+        {
+          "id": "489ea8f6-4f64-4da2-8df9-2daa63c6a087",
+          "content": "The two patients are Ahmed Ben Salah, a 45-year-old male with blood type O+, and Amina Trabelsi, a 33-year-old female with blood type A-.   Ahmed Ben Salah's contact information is phone: +21612345678 and email: ahmed.bensalah@email.com. He lives at 123 Avenue Habib Bourguiba, Tunis, 1000, Tunisia. His emergency contact is Fatima Ben Salah, his wife, who can be reached at +21687654321.  Amina Trabelsi's contact information is phone: +21698765432 and email: amina.trabelsi@email.com. She lives at 456 Rue de la République, Sfax, 3000, Tunisia. Her emergency contact is Mohamed Trabelsi, her father, who can be reached at +21656789123.  In terms of medical history, Ahmed Ben Salah has allergies to Penicillin and Peanuts, and has a chronic condition of Hypertension. He is currently taking Lisinopril 10mg daily. Amina Trabelsi does not have any allergies, chronic conditions, or medications.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:13:13.582217"
+        }
+      ]
+    },
+    "e89212c0-ec19-4ff7-a86f-6fdc16b0a30c": {
+      "id": "e89212c0-ec19-4ff7-a86f-6fdc16b0a30c",
+      "title": "New Conversation MONGODB - 09/17/2025, 11:13 PM",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T23:13:20.699735",
+      "updated_at": "2025-09-17T23:13:20.699735",
+      "messages": []
+    },
+    "cbf529fe-a722-41c7-9a42-f4d93d7c0818": {
+      "id": "cbf529fe-a722-41c7-9a42-f4d93d7c0818",
+      "title": "Request for Patient Names Disclosure",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T23:17:51.884455",
+      "updated_at": "2025-09-17T23:18:11.125368",
+      "messages": [
+        {
+          "id": "f42f6b77-570c-4370-aac6-8a39c7db4fce",
+          "content": "patients names?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:17:51.894453"
+        },
+        {
+          "id": "01e215db-4159-49fa-9c10-f74744d1dfcc",
+          "content": "The patients' names are Ahmed Ben Salah and Amina Trabelsi.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:17:53.414755"
+        },
+        {
+          "id": "4016c522-4a98-40bc-b26a-44d384cebc49",
+          "content": "how old are they",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:18:05.352354"
+        },
+        {
+          "id": "8a6fdd6c-7290-4bac-9e29-eadfe15ccebe",
+          "content": "To determine their ages, we need to calculate the difference between their date of birth and the current year.  The first patient, Ahmed Ben Salah, was born on May 15, 1980. Assuming the current year is 2025, we can calculate his age as follows: 2025 - 1980 = 45 years old.  The second patient, Amina Trabelsi, was born on August 22, 1992. Using the same calculation: 2025 - 1992 = 33 years old.  So, Ahmed Ben Salah is 45 years old and Amina Trabelsi is 33 years old.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:18:11.125368"
+        }
+      ]
+    },
+    "bda6314c-c567-4842-b17f-72664d1b5ed7": {
+      "id": "bda6314c-c567-4842-b17f-72664d1b5ed7",
+      "title": "Conversation MONGODB - 17/09/2025 23:32",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T23:32:26.351274",
+      "updated_at": "2025-09-17T23:32:26.362277",
+      "messages": [
+        {
+          "id": "11ab4ea1-48c9-4991-aae7-bfaa9e5c03a7",
+          "content": "Patients names?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:32:26.362277"
+        }
+      ]
+    },
+    "e2dc7475-ad86-4d98-86f5-4f7855bea944": {
+      "id": "e2dc7475-ad86-4d98-86f5-4f7855bea944",
+      "title": "Request for Patient Names Disclosure",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T23:32:46.199287",
+      "updated_at": "2025-09-17T23:33:15.547467",
+      "messages": [
+        {
+          "id": "9458fe04-883e-470c-997a-0ceda941a4c3",
+          "content": "patients names?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:32:46.209277"
+        },
+        {
+          "id": "a39d1a63-1d27-4ff6-9691-4941d86ec12a",
+          "content": "The patients' names are Ahmed Ben Salah and Amina Trabelsi.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:32:48.022215"
+        },
+        {
+          "id": "f8c26392-0da3-4b62-8026-2a0407145c73",
+          "content": "how old are they ?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:33:12.745300"
+        },
+        {
+          "id": "a7e0b28c-f8b3-498b-976a-eff95c6968c2",
+          "content": "To determine their ages, I'll need to calculate the difference between their date of birth and the current year.  Ahmed Ben Salah was born on May 15, 1980, which makes him 45 years old.   Amina Trabelsi was born on August 22, 1992, which makes her 33 years old.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:33:15.547467"
+        }
+      ]
+    },
+    "7bbbc588-63f7-464e-9adc-332a42397d53": {
+      "id": "7bbbc588-63f7-464e-9adc-332a42397d53",
+      "title": "New Conversation MONGODB - 09/17/2025, 11:33 PM",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T23:33:25.677369",
+      "updated_at": "2025-09-17T23:33:25.677369",
+      "messages": []
+    },
+    "8895bfed-9e17-4f26-b42c-80980f5dc8a3": {
+      "id": "8895bfed-9e17-4f26-b42c-80980f5dc8a3",
+      "title": "New Conversation MONGODB - 09/17/2025, 11:33 PM",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T23:33:34.031436",
+      "updated_at": "2025-09-17T23:33:34.031436",
+      "messages": []
+    },
+    "4fc14e94-94d8-4ae7-865e-ae9f417ff9a3": {
+      "id": "4fc14e94-94d8-4ae7-865e-ae9f417ff9a3",
+      "title": "New Conversation MONGODB - 09/17/2025, 11:33 PM",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T23:33:37.077640",
+      "updated_at": "2025-09-17T23:34:10.815691",
+      "messages": [
+        {
+          "id": "24733a1e-c014-4d8d-b004-de196ab4ca22",
+          "content": "what  are the patients name?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:33:46.890775"
+        },
+        {
+          "id": "87b7fdf3-bd14-481e-8a02-92e423a22380",
+          "content": "The patients' names are Ahmed Ben Salah and Amina Trabelsi.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:33:55.890812"
+        },
+        {
+          "id": "4d9944a6-f23d-40ec-9548-a65b9e452398",
+          "content": "how old are they?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:34:03.345498"
+        },
+        {
+          "id": "11b345c4-03e4-4833-a95b-89e2c8fcc4c4",
+          "content": "To determine their ages, we need to calculate the difference between their dates of birth and the current date.  Ahmed Ben Salah was born on May 15, 1980, and Amina Trabelsi was born on August 22, 1992.   As of September 17, 2025, Ahmed is 45 years old and Amina is 33 years old.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:34:10.815691"
+        }
+      ]
+    },
+    "cd48532f-e8a7-423b-a9b3-ab9fa66f9cb2": {
+      "id": "cd48532f-e8a7-423b-a9b3-ab9fa66f9cb2",
+      "title": "New Conversation MONGODB - 09/17/2025, 11:34 PM",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T23:34:36.960581",
+      "updated_at": "2025-09-17T23:34:36.960581",
+      "messages": []
+    },
+    "2a931448-41d6-47e9-b190-5644ab31f78b": {
+      "id": "2a931448-41d6-47e9-b190-5644ab31f78b",
+      "title": "New Conversation MONGODB - 09/17/2025, 11:34 PM",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T23:34:52.668028",
+      "updated_at": "2025-09-17T23:34:52.668028",
+      "messages": []
+    },
+    "18212372-f860-4d6a-aef9-eaaf15b92e8f": {
+      "id": "18212372-f860-4d6a-aef9-eaaf15b92e8f",
+      "title": "Conversation MONGODB - 17/09/2025 23:35",
+      "db_type": "mongodb",
+      "created_at": "2025-09-17T23:35:07.033694",
+      "updated_at": "2025-09-17T23:35:12.246755",
+      "messages": [
+        {
+          "id": "077a6f9b-38ff-4689-bc33-b32c1c767a2e",
+          "content": "what are the patients names?",
+          "sender": "user",
+          "timestamp": "2025-09-17T23:35:07.042778"
+        },
+        {
+          "id": "4fcc4180-edc3-4d90-8d95-b75162f17cd9",
+          "content": "Erreur: Connection error.",
+          "sender": "bot",
+          "timestamp": "2025-09-17T23:35:12.246755"
+        }
+      ]
+    },
+    "ae386911-690d-45a2-bdd0-ac51c8ab4567": {
+      "id": "ae386911-690d-45a2-bdd0-ac51c8ab4567",
+      "title": "New Conversation MONGODB - 09/19/2025, 02:02 PM",
+      "db_type": "mongodb",
+      "created_at": "2025-09-19T14:02:42.236664",
+      "updated_at": "2025-09-19T14:03:16.525415",
+      "messages": [
+        {
+          "id": "0b411318-cf86-4066-86bf-b102141faebf",
+          "content": "How many patients are in the database?",
+          "sender": "user",
+          "timestamp": "2025-09-19T14:02:53.796633"
+        },
+        {
+          "id": "0b0d3f31-976b-4b88-a9b0-ae1469293170",
+          "content": "There are 2 patients in the database.",
+          "sender": "bot",
+          "timestamp": "2025-09-19T14:02:54.678898"
+        },
+        {
+          "id": "3ed4bdf7-458b-4c44-a052-e1d6eb92f11a",
+          "content": "List all médications",
+          "sender": "user",
+          "timestamp": "2025-09-19T14:03:07.132234"
+        },
+        {
+          "id": "2eb8a538-39bd-4c65-95aa-0292bdcecc99",
+          "content": "The patient is taking Lisinopril, which is 10mg, taken once daily for a duration of 3 months.",
+          "sender": "bot",
+          "timestamp": "2025-09-19T14:03:07.907318"
+        },
+        {
+          "id": "5cfe2ba6-1c44-41e2-a127-21ddf872e5b9",
+          "content": "What appointments are scheduled for August 2025?",
+          "sender": "user",
+          "timestamp": "2025-09-19T14:03:15.491353"
+        },
+        {
+          "id": "be72e642-0581-46fc-872e-a616f004affb",
+          "content": "There are no appointments scheduled for August 2025. However, I can see that there are appointments scheduled for September 2025.   On September 18, 2025, at 2:30 PM, a follow-up appointment with doctor DOC002 for patient PAT002 is completed.  On September 20, 2025, at 10:00 AM, a consultation appointment with doctor DOC001 for patient PAT001 is scheduled.   Let me know if you need more information.",
+          "sender": "bot",
+          "timestamp": "2025-09-19T14:03:16.525415"
         }
       ]
     }

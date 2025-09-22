@@ -131,7 +131,8 @@ class ChatbotInterface {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    db_type: this.currentDbType
+                    db_type: this.currentDbType,
+                    title: `New Conversation ${this.currentDbType.toUpperCase()} - ${new Date().toLocaleString("en-US", { month: '2-digit', day: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })}`
                 })
             });
 
@@ -214,7 +215,8 @@ class ChatbotInterface {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    db_type: this.currentDbType
+                    db_type: this.currentDbType,
+                    title: `New Conversation ${this.currentDbType.toUpperCase()} - ${new Date().toLocaleString("en-US", { month: '2-digit', day: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })}`
                 })
             });
 
@@ -427,7 +429,7 @@ class ChatbotInterface {
         } else if (diffDays <= 7) {
             return `${diffDays - 1} days ago`;
         } else {
-            return date.toLocaleDateString('en-US');
+            return date.toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' });
         }
     }
 }

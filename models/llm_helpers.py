@@ -115,6 +115,51 @@ class LanguageModelRequest:
         response = chain.run(tables_schema=tables_schema, questions=query)
         return response[0].strip()
 
+    def generate_conversation_title(self, messages):
+        """
+        Generate a conversation title based on the messages content.
+        
+        Args:
+            messages: List of message dictionaries with 'content' and 'sender' keys
+            
+        Returns:
+            A concise title for the conversation
+        """
+        if not messages:
+            return "Nouvelle conversation"
+        
+        # Get the first few user messages to understand the topic
+        user_messages = [msg['content'] for msg in messages if msg.get('sender') == 'user']
+        
+        if not user_messages:
+            return "Nouvelle conversation"
+        
+        # Use the first 2-3 user messages to generate a title
+        context = " ".join(user_messages[:3])
+        
+        template = ("Based on the following conversation messages, generate a short, descriptive and unique title (maximum 5-7 words) that captures the main topic, key entities (like patient names, order numbers, product names), or the primary question being discussed. The title should be in English and professional. Prioritize specific details over generic terms. Only return the title, no other text.\n\nMessages: {context}")
+        system_message_prompt = SystemMessagePromptTemplate.from_template(template)
+        human_template = "Generate a title for this conversation."
+        human_message_prompt = HumanMessagePromptTemplate.from_template(human_template)
+
+        chat_prompt = ChatPromptTemplate.from_messages([system_message_prompt, human_message_prompt])
+
+        chain = LLMChain(
+            llm=self.chat_model,
+            prompt=chat_prompt
+        )
+
+        try:
+            response = chain.run(context=context)
+            # Clean up the response and ensure it's not too long
+            title = response.strip().replace('"', '').replace("'", "")
+            if len(title) > 50:
+                title = title[:47] + "..."
+            return title if title else "Nouvelle conversation"
+        except Exception as e:
+            print(f"Error generating conversation title: {e}")
+            return "Nouvelle conversation"
+
     def get_column_based_on_query(self, columns, query):
         template = ("Get the column names for sql query based on given columns and question only write column names "
                     "so it can use for query database\ncolumns: {columns}")

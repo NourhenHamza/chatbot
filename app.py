@@ -63,6 +63,9 @@ def ask():
         
         # Ajouter la réponse du bot à la conversation
         conversation_manager.add_message(db_type, conversation_id, response, "bot")
+        
+        # Mettre à jour automatiquement le titre de la conversation si nécessaire
+        conversation_manager.auto_update_conversation_title(db_type, conversation_id, language_model_processor)
             
         return jsonify({"response": response, "conversation_id": conversation_id})
             

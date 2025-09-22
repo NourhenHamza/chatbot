@@ -175,6 +175,38 @@ class ConversationManager:
         self._save_conversations()
         return True
     
+    def auto_update_conversation_title(self, db_type: str, conversation_id: str, llm_processor) -> bool:
+        """
+        Met à jour automatiquement le titre d'une conversation basé sur son contenu.
+        
+        Args:
+            db_type: Type de base de données
+            conversation_id: ID de la conversation
+            llm_processor: Instance du processeur LLM pour générer le titre
+            
+        Returns:
+            True si le titre a été mis à jour avec succès, False sinon
+        """
+        conversation = self.get_conversation(db_type, conversation_id)
+        if not conversation:
+            return False
+        
+        messages = conversation.get("messages", [])
+        if len(messages) < 2:  # Attendre au moins 2 messages (1 user + 1 bot)
+            return False
+        
+        # Ne mettre à jour que si le titre est encore le titre par défaut
+        current_title = conversation.get("title", "")
+        if not current_title.startswith("Conversation") and not current_title.startswith("Nouvelle"):
+            return False  # Le titre a déjà été personnalisé
+        
+        try:
+            new_title = llm_processor.generate_conversation_title(messages)
+            return self.update_conversation_title(db_type, conversation_id, new_title)
+        except Exception as e:
+            print(f"Erreur lors de la mise à jour automatique du titre: {e}")
+            return False
+
     def get_conversation_messages(self, db_type: str, conversation_id: str) -> List[Dict]:
         """
         Récupère tous les messages d'une conversation.
