@@ -875,10 +875,10 @@
     },
     "b48ac00a-dac3-40a2-9934-a81e53d683cb": {
       "id": "b48ac00a-dac3-40a2-9934-a81e53d683cb",
-      "title": "New Conversation MYSQL - 09/17/2025, 11:31 PM",
+      "title": "The most frequent direction of flight",
       "db_type": "mysql",
       "created_at": "2025-09-17T23:31:35.281479",
-      "updated_at": "2025-09-17T23:31:56.593677",
+      "updated_at": "2025-09-24T17:12:19.709228",
       "messages": [
         {
           "id": "2f1eb58c-f649-4f0d-a0fa-b091bcf9b79b",
@@ -891,15 +891,261 @@
           "content": "The airports are Charles de Gaulle Airport, John F. Kennedy International Airport, London Heathrow Airport, Dubai International Airport, and Tunis-Carthage International Airport.",
           "sender": "bot",
           "timestamp": "2025-09-17T23:31:56.593677"
+        },
+        {
+          "id": "3ce4e927-cd12-44b3-b76a-fe5f1569e43e",
+          "content": "what are my passengers",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:32:02.747353"
+        },
+        {
+          "id": "5c6e1f6e-832c-40ef-857f-fe3cd59f6df8",
+          "content": "what are my passengers",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:32:16.699374"
+        },
+        {
+          "id": "8d5225b0-00ff-4a65-adb1-43209ca70a05",
+          "content": "You have four passengers.   1. Ahmed Ben Ali, a 39-year-old man from Tunisia, born on March 15, 1985. 2. Marie Dubois, a 33-year-old woman from France, born on July 22, 1990. 3. John Smith, a 47-year-old man from the USA, born on December 5, 1978. 4. Fatima Al-Zahra, a 32-year-old woman from the UAE, born on January 30, 1992.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:32:21.367471"
+        },
+        {
+          "id": "5ce73524-f72b-4d65-aa26-246249a86b14",
+          "content": "give me the average of passengers age",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:32:43.514424"
+        },
+        {
+          "id": "4b45619e-bea4-4c7e-bff9-1340b7e22306",
+          "content": "Erreur: Error querying data for table passengers: (pymysql.err.ProgrammingError) (1064, \"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1\")\n[SQL: SELECT AVG(TIMESTAMPDIFF(YEAR]\n(Background on this error at: https://sqlalche.me/e/20/f405)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:32:45.458598"
+        },
+        {
+          "id": "81e156af-50a8-49a0-a1dd-5604235b09bc",
+          "content": "donner la moyenne d age des passagers",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:33:10.936994"
+        },
+        {
+          "id": "2bfe5502-7305-41e8-9a6b-2a53c1045692",
+          "content": "Erreur: Error querying data for table passengers: (pymysql.err.ProgrammingError) (1064, \"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1\")\n[SQL: SELECT AVG(TIMESTAMPDIFF(YEAR]\n(Background on this error at: https://sqlalche.me/e/20/f405)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:33:12.277606"
+        },
+        {
+          "id": "1e233b80-7df2-426f-980c-a1bd86e5df03",
+          "content": "donner la tranche dage la plus existante",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:34:20.469398"
+        },
+        {
+          "id": "fc81d5ff-19a6-4d27-91b8-191f2f3caafd",
+          "content": "Erreur: Error querying data for table passengers: (pymysql.err.ProgrammingError) (1064, \"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2\")\n[SQL: SELECT \n    TIMESTAMPDIFF(YEAR]\n(Background on this error at: https://sqlalche.me/e/20/f405)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:34:24.291636"
+        },
+        {
+          "id": "bd4a2cfd-9f12-4f04-a91e-abb3603db80e",
+          "content": "give me more details about airports",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:42:24.495762"
+        },
+        {
+          "id": "49cd96e9-a747-4980-8678-f6634fecf05e",
+          "content": "There are several airports in the data provided. Here are some details about each:  Charles de Gaulle Airport, located in Paris, France, has the code CDG. Its coordinates are 49.00972000 latitude and 2.54791000 longitude. It was created at the same time as the others, on September 16, 2025, at 00:10:41.  Another airport is John F. Kennedy International Airport in New York, USA, with the code JFK. Its coordinates are 40.64131000 latitude and -73.77814000 longitude.  The London Heathrow Airport, with the code LHR, is located in London, UK. Its coordinates are 51.47002000 latitude and -0.45429000 longitude.  In Dubai, UAE, there's the Dubai International Airport with the code DXB. Its coordinates are 25.25322000 latitude and 55.36572000 longitude.  Lastly, there's the Tunis-Carthage International Airport in Tunis, Tunisia, with the code TUN. Its coordinates are 36.85100000 latitude and 10.22717000 longitude.  All of these airports were created at the same time. Their timezones vary: Europe/Paris for CDG, America/New_York for JFK, Europe/London for LHR, Asia/Dubai for DXB, and Africa/Tunis for TUN.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:42:27.851949"
+        },
+        {
+          "id": "4458ffbd-32ef-4e27-a0ca-d64d68dbd27b",
+          "content": "where are the most airports situated ?",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:42:59.284786"
+        },
+        {
+          "id": "3b2107ba-43c8-42e7-8358-20f6abed7035",
+          "content": "Erreur: Error querying data for table airports: (pymysql.err.OperationalError) (1054, \"Unknown column 'country' in 'field list'\")\n[SQL: SELECT country]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:43:00.236541"
+        },
+        {
+          "id": "8151488c-63c2-41ec-8088-5722da2a468f",
+          "content": "where are the most airports situated  located in?",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:43:41.565071"
+        },
+        {
+          "id": "cbf5dca1-3f55-4dd3-a933-66e580df7881",
+          "content": "Erreur: Error querying data for table airports: (pymysql.err.OperationalError) (1054, \"Unknown column 'country' in 'field list'\")\n[SQL: SELECT country]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:43:43.563612"
+        },
+        {
+          "id": "68466a92-51ad-46f3-b1a7-2afcc4c5b921",
+          "content": "what are baggage?",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:44:03.938185"
+        },
+        {
+          "id": "31455591-d729-461f-8c2d-0a1e7b0a8d5d",
+          "content": "Baggage refers to the luggage or personal belongings that a person carries or checks in when traveling by air, train, or other modes of transportation. In the context of the provided data, it appears to be related to checked baggage, as indicated by the 'type' being 'checked'. The data shows several pieces of baggage, each with its own details such as weight, tag number, status, and booking ID.   For instance, there are four pieces of baggage with weights 23.50, 18.20, 25.80, and 20.10, and their respective statuses are checked in, loaded, checked in, and in transit. These details likely help in tracking and managing the baggage throughout the travel process.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:44:06.207748"
+        },
+        {
+          "id": "0dc889e9-421e-48e5-8946-e5f6fcc90900",
+          "content": "is there baggage lost?",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:44:21.392940"
+        },
+        {
+          "id": "016c0b0a-d26e-47f7-ba17-b5dc989cdb5a",
+          "content": "According to the information provided, it appears there are no reports of lost baggage, as the count is zero.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:44:22.883347"
+        },
+        {
+          "id": "436e6133-10e9-4027-83a4-2ea98c16ed74",
+          "content": "can you give me static information about my db?",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:44:50.899440"
+        },
+        {
+          "id": "86eb8be8-1e2b-4efd-b020-ae3faf17bfad",
+          "content": "Based on the data provided, it appears that you have a MySQL database with a variety of system tables. Here are some key details:  The database contains 44 tables, including system tables such as `user`, `db`, `tables_priv`, and `columns_priv`, which are used for access control and permissions. There are also tables related to replication, such as `replication_asynchronous_connection_failover` and `slave_master_info`.  Some tables seem to be related to performance and optimization, like `innodb_index_stats` and `server_cost`. Additionally, there are tables for storing help topics and keywords, such as `help_category` and `help_keyword`.  The database also includes tables for storing information about plugins, procedures, and functions, like `plugin` and `func`.   Would you like to know more about a specific table or aspect of your database?",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:44:52.557309"
+        },
+        {
+          "id": "2cba0d14-e0bb-4e85-a961-9c64637e6eb9",
+          "content": "details about booking",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:45:19.118903"
+        },
+        {
+          "id": "160ab1d8-3fbb-47e4-9f18-70c8d80bb8be",
+          "content": "There are four bookings.   The first booking has a reference number of AF123XYZ. It is for a passenger on flight number 1, in seat 15A, in economy class, for $650. The booking was made on September 16, 2025, and is confirmed.  The second booking has a reference number of BA456ABC. It is for a passenger on flight number 2, in seat 8C, in business class, for $1200. The booking was also made on September 16, 2025, and the passenger has checked in.  The third booking has a reference number of EK789DEF. It is for a passenger on flight number 3, in seat 12F, in economy class, for $890. This booking was made on the same day and is confirmed.  The fourth booking has a reference number of TU012GHI. It is for a passenger on flight number 4, in seat 22B, in economy class, for $320. This booking was also made on September 16, 2025, and the passenger has checked in.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:45:22.795322"
+        },
+        {
+          "id": "54a47e6b-4680-4e62-8572-ffe19210a0b4",
+          "content": "where go the most flights?",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:45:46.481841"
+        },
+        {
+          "id": "34233fe7-dcad-4aa7-938e-6d66a04058c2",
+          "content": "Erreur: Error querying data for table airports: (pymysql.err.OperationalError) (1109, \"Unknown table 'a' in field list\")\n[SQL: SELECT a.name]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:45:54.685441"
+        },
+        {
+          "id": "2f15d110-2cbb-493a-90f6-9f0a9e588da8",
+          "content": "the average destination",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:57:11.663936"
+        },
+        {
+          "id": "172d7090-f9da-4160-8748-272dfe11cc98",
+          "content": "Erreur: Error querying data for table airports: (pymysql.err.OperationalError) (1054, \"Unknown column 'longitude' in 'field list'\")\n[SQL: SELECT AVG(longitude)]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:57:12.648784"
+        },
+        {
+          "id": "8154fde0-b99f-4254-a618-a2475d5cbbc6",
+          "content": "the most visited place",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:57:19.299308"
+        },
+        {
+          "id": "c7c59816-5637-495c-aac2-0681207b6b6c",
+          "content": "Erreur: Error querying data for table airports: (pymysql.err.OperationalError) (1109, \"Unknown table 'airports' in field list\")\n[SQL: SELECT airports.name]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:57:20.107050"
+        },
+        {
+          "id": "2f2b67e2-d913-499a-8246-69b12684c68e",
+          "content": "the most baggage",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:57:25.587438"
+        },
+        {
+          "id": "24f1c8e9-fd4e-4ea4-8216-2356544121e2",
+          "content": "The heaviest baggage is 25.80.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:57:26.590478"
+        },
+        {
+          "id": "abfff1c4-951f-48cc-9a50-46de5d11e645",
+          "content": "give me all baggage",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:57:41.009321"
+        },
+        {
+          "id": "4972c752-995e-46a7-b624-531991da947b",
+          "content": "Here are all the baggages:  1. Baggage with tag number AF123001, weight 23.50, status checked_in 2. Baggage with tag number BA456001, weight 18.20, status loaded 3. Baggage with tag number EK789001, weight 25.80, status checked_in 4. Baggage with tag number TU012001, weight 20.10, status in_transit  Or if you want a summary: There are 4 baggages in total with weights ranging from 18.20 to 25.80 and their status are either checked_in, loaded or in_transit.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:57:42.212657"
+        },
+        {
+          "id": "32d772df-4155-4bfd-8ecc-f18d723e60c9",
+          "content": "how can we book a flight",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:58:01.358305"
+        },
+        {
+          "id": "f71a6a1c-13a5-4830-b3ab-23be9f675a1b",
+          "content": "Erreur: Error querying data for table bookings: (pymysql.err.ProgrammingError) (1064, \"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1\")\n[SQL: INSERT INTO bookings (booking_reference]\n(Background on this error at: https://sqlalche.me/e/20/f405)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:58:02.227213"
+        },
+        {
+          "id": "6ff86dcc-8086-4e67-ab09-753f48e98415",
+          "content": "what are the passengers",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:58:10.982005"
+        },
+        {
+          "id": "7aa49ea2-fd51-4a07-a67c-27ce95c0edf6",
+          "content": "The passengers are Ahmed Ben Ali, Marie Dubois, John Smith, and Fatima Al-Zahra.   Here are their details:  - Ahmed Ben Ali, a 39-year-old from Tunisia - Marie Dubois, a 35-year-old from France - John Smith, a 47-year-old from the USA - Fatima Al-Zahra, a 32-year-old from the UAE",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:58:12.047068"
+        },
+        {
+          "id": "e038a7e9-7ce0-4a9b-95f1-acdc373b916b",
+          "content": "the average counry of passengers",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:58:33.961976"
+        },
+        {
+          "id": "efd08342-3c85-4a04-b3b8-923142bf0d18",
+          "content": "To determine the average country of passengers, we first need to identify the countries listed and their possible relevance to the passengers' nationalities. The countries mentioned are Tunisia, France, USA, and UAE.  Given that we are looking for an \"average\" country, it seems we are trying to find a central tendency or a representative country among the ones listed as passengers' nationalities. However, countries don't typically average in the way numbers do, so we'll interpret this as seeking the most representative or a middle-ground country if we were to arrange them in some form of order.  The nationalities provided are from Tunisia, France, USA, and UAE. Without specific numbers of passengers per country, it's challenging to calculate a true average. However, we can list the countries by their general geographic or economic groupings:  - Geographically, they are spread across North Africa (Tunisia), Western Europe (France), North America (USA), and the Middle East (UAE). - Economically or by global influence, they range from highly influential and economically strong nations (USA, France) to significant players in their regions (UAE) and a developing nation (Tunisia).  If we were to pick a country that might represent a middle ground in terms of economic development and global influence, France and the UAE might be on one side as relatively strong economies, the USA as a global leader, and Tunisia as a representative of developing nations.  However, without a specific criterion for \"average\" (such as GDP, population, or another metric), it's difficult to pinpoint. A simplistic approach might be to consider that two are in regions often considered economically strong or influential (France, USA), one in a rapidly growing region (UAE), and one in North Africa (Tunisia).  Given no clear way to average countries and based on a simplistic view, one might say France could be considered somewhat central in many global rankings, but that's a very subjective interpretation. If you had specific numbers of passengers, that would help provide a more accurate response.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:58:35.866073"
+        },
+        {
+          "id": "80caf941-d760-4182-b594-d19d6968e622",
+          "content": "the most place the passengers from",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:59:25.017354"
+        },
+        {
+          "id": "2b3375cb-e700-4662-a783-e29215257c07",
+          "content": "The Charles de Gaulle Airport is likely one of the busiest airports, serving as a major hub for many passengers.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:59:26.155152"
         }
       ]
     },
     "ca589507-2522-43e6-8625-2cc29c8108fd": {
       "id": "ca589507-2522-43e6-8625-2cc29c8108fd",
-      "title": "New Conversation MYSQL - 09/19/2025, 01:54 PM",
+      "title": "The most frequently lost luggage",
       "db_type": "mysql",
       "created_at": "2025-09-19T13:54:06.663633",
-      "updated_at": "2025-09-19T13:54:48.823110",
+      "updated_at": "2025-09-24T17:10:50.733190",
       "messages": [
         {
           "id": "85d6c95f-893d-446d-8f1c-a83d62da1a0f",
@@ -950,6 +1196,266 @@
           "timestamp": "2025-09-19T13:54:48.823110"
         }
       ]
+    },
+    "28d1b425-b351-4059-9291-fd0bcb3a4c04": {
+      "id": "28d1b425-b351-4059-9291-fd0bcb3a4c04",
+      "title": "Brief Details About BD Requested",
+      "db_type": "mysql",
+      "created_at": "2025-09-24T12:51:36.418382",
+      "updated_at": "2025-09-24T12:56:32.795254",
+      "messages": [
+        {
+          "id": "54ca2f38-ea26-4f38-ad43-8b8740db3452",
+          "content": "give me brief details about my bd",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:51:36.429378"
+        },
+        {
+          "id": "ff1b56eb-b7f9-4883-a661-536be7c56be1",
+          "content": "Based on the provided data, it seems like you're referring to a MySQL database. There is a table named \"db\" which likely stores information about the databases in your MySQL instance.   Additionally, there are other tables that seem relevant to database and user management, such as \"user\", \"global_grants\", \"db\", and \"tables_priv\". These tables appear to be part of the MySQL system database, which stores metadata about the databases, users, and access control.  If you're looking for information about a specific database, I would need more context or details about what you're trying to find.   However, in general, a MySQL database can have multiple tables, and each table can have multiple rows and columns. The data you provided lists many system tables that MySQL uses to manage its databases.   To get more specific information about your database, you might want to look into the \"information_schema\" database, which provides metadata about your databases, or use SQL queries to retrieve information from the system tables.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:51:38.091102"
+        },
+        {
+          "id": "b24ae125-7a56-45c1-90c1-c92454391a2f",
+          "content": "give me details about my db ,brievely",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:52:03.951455"
+        },
+        {
+          "id": "e6bdfd80-e85f-4135-bb5c-fb098d670e75",
+          "content": "Your database appears to be related to an airline or flight management system. It consists of 7 tables:   - Aircraft - Airlines - Airports - Baggage - Bookings - Flights - Passengers  These tables likely store information about the aircraft, airlines, airports, passenger bookings, flights, and baggage.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:52:05.254823"
+        },
+        {
+          "id": "8a12ce77-3987-4601-834c-035f65a81bb7",
+          "content": "give me le pays le plus existant dans les costumers",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:52:52.394263"
+        },
+        {
+          "id": "eb9eaf71-8e30-4842-ad39-452a54f0d3b2",
+          "content": "Le pays qui apparaît le plus dans les données fournies est la France.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:52:53.438524"
+        },
+        {
+          "id": "562d3d37-29d1-4591-af6c-1a1796a8caa3",
+          "content": "give me the most going destination",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:54:15.546110"
+        },
+        {
+          "id": "4813ab31-1928-4cec-b938-6e39c0a59cb4",
+          "content": "Based on the information provided, it seems like there's only one destination mentioned, which is associated with a count of 1. Therefore, I'd say the most going destination is the one with a count of 1.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:54:16.617622"
+        },
+        {
+          "id": "9bd2527d-f3ff-4789-a47f-47a7818c11ec",
+          "content": "give me the flights",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:55:05.421644"
+        },
+        {
+          "id": "ed00c9ee-cf4a-434f-8695-fb5bd59ef5bb",
+          "content": "Here are the flights:  1. AF1148, scheduled to depart at 8:30 on September 17, 2025, from gate A12, terminal 2E, priced at $650.00 2. BA178, scheduled to depart at 10:15 on September 17, 2025, from gate B7, terminal 5, priced at $720.00 3. EK201, scheduled to depart at 14:20 on September 17, 2025, from gate C15, terminal 3, priced at $890.00, and is currently boarding 4. TU714, which has departed, was scheduled to depart at 12:00 on September 17, 2025, from gate A5, terminal 1, priced at $320.00",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:55:06.721074"
+        },
+        {
+          "id": "ee51968e-d620-4747-bff4-8a7ffba37dca",
+          "content": "destinations of flights",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:55:43.135062"
+        },
+        {
+          "id": "fd6def40-7002-4d72-a37e-65bc77883457",
+          "content": "It seems like you're looking for destinations of flights. Based on the information provided, it appears that flights are headed to Charles de Gaulle Airport and John F. Kennedy International Airport. These are two major airports, one in Paris, France, and the other in New York City, USA. If you're looking for specific flight information, I'd be happy to help with that or provide general information about these airports.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:55:44.453891"
+        },
+        {
+          "id": "4f5aed3c-9334-49e7-b98d-c92b82ad82c3",
+          "content": "giv me the most destinations of flights.",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:56:12.440465"
+        },
+        {
+          "id": "78fa14ce-bde4-4018-9251-0b640cd4af69",
+          "content": "The data shows 1 destination.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:56:13.371171"
+        },
+        {
+          "id": "7d94aaf2-0671-4ee6-8ff7-c360bf91c888",
+          "content": "where are the most airport located?",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:56:32.073146"
+        },
+        {
+          "id": "f368c4f9-e8a3-4246-a8ee-75e9ffe7d916",
+          "content": "Erreur: Error querying data for table airports: (pymysql.err.OperationalError) (1054, \"Unknown column 'country' in 'field list'\")\n[SQL: SELECT country]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:56:32.795254"
+        }
+      ]
+    },
+    "e9d3e3eb-2222-4ff5-9cbd-cfef8607b49a": {
+      "id": "e9d3e3eb-2222-4ff5-9cbd-cfef8607b49a",
+      "title": "Conversation MYSQL - 24/09/2025 17:23",
+      "db_type": "mysql",
+      "created_at": "2025-09-24T17:23:20.519114",
+      "updated_at": "2025-09-24T17:23:22.024525",
+      "messages": [
+        {
+          "id": "3817e354-e4f2-47f2-802d-f5e196c9d0d9",
+          "content": "What is the busiest airport in the database",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:23:20.535653"
+        },
+        {
+          "id": "ee1a1282-1659-4c9b-bc0f-90d6af66d31c",
+          "content": "Erreur: Error querying data for table airports: (pymysql.err.OperationalError) (1109, \"Unknown table 'airports' in field list\")\n[SQL: SELECT airports.name]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:23:22.024525"
+        }
+      ]
+    },
+    "5487871c-660c-4d18-ae07-d361b6563641": {
+      "id": "5487871c-660c-4d18-ae07-d361b6563641",
+      "title": "Aircraft Seating Capacity Comparison Inquiry",
+      "db_type": "mysql",
+      "created_at": "2025-09-24T17:24:22.475209",
+      "updated_at": "2025-09-24T17:26:11.002225",
+      "messages": [
+        {
+          "id": "fd654035-5242-46cd-a8ac-51f6c13f058c",
+          "content": "Which aircraft has the most seats?",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:24:22.489281"
+        },
+        {
+          "id": "a8a058bf-2f0d-43a8-a262-9925ccd0b899",
+          "content": "The Airbus A380 has the most seats with a capacity of 615 passengers. It's a model made by Airbus.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:24:23.598704"
+        },
+        {
+          "id": "8bfc2363-4015-414e-a090-658ab6f3ef1c",
+          "content": "What is the average age of our fleet?",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:24:35.642015"
+        },
+        {
+          "id": "7151ce21-96db-4674-b3e2-dfd0c8bee73b",
+          "content": "Erreur: Error querying data for table aircraft: (pymysql.err.ProgrammingError) (1064, \"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1\")\n[SQL: SELECT AVG(TIMESTAMPDIFF(YEAR]\n(Background on this error at: https://sqlalche.me/e/20/f405)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:24:37.091665"
+        },
+        {
+          "id": "802854a8-5cc8-4af6-a413-4eb0d8546330",
+          "content": "Who are our top 10 most frequent flyers?",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:24:45.029835"
+        },
+        {
+          "id": "c50f7e4c-1619-4c54-a3a0-8c3ba54cb76b",
+          "content": "Erreur: Error querying data for table passengers: (pymysql.err.OperationalError) (1109, \"Unknown table 'p' in field list\")\n[SQL: SELECT p.first_name]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:24:46.096284"
+        },
+        {
+          "id": "7b29d27a-9d62-46f7-b358-76139c21c2c6",
+          "content": "What percentage of seats are typically booked on a flight?",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:25:07.274568"
+        },
+        {
+          "id": "4c401e1b-1dbc-4e76-b050-286c6aba8e7f",
+          "content": "Based on the provided data, it seems that the percentage of seats booked on these flights varies. For instance, flight AF1148 has about 19.38% of its seats booked, while flight BA178 has around 28.99% booked. Flight EK201 has 16.26% of its seats booked, and flight TU714 has a higher percentage with 55.56% booked. So, the typical percentage of seats booked on these flights appears to range from around 16% to over 55%, with an average of around 29% based on these specific flights.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:25:08.964566"
+        },
+        {
+          "id": "d265b3b8-4a55-4f6e-8f97-ec9237831dfc",
+          "content": "Which flight route generates the highest revenue?",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:25:25.990853"
+        },
+        {
+          "id": "b59e5410-c7af-4dec-ae85-3f851b2cc859",
+          "content": "Erreur: Error querying data for table flights: (pymysql.err.OperationalError) (1109, \"Unknown table 'f' in field list\")\n[SQL: SELECT \n    f.departure_airport_id]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:25:27.101787"
+        },
+        {
+          "id": "babf1cfc-d277-43d0-98bb-6008851aa632",
+          "content": "What is our overall flight on-time performance rate?",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:25:36.679972"
+        },
+        {
+          "id": "54245e4c-62d1-46a0-81d4-18f4d31ebbc3",
+          "content": "Our overall flight on-time performance rate is 0.0000, which means that essentially none of our flights are on time.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:25:38.241895"
+        },
+        {
+          "id": "679e4022-b1d3-4cd3-b1d4-0fff49fffc56",
+          "content": "\"For our busiest flight route, what is the average number of passengers and bags carried per aircraft model?\"",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:26:09.448539"
+        },
+        {
+          "id": "dc86aaa3-f17d-4f42-9533-ac003b563a30",
+          "content": "Erreur: Error querying data for table flights \nbookings \nbaggage \naircraft: (pymysql.err.ProgrammingError) (1064, \"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '```sql\\nWITH \\n  -- Calculate total passengers and bags per flight\\n  flight_stats ' at line 1\")\n[SQL: ```sql\nWITH \n  -- Calculate total passengers and bags per flight\n  flight_stats AS (\n    SELECT \n      f.id AS flight_id,\n      f.aircraft_id,\n      COUNT(p.id) AS total_passengers,\n      COALESCE(SUM(b.weight)]\n(Background on this error at: https://sqlalche.me/e/20/f405)",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:26:11.002225"
+        }
+      ]
+    },
+    "49908673-7d6b-40f7-9cd5-2d5fcebfb19c": {
+      "id": "49908673-7d6b-40f7-9cd5-2d5fcebfb19c",
+      "title": "Database Overview Request",
+      "db_type": "mysql",
+      "created_at": "2025-09-24T17:28:33.214491",
+      "updated_at": "2025-09-24T17:28:46.286673",
+      "messages": [
+        {
+          "id": "d361c3b2-674c-4803-921a-8ca33c6cb516",
+          "content": "Give me a brief overview of my database.",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:28:33.227051"
+        },
+        {
+          "id": "51a1508a-379e-4f22-99c6-39121986e570",
+          "content": "Your database appears to be related to airline or flight information. It contains several tables, including ones that track aircraft, airlines, airports, baggage, bookings, flights, and passengers. This suggests a comprehensive system for managing various aspects of flight operations and customer data.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:28:34.570929"
+        },
+        {
+          "id": "2e24307e-016b-4d79-8264-da70e612d500",
+          "content": "Which aircraft has the most seats?",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:28:43.919127"
+        },
+        {
+          "id": "6d8f1aba-05d1-4eac-b698-4bebd8791dc2",
+          "content": "The Airbus A380 has the most seats with a capacity of 615 passengers. It's a model made by Airbus.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:28:46.286673"
+        }
+      ]
+    },
+    "655e4ac2-274b-44b0-b6b4-9c8e329e1cc4": {
+      "id": "655e4ac2-274b-44b0-b6b4-9c8e329e1cc4",
+      "title": "New Conversation MYSQL - 09/24/2025, 05:28 PM",
+      "db_type": "mysql",
+      "created_at": "2025-09-24T17:28:50.281315",
+      "updated_at": "2025-09-24T17:28:50.281315",
+      "messages": []
     }
   },
   "postgresql": {
@@ -1696,57 +2202,72 @@
         }
       ]
     },
-    "fb74391d-ee2e-473c-aa73-d1dae26eba00": {
-      "id": "fb74391d-ee2e-473c-aa73-d1dae26eba00",
-      "title": "New Conversation POSTGRESQL - 09/19/2025, 02:10 PM",
+    "f34f34e3-81b9-468f-879d-685bb25fb8e9": {
+      "id": "f34f34e3-81b9-468f-879d-685bb25fb8e9",
+      "title": "Most Prevalent Country in Customer Base",
       "db_type": "postgresql",
-      "created_at": "2025-09-19T14:10:04.693524",
-      "updated_at": "2025-09-19T14:10:18.315682",
+      "created_at": "2025-09-24T12:53:20.004353",
+      "updated_at": "2025-09-24T12:53:21.437412",
       "messages": [
         {
-          "id": "94d037d4-43b3-4354-99be-bf275709e9aa",
-          "content": "what are the costumers?",
+          "id": "3b324ec6-d8c8-4077-8f91-c76c4da8708e",
+          "content": "give me le pays le plus existant dans les costumers",
           "sender": "user",
-          "timestamp": "2025-09-19T14:10:17.251015"
+          "timestamp": "2025-09-24T12:53:20.017338"
         },
         {
-          "id": "6babd9de-9af1-4db4-8b0c-607615049d3a",
-          "content": "The customers are John Doe and Jane Smith.   John's details are: - First name: John - Last name: Doe - Email: john.doe@email.com - Phone: +33123456789 - Address: 123 Rue de la Paix - City: Paris - Postal code: 75001 - Country: France  Jane's details are: - First name: Jane - Last name: Smith - Email: jane.smith@email.com - Phone: +33987654321 - Address: 456 Avenue des Champs - City: Lyon - Postal code: 69001 - Country: France",
+          "id": "5a1a7f75-d4a1-4f9f-aa27-1c350bf5de08",
+          "content": "Le pays qui apparaît le plus dans les données fournies est la France.",
           "sender": "bot",
-          "timestamp": "2025-09-19T14:10:18.315682"
+          "timestamp": "2025-09-24T12:53:21.144928"
         }
       ]
     },
-    "1c71737c-94f8-4158-8365-44b865d59bec": {
-      "id": "1c71737c-94f8-4158-8365-44b865d59bec",
-      "title": "Clarification on Customer Definition Needed",
+    "f977c1dc-4596-4d87-b6fa-dba050dd7669": {
+      "id": "f977c1dc-4596-4d87-b6fa-dba050dd7669",
+      "title": "Conversation POSTGRESQL - 25/09/2025 10:54",
       "db_type": "postgresql",
-      "created_at": "2025-09-19T14:10:53.994405",
-      "updated_at": "2025-09-19T14:11:10.502502",
+      "created_at": "2025-09-25T10:54:42.897918",
+      "updated_at": "2025-09-25T10:54:42.908461",
       "messages": [
         {
-          "id": "d03a6854-8b57-460c-94ed-efdd861a8295",
-          "content": "what are the costumers?",
+          "id": "93d6c7b3-e7ef-4f79-a974-83f3ebcd2b0a",
+          "content": "give me the averae price of products",
           "sender": "user",
-          "timestamp": "2025-09-19T14:10:54.010556"
-        },
+          "timestamp": "2025-09-25T10:54:42.908461"
+        }
+      ]
+    },
+    "9e0b69bb-33e0-4f73-b4a4-77692401a387": {
+      "id": "9e0b69bb-33e0-4f73-b4a4-77692401a387",
+      "title": "Average Product Price Inquiry",
+      "db_type": "postgresql",
+      "created_at": "2025-09-25T10:55:40.266902",
+      "updated_at": "2025-09-25T10:55:53.586080",
+      "messages": [
         {
-          "id": "0e7b58d9-18b2-4a87-842d-3ba8a4a92e96",
-          "content": "The customers are John Doe and Jane Smith.   John's details are: - First name: John - Last name: Doe - Email: john.doe@email.com - Phone: +33123456789 - Address: 123 Rue de la Paix - City: Paris - Postal code: 75001 - Country: France  Jane's details are: - First name: Jane - Last name: Smith - Email: jane.smith@email.com - Phone: +33987654321 - Address: 456 Avenue des Champs - City: Lyon - Postal code: 69001 - Country: France",
-          "sender": "bot",
-          "timestamp": "2025-09-19T14:10:55.089361"
-        },
-        {
-          "id": "0805006f-8871-4eb5-aacc-9ac18dd96897",
-          "content": "give me the wostumers who lives in Lyon",
+          "id": "f0fb28f8-a410-4fb2-9cab-0af762252c6b",
+          "content": "give me the average price of products",
           "sender": "user",
-          "timestamp": "2025-09-19T14:11:09.571260"
+          "timestamp": "2025-09-25T10:55:40.284099"
         },
         {
-          "id": "6ab7aa8b-58c7-49c8-b04d-553839673816",
-          "content": "Based on the information I have, there is one customer who lives in Lyon.   The customer's name is Jane Smith. She lives at 456 Avenue des Champs, Lyon, 69001, France. Her contact details are jane.smith@email.com and +33987654321.",
+          "id": "53282dab-7f97-454c-97f3-13e71ee2843e",
+          "content": "The average price of the products is 634.99.",
           "sender": "bot",
-          "timestamp": "2025-09-19T14:11:10.502502"
+          "timestamp": "2025-09-25T10:55:41.299151"
+        },
+        {
+          "id": "f321c6b0-fd28-432b-b083-bf3a4867879b",
+          "content": "Give me the country that appears most frequently among the customers.",
+          "sender": "user",
+          "timestamp": "2025-09-25T10:55:52.452370"
+        },
+        {
+          "id": "33d6ea50-cfba-4758-a30f-b805a27fba7e",
+          "content": "The country that appears most frequently is France.",
+          "sender": "bot",
+          "timestamp": "2025-09-25T10:55:53.586080"
         }
       ]
     }
@@ -2606,7 +3127,7 @@
       "title": "New Conversation MONGODB - 09/19/2025, 02:02 PM",
       "db_type": "mongodb",
       "created_at": "2025-09-19T14:02:42.236664",
-      "updated_at": "2025-09-19T14:03:16.525415",
+      "updated_at": "2025-09-24T12:50:01.928212",
       "messages": [
         {
           "id": "0b411318-cf86-4066-86bf-b102141faebf",
@@ -2643,6 +3164,269 @@
           "content": "There are no appointments scheduled for August 2025. However, I can see that there are appointments scheduled for September 2025.   On September 18, 2025, at 2:30 PM, a follow-up appointment with doctor DOC002 for patient PAT002 is completed.  On September 20, 2025, at 10:00 AM, a consultation appointment with doctor DOC001 for patient PAT001 is scheduled.   Let me know if you need more information.",
           "sender": "bot",
           "timestamp": "2025-09-19T14:03:16.525415"
+        },
+        {
+          "id": "44b77187-dc23-4b42-8414-a903fa57d039",
+          "content": "Find patient John Doe's records",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:46:35.298693"
+        },
+        {
+          "id": "685c816c-2777-4b3c-a4e0-bcd9910bea70",
+          "content": "Find patient John Doe's records",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:46:40.777110"
+        },
+        {
+          "id": "ab6e6c89-54e7-4bcb-8cf7-b4a776528bba",
+          "content": "I couldn't find any patient records for John Doe. The data provided only shows records for Ahmed Ben Salah and Amina Trabelsi. If you have any other patient IDs or names, I'd be happy to try and assist you further.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:46:43.211189"
+        },
+        {
+          "id": "3f85f3ac-a0f7-4252-a20b-4042157e908c",
+          "content": "Find patientAmina Trabelsi records",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:46:57.127112"
+        },
+        {
+          "id": "2a669943-2d9d-4dcf-b8b9-cf1e1d1a5638",
+          "content": "I've found the records for Amina Trabelsi. Here are the details:  * Patient ID: PAT002 * Date of birth: August 22, 1992 * Gender: Female * Blood type: A- * Contact information: Phone: +21698765432, Email: amina.trabelsi@email.com * Address: 456 Rue de la République, Sfax, 3000, Tunisia * Emergency contact: Mohamed Trabelsi (Father), Phone: +21656789123 * Medical history: No allergies, no chronic conditions, and no medications are listed.  Let me know if you need any further information!",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:47:00.266983"
+        },
+        {
+          "id": "b50f93e5-0af5-44d4-861f-213bf402e5c4",
+          "content": "What appointments are scheduled for September 2025?",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:48:14.992156"
+        },
+        {
+          "id": "1d3f82c3-0939-40c2-b52a-713ae970aabd",
+          "content": "There are two appointments in the data provided.   One appointment is scheduled for September 20, 2025, at 10:00 AM, which is a consultation with a duration of 30 minutes. The appointment ID is APT001.  Another appointment was scheduled for September 18, 2025, at 2:30 PM but its status has been updated to Completed. The appointment ID is APT002.  So, there is 1 appointment still scheduled for September 2025.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:48:17.248327"
+        },
+        {
+          "id": "80488dc2-b1d3-4f2e-a0d1-d8417e21748a",
+          "content": "What appointments are scheduled for  18 September 2025?",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:48:57.574379"
+        },
+        {
+          "id": "4f648c01-061b-4f61-8e0b-092763febd45",
+          "content": "There is one appointment scheduled for 18 September 2025. The appointment details are as follows:  Appointment ID is APT002, Patient ID is PAT002, Doctor ID is DOC002. It is a Follow-up appointment that was completed. The appointment was at 14:30 and lasted 45 minutes. The reason for the appointment was for Vaccination follow-up. The notes from the appointment were that all vaccinations were up to date. The fee for the appointment was 70.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:48:59.917741"
+        },
+        {
+          "id": "a45710aa-d9c1-4af4-b003-d90fa6021aed",
+          "content": "What appointments are scheduled for  18 September 2025? give a brief answer",
+          "sender": "user",
+          "timestamp": "2025-09-24T12:49:43.741196"
+        },
+        {
+          "id": "40752038-0d71-4404-9e2e-b3104b245821",
+          "content": "There is one appointment scheduled for 18 September 2025. The appointment is a follow-up at 14:30 with doctor DOC002 for patient PAT002.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T12:50:01.928212"
+        }
+      ]
+    },
+    "bf7e05a5-a9eb-46ed-9cec-3d6ec891425a": {
+      "id": "bf7e05a5-a9eb-46ed-9cec-3d6ec891425a",
+      "title": "Conversation MONGODB - 24/09/2025 17:14",
+      "db_type": "mongodb",
+      "created_at": "2025-09-24T17:14:56.472703",
+      "updated_at": "2025-09-24T17:14:56.486707",
+      "messages": [
+        {
+          "id": "647cd745-8470-46fb-9002-72aa25a1dca9",
+          "content": "List all doctors specializing in 'Cardiology'.",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:14:56.486707"
+        }
+      ]
+    },
+    "3e5b55b8-2ab8-4155-afe9-ac1a5b8f46b5": {
+      "id": "3e5b55b8-2ab8-4155-afe9-ac1a5b8f46b5",
+      "title": "Cardiology Specialist Doctor List Request",
+      "db_type": "mongodb",
+      "created_at": "2025-09-24T17:15:06.744520",
+      "updated_at": "2025-09-24T17:15:30.233134",
+      "messages": [
+        {
+          "id": "f7e7e973-2805-464b-9642-5494b7f552c0",
+          "content": "List all doctors specializing in 'Cardiology'.",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:15:06.756531"
+        },
+        {
+          "id": "c878bd5a-002f-425d-9929-a2d2d740078e",
+          "content": "Here is the list of doctors specializing in Cardiology:  Dr. Karim Mansouri is a cardiologist with 15 years of experience. His consultation fee is 80 and he is available on Monday, Tuesday, Wednesday and Thursday. You can reach him at karim.mansouri@hospital.tn or call him on +21671234567.   No other doctors were found with the same specialization.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:15:08.473092"
+        },
+        {
+          "id": "169bb870-ca2d-4e04-a89c-cb6adb8d253e",
+          "content": "Show all appointments scheduled for today",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:15:28.391796"
+        },
+        {
+          "id": "37d37fc4-e6e4-4eb6-8670-7eea4dad9a17",
+          "content": "Based on the provided data, I can see that there are two appointments. However, I need to establish the current date to determine which ones are scheduled for today.  Assuming today is September 18, 2025, the appointment scheduled for today is:  - Appointment ID: APT002 - Patient ID: PAT002 - Doctor ID: DOC002 - Date and Time: September 18, 2025, at 2:30 PM - Duration: 45 minutes - Type: Follow-up - Status: Completed - Reason: Vaccination follow-up - Notes: All vaccinations up to date - Fee: $70  Additionally, there is another appointment scheduled for September 20, 2025, which is:  - Appointment ID: APT001 - Patient ID: PAT001 - Doctor ID: DOC001 - Date and Time: September 20, 2025, at 10:00 AM - Duration: 30 minutes - Type: Consultation - Status: Scheduled - Reason: Routine cardiac checkup - Notes: Patient reports chest discomfort - Fee: $80  So, for today, September 18, 2025, there is only one completed appointment.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:15:30.233134"
+        }
+      ]
+    },
+    "deabe2fa-ecab-4b46-9d15-cb64b8e8591d": {
+      "id": "deabe2fa-ecab-4b46-9d15-cb64b8e8591d",
+      "title": "Facilities in New York Location List",
+      "db_type": "mongodb",
+      "created_at": "2025-09-24T17:16:17.108703",
+      "updated_at": "2025-09-24T17:16:18.654168",
+      "messages": [
+        {
+          "id": "7cac6cab-1d69-4eff-a1ca-9785ef34d5dd",
+          "content": "List all facilities located in 'New York'.",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:16:17.121761"
+        },
+        {
+          "id": "80e6bbb3-1343-4dd3-afa4-6deb9a0cfa02",
+          "content": "There are no facilities located in 'New York' based on the provided data. The provided data only shows one facility, Hôpital Charles Nicolle, which is located in Tunis, Tunisia.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:16:18.435522"
+        }
+      ]
+    },
+    "a2c87280-4ec0-42f3-b6f4-a923525facc5": {
+      "id": "a2c87280-4ec0-42f3-b6f4-a923525facc5",
+      "title": "Patients Born After 1990 List Request",
+      "db_type": "mongodb",
+      "created_at": "2025-09-24T17:16:34.128792",
+      "updated_at": "2025-09-24T17:16:35.768260",
+      "messages": [
+        {
+          "id": "97c2d354-a4ab-4648-8200-6285b8329498",
+          "content": "List all patients born after 1990.",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:16:34.144808"
+        },
+        {
+          "id": "ac774e62-ff96-4a60-8cf6-4c86e2f79604",
+          "content": "Based on the provided information, I can see that there are two patients in the database.   Amina Trabelsi was born on August 22, 1992, and Ahmed Ben Salah was born on May 15, 1980.  So, the patients born after 1990 are Amina Trabelsi.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:16:35.526084"
+        }
+      ]
+    },
+    "31c0fb28-57d5-4eea-b07c-b0d598f5c9d0": {
+      "id": "31c0fb28-57d5-4eea-b07c-b0d598f5c9d0",
+      "title": "Amina Trabelsi Patient Contact Information Request",
+      "db_type": "mongodb",
+      "created_at": "2025-09-24T17:18:32.147018",
+      "updated_at": "2025-09-24T17:18:43.155308",
+      "messages": [
+        {
+          "id": "54309e6c-191e-4b3a-81e1-d9ce62d04a9e",
+          "content": "hi",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:18:32.161557"
+        },
+        {
+          "id": "93ba6159-4db3-471e-a684-74f0806e9cfd",
+          "content": "Hi! How can I assist you today? Do you have any questions about the provided patient data or would you like me to help with something else?",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:18:33.211986"
+        },
+        {
+          "id": "9279ae4c-7368-4184-8604-b43a4e8bd6c6",
+          "content": "Find patient Amina Trabelsi phone",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:18:41.663686"
+        },
+        {
+          "id": "7ca65c5a-1832-4fca-9a4b-81e31c6b998d",
+          "content": "The phone number of Amina Trabelsi is +21698765432.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:18:42.903132"
+        }
+      ]
+    },
+    "ae62bfc5-5dcc-4d33-a60d-c9a540378667": {
+      "id": "ae62bfc5-5dcc-4d33-a60d-c9a540378667",
+      "title": "New Conversation MONGODB - 09/24/2025, 05:18 PM",
+      "db_type": "mongodb",
+      "created_at": "2025-09-24T17:18:59.176961",
+      "updated_at": "2025-09-24T17:18:59.176961",
+      "messages": []
+    },
+    "f7a68e8d-a59c-490d-bb1b-8630a87838c9": {
+      "id": "f7a68e8d-a59c-490d-bb1b-8630a87838c9",
+      "title": "Locating Patient Amina Trabelsis Contact Inform...",
+      "db_type": "mongodb",
+      "created_at": "2025-09-24T17:19:23.806575",
+      "updated_at": "2025-09-24T17:19:35.289564",
+      "messages": [
+        {
+          "id": "f0e27ebf-5762-496c-aeba-ad52e7004e6b",
+          "content": "Find patient Amina Trabelsi phone",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:19:23.820653"
+        },
+        {
+          "id": "43156c77-97e1-4a46-8245-8235505d1474",
+          "content": "The phone number of Amina Trabelsi is +21698765432.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:19:24.993270"
+        },
+        {
+          "id": "278f94f3-2d86-4ba0-b772-e8c5d4bdec67",
+          "content": "What appointments are scheduled for 18 September 2025? give a brief answer",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:19:34.120843"
+        },
+        {
+          "id": "b1003ceb-f11d-45e8-aee4-4c9f4572e750",
+          "content": "There is one appointment scheduled for 18 September 2025. The appointment is a follow-up at 14:30 with doctor DOC002 for patient PAT002.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:19:35.289564"
+        }
+      ]
+    },
+    "bf6013d6-3d16-4593-b164-21a388e9f4c1": {
+      "id": "bf6013d6-3d16-4593-b164-21a388e9f4c1",
+      "title": "Locating Patient Amina Trabelsis Contact Inform...",
+      "db_type": "mongodb",
+      "created_at": "2025-09-24T17:26:59.579262",
+      "updated_at": "2025-09-24T17:27:12.971580",
+      "messages": [
+        {
+          "id": "17e8166f-0bcf-446e-98a8-9f515bc47401",
+          "content": "Find patient Amina Trabelsi phone",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:26:59.590327"
+        },
+        {
+          "id": "ebc140c0-926d-4f50-b1c2-63268050ee7a",
+          "content": "The phone number of Amina Trabelsi is +21698765432.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:27:00.747874"
+        },
+        {
+          "id": "395d8655-e477-461e-8f45-63ec061ab5d4",
+          "content": "What appointments are scheduled for 18 September 2025? give a brief answer",
+          "sender": "user",
+          "timestamp": "2025-09-24T17:27:11.575443"
+        },
+        {
+          "id": "8e02d543-0994-44e7-9dbd-a935c79d54e3",
+          "content": "There is one appointment scheduled for 18 September 2025. The appointment is a follow-up at 14:30 with doctor DOC002 for patient PAT002.",
+          "sender": "bot",
+          "timestamp": "2025-09-24T17:27:12.971580"
         }
       ]
     }

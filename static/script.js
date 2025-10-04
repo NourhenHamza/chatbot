@@ -413,7 +413,46 @@ class ChatbotInterface {
         messageDiv.appendChild(messageContent);
         this.chatMessages.appendChild(messageDiv);
         
-        this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+        // Improved auto-scroll logic for long messages
+        this.scrollToNewMessage(messageDiv, type);
+    }
+
+    scrollToNewMessage(messageElement, messageType) {
+        // For bot messages, scroll to show the beginning of the message
+        if (messageType === 'bot') {
+            // First, scroll to the top of the new message
+            messageElement.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start',
+                inline: 'nearest'
+            });
+            
+            // Add a small delay to ensure the scroll completes, then adjust if needed
+            setTimeout(() => {
+                const chatContainer = this.chatMessages;
+                const messageRect = messageElement.getBoundingClientRect();
+                const containerRect = chatContainer.getBoundingClientRect();
+                
+                // If the message is taller than the container, ensure we see the beginning
+                if (messageRect.height > containerRect.height) {
+                    messageElement.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start',
+                        inline: 'nearest'
+                    });
+                } else {
+                    // If the message fits, scroll to show it completely
+                    messageElement.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'nearest',
+                        inline: 'nearest'
+                    });
+                }
+            }, 100);
+        } else {
+            // For user messages, use the original behavior
+            this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+        }
     }
 
     formatDate(dateString) {
